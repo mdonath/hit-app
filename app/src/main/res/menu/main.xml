@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main">
+
+    <item
+        android:id="@+id/action_settings"
+        android:showAsAction=""
+        android:title="@string/action_settings" />
+
+    <item
+        android:id="@+id/action_about"
+        android:showAsAction=""
+        android:title="@string/title_activity_about" />
+</menu>
