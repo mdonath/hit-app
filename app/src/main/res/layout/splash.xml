@@ -48,7 +48,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffaeab"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -57,7 +58,8 @@
         android:src="@drawable/scoutinglogo"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:paddingTop="30dp" />
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp" />
 
     <TextView
         android:id="@+id/textView"
