@@ -4,13 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.StrictMode;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
@@ -107,7 +107,7 @@ public class Splash extends Activity {
                     startActivity(new Intent(Splash.this, Main.class));
                     finish();
                 }
-            }, secondsDelayed * 1);
+            }, secondsDelayed * 150);
         }else{
             Update_Splash_Status("Fout: Geen informatie. App kan niet worden geopend");
             Log.e("FOUT", "Geen JSON file beschikbaar, App kan niet worden geopend");
@@ -267,7 +267,7 @@ public class Splash extends Activity {
             String timeStamp;
 
 
-            DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
+            DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HH");
             Calendar cal = Calendar.getInstance();
             timeStamp = dateFormat.format(cal.getTime());
 
@@ -333,12 +333,76 @@ public class Splash extends Activity {
 
 
 
+
+
+
+
+    //Kopieer de Backup JSON Export vanuit Assets
+
+    private void copyAssets() {
+        AssetManager assetManager = getAssets();
+        String[] files = null;
+
+
+        try {
+            files = assetManager.list("");
+            Log.i("Array assets", "Filename: "+ files[0]);
+        } catch (IOException e) {
+            Log.e("tag", "Failed to get asset file list.", e);
+        }
+        for(String filename : files) {
+            InputStream in = null;
+            OutputStream out = null;
+            try {
+
+                if( filename.equals("hitapp.2014.json") ) {
+
+                    in = assetManager.open(filename);
+
+                    Log.i("Asset copy", "Filename: " + filename);
+
+                    File outFile = new File(public_dir, filename);
+                    out = new FileOutputStream(outFile);
+                    copyFile(in, out);
+                    in.close();
+                    in = null;
+                    out.flush();
+                    out.close();
+                    out = null;
+                }
+            } catch(IOException e) {
+                Log.e("tag", "Failed to copy asset file: " + filename, e);
+            }
+        }
+    }
+    private void copyFile(InputStream in, OutputStream out) throws IOException {
+        byte[] buffer = new byte[1024];
+        int read;
+        while((read = in.read(buffer)) != -1){
+            out.write(buffer, 0, read);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        StrictMode.ThreadPolicy tp = StrictMode.ThreadPolicy.LAX;
-        StrictMode.setThreadPolicy(tp);
+        //StrictMode.ThreadPolicy tp = StrictMode.ThreadPolicy.LAX;
+        //StrictMode.setThreadPolicy(tp);
 
         // Remove title bar and notification bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -352,12 +416,42 @@ public class Splash extends Activity {
         appVersion.setText(getApplicationVersion());
 
 
+        //Kopieer de Backup JSON export
+        File dir = public_dir;
+        dir.mkdirs();
+
+        copyAssets();
+
+
+
+
         //Download nieuwe JSON data
         if(isNetworkAvailable()){
             //DownloadJSON("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
 
-            DownloadFile downloadFile = new DownloadFile();
-            downloadFile.execute("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
+
+            //Indien er in het laatste uur al een JSON Export is gedownload dan openen we die gewoon
+                                DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HH");
+                                Calendar cal = Calendar.getInstance();
+
+                                String timeStamp;
+                                timeStamp = dateFormat.format(cal.getTime());
+
+                                String FileName = "JSON_HITAPP_" + timeStamp + "_.JSON";
+
+
+                                File file = new File(public_dir + "/" + FileName);
+
+
+                                if(file.exists() && !file.isDirectory()){
+                                    Update_Splash_Status("Recente informatie gevonden");
+                                    doorsturen();
+                                    Update_Splash_Status("U wordt doorgestuurd");
+                                }else {
+
+                                    DownloadFile downloadFile = new DownloadFile();
+                                    downloadFile.execute("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
+                                }
 
         }else{
                                         //Indien geen internet check voor lokale file uit verleden
