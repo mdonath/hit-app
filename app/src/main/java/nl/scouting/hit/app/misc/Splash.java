@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -23,6 +24,7 @@ import java.io.FileFilter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.DateFormat;
@@ -105,7 +107,7 @@ public class Splash extends Activity {
                     startActivity(new Intent(Splash.this, Main.class));
                     finish();
                 }
-            }, secondsDelayed * 1000);
+            }, secondsDelayed * 1);
         }else{
             Update_Splash_Status("Fout: Geen informatie. App kan niet worden geopend");
             Log.e("FOUT", "Geen JSON file beschikbaar, App kan niet worden geopend");
@@ -116,11 +118,144 @@ public class Splash extends Activity {
     }
 
     public void Update_Splash_Status(String new_status){
-        TextView status_tonen = (TextView) findViewById(R.id.status);
-        status_tonen.setText(new_status);
 
-        Log.d("Splash", "Status aangepast: " + new_status);
+        final String update_string = new_status;
+
+        this.runOnUiThread(new Runnable() {
+            public void run() {
+
+
+                TextView status_tonen = (TextView) findViewById(R.id.status);
+                status_tonen.setText(update_string);
+
+                Log.d("Splash", "Status aangepast: " + update_string);
+
+            }
+        });
     }
+
+
+    String TAG = "JSON Downloader";
+
+        private class DownloadFile extends AsyncTask<String, Integer, String> {
+            @Override
+            protected String doInBackground(String... sUrl) {
+                try {
+
+                    URL url = new URL(sUrl[0]);
+
+                    Update_Splash_Status("Bezig met verbinden");
+
+                    URLConnection connection = url.openConnection();
+                    connection.connect();
+                    Log.i(TAG, "connected");
+
+                    Update_Splash_Status("Verbonden");
+
+                    // this will be useful so that you can show a typical 0-100% progress bar
+
+                    Update_Splash_Status("Opzoeken informatie");
+                    int fileLength = connection.getContentLength();
+
+
+
+                    File dir = public_dir;
+                    dir.mkdirs();
+
+                    String timeStamp;
+
+
+                    DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
+                    Calendar cal = Calendar.getInstance();
+                    timeStamp = dateFormat.format(cal.getTime());
+
+                    String FileName = "JSON_HITAPP_" + timeStamp + "_.JSON";
+
+
+
+
+                    // download the file
+
+
+                    InputStream input = new BufferedInputStream(url.openStream());
+                    Log.i(TAG, "input set");
+                    OutputStream output = new FileOutputStream(dir + "/" + FileName);
+                    Log.i(TAG, "output set");
+
+                    byte data[] = new byte[1024];
+                    long total = 0;
+                    int count;
+                    while ((count = input.read(data)) != -1) {
+                        total += count;
+
+
+
+                        long nog_te_doen = fileLength - total;
+                        long dg = nog_te_doen/fileLength;
+
+                        Log.i(TAG, "Nu gedaan: "+total+", geheel: "+fileLength+" percentage: "+(dg * 100));
+                        long voortgang = 0;
+
+                        if(fileLength < 0) {
+                            voortgang = 0;
+                        }else{
+                            voortgang = (dg * 100);
+                        }
+
+                        publishProgress((int) voortgang);
+
+                        output.write(data, 0, count);
+                    }
+
+                    output.flush();
+                    output.close();
+                    input.close();
+                }catch(Exception e){
+                    Log.e("ERROR_TAG", e.getMessage());
+                    return "fine";
+                }
+                String s ="fine";
+                Log.i(TAG, "end download");
+                return s;
+            }
+
+
+
+
+        protected void onProgressUpdate(Integer... progress) {
+            Log.i(TAG, "Progress update: "+progress[0]);
+
+            if(progress[0] < 1){
+                Update_Splash_Status("Bezig met downloaden");
+            }else{
+                Update_Splash_Status("Downloaden ("+progress[0].toString()+"%)");
+            }
+
+
+        }
+
+            protected void onPostExecute(String s) {
+
+            Log.i("Download geslaagd", "Status: "+s.toString());
+                Update_Splash_Status("Informatie opgehaald");
+
+            if( lastFileModified_check() ) {
+                Update_Splash_Status("Informatie opgehaald");
+                doorsturen();
+            }else{
+                Update_Splash_Status("Fout: Geen informatie. App kan niet worden geopend");
+                Log.e("FOUT", "Check Download Function, Geen JSON file beschikbaar, App kan niet worden geopend");
+                //Log.e("FOUT", "Filename check: "+lastFileModified().getName() );
+
+            }
+
+        }
+    }
+
+
+
+
+
 
     public void DownloadJSON(String URL) {
         try {
@@ -219,7 +354,11 @@ public class Splash extends Activity {
 
         //Download nieuwe JSON data
         if(isNetworkAvailable()){
-            DownloadJSON("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
+            //DownloadJSON("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
+
+            DownloadFile downloadFile = new DownloadFile();
+            downloadFile.execute("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
+
         }else{
                                         //Indien geen internet check voor lokale file uit verleden
 
