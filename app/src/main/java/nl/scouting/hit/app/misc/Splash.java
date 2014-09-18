@@ -243,7 +243,7 @@ public class Splash extends Activity {
                                             //Bestand was al gedownload maar nu geen internet
                                             Update_Splash_Status("Oude informatie gevonden");
                                             doorsturen();
-                                            Update_Splash_Status("Oude informatie gevonden, u wordt doorgestuurd");
+                                            Update_Splash_Status("U wordt doorgestuurd");
 
                                         }else{
                                             Update_Splash_Status("Internet verbinding is nodig, probeer het later opnieuw");
