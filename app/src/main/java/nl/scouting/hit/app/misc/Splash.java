@@ -165,7 +165,7 @@ public class Splash extends Activity {
                     String timeStamp;
 
 
-                    DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
+                    DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HH");
                     Calendar cal = Calendar.getInstance();
                     timeStamp = dateFormat.format(cal.getTime());
 
