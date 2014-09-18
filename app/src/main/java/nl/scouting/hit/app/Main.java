@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import nl.scouting.hit.app.courant.Kamp;
 import nl.scouting.hit.app.courant.Plaats;
 import nl.scouting.hit.app.misc.About;
+import nl.scouting.hit.app.model.AbstractHitEntity;
+import nl.scouting.hit.app.model.HitProject;
 
 
 /**
@@ -32,6 +34,14 @@ public class Main extends Activity
      */
     private CharSequence mLastScreenTitle;
 
+    private HitProject hitProject;
+
+    public HitProject getHitProject() {
+        if (hitProject == null) {
+            hitProject = new JsonData(getApplicationContext()).parse(2014);
+        }
+        return hitProject;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,32 +60,35 @@ public class Main extends Activity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        Log.i("onNavigationDrawerItemSelected", "Ontvangen: " + position);
-
-        // Titel update
-        storeActionBar(position);
+        AbstractHitEntity obj = getHitProject().getByIndex(position);
+        mLastScreenTitle = obj.getLabel();
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
 
         Fragment fragment;
-        switch (position) {
-            case 0: {
-                fragment = new Welcome();
-                break;
-            }
-            case 1: {
-                fragment = new Plaats();
-                Bundle bundle = new Bundle();
-                bundle.putString(Plaats.PARAM_NAAM, mLastScreenTitle.toString());
-                fragment.setArguments(bundle);
-                break;
-            }
-            default: {
+        switch (obj.getType()) {
+            case KAMP: {
                 fragment = new Kamp();
                 Bundle bundle = new Bundle();
-                bundle.putString(Kamp.PARAM_NAAM, mLastScreenTitle.toString());
+                bundle.putLong(Kamp.PARAM_ID, obj.getId());
+                bundle.putString(Kamp.PARAM_NAAM, obj.getLabel());
                 fragment.setArguments(bundle);
+                break;
+            }
+            case PLAATS: {
+                fragment = new Plaats();
+                Bundle bundle = new Bundle();
+                bundle.putLong(Plaats.PARAM_ID, obj.getId());
+                bundle.putString(Plaats.PARAM_NAAM, obj.getLabel());
+                fragment.setArguments(bundle);
+
+                break;
+            }
+            default:
+            case PROJECT: {
+                fragment = new Welcome();
+                break;
             }
         }
 
@@ -86,26 +99,6 @@ public class Main extends Activity
                 .replace(R.id.container, fragment)
                 .commit();
     }
-
-    private void storeActionBar(int number) {
-        Log.i("storeActionBar", "Ontvangen:" + number);
-
-        switch (number) {
-            case 0:
-                mLastScreenTitle = getString(R.string.title_section1);
-                break;
-            case 1:
-                mLastScreenTitle = getString(R.string.title_section2);
-                break;
-            case 2:
-                mLastScreenTitle = getString(R.string.title_section3);
-                break;
-            case 3:
-                mLastScreenTitle = getString(R.string.title_section4);
-                break;
-        }
-    }
-
 
     private void restoreActionBar() {
         Log.i("restoreActionBar", "Tabblad restored met titel: " + mLastScreenTitle);

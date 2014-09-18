@@ -21,6 +21,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import nl.scouting.hit.app.model.AbstractHitEntity;
+import nl.scouting.hit.app.model.HitProject;
+
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
@@ -168,16 +174,21 @@ public class NavigationDrawer extends Fragment {
                 selectItem(position);
             }
         });
+
+        //
+        // FIXME Gebruik maken van model en onderbrengen in eigen adapter
+        //
+
+        HitProject hitProject = ((Main) getActivity()).getHitProject();
+        List<String> objects = new ArrayList<String>();
+        for (AbstractHitEntity o : hitProject.getOrderedList()) {
+            objects.add(o.getLabel());
+        }
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                        getString(R.string.title_section4),
-                }));
+                objects.toArray(new String[objects.size()])));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
