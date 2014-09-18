@@ -190,7 +190,7 @@ public class Splash extends Activity {
                     + " sec");
 
         } catch (IOException e) {
-            Log.d("JSON Downloader", "Error: " + e);
+            Log.e("JSON Downloader", "Error: " + e);
         }
 
     }
@@ -221,18 +221,38 @@ public class Splash extends Activity {
         if(isNetworkAvailable()){
             DownloadJSON("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
         }else{
-                //Indien geen internet check voor lokale file uit verleden
+                                        //Indien geen internet check voor lokale file uit verleden
 
-                    if( lastFileModified_check() ){
+                                    File[] contents = public_dir.listFiles();
+                        // the directory file is not really a directory..
+                                    if (contents == null) {
+                                        Update_Splash_Status("Internet verbinding is nodig, probeer het later opnieuw");
+                                        Log.e("FOUT", "Geen directory");
+                                    }
+                        // Folder is empty
+                                    else if (contents.length == 0) {
+                                        Update_Splash_Status("Internet verbinding is nodig, probeer het later opnieuw");
+                                        Log.e("FOUT", "Folder leeg");
 
-                        //Bestand was al gedownload maar nu geen internet
-                        Update_Splash_Status("Oude informatie gevonden");
-                        doorsturen();
-                        Update_Splash_Status("Oude informatie gevonden, u wordt doorgestuurd");
+                                    }
+                        // Folder contains files
+                                    else {
 
-                    }else{
-                        Update_Splash_Status("Internet verbinding is nodig, probeer het later opnieuw");
-                    }
+                                        if( lastFileModified_check() ){
+
+                                            //Bestand was al gedownload maar nu geen internet
+                                            Update_Splash_Status("Oude informatie gevonden");
+                                            doorsturen();
+                                            Update_Splash_Status("Oude informatie gevonden, u wordt doorgestuurd");
+
+                                        }else{
+                                            Update_Splash_Status("Internet verbinding is nodig, probeer het later opnieuw");
+                                        }
+
+                                    }
+
+
+
 
         }
 

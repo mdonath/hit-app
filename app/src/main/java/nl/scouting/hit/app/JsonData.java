@@ -69,7 +69,7 @@ public class JsonData {
         try {
             //br = new BufferedReader(new InputStreamReader(context.getAssets().open("hitapp." + year + ".json")));
 
-            br = new BufferedReader(new FileReader(lastFileModified()));
+            br = new BufferedReader(new FileReader( lastFileModified() ));
 
 
             String temp;
