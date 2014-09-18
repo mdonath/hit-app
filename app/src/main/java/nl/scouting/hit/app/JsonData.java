@@ -1,14 +1,17 @@
 package nl.scouting.hit.app;
 
 import android.content.Context;
+import android.os.Environment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,6 +27,32 @@ import nl.scouting.hit.app.model.HitProject;
  * Reads json data from a file in the folder <code>assets</code>.
  */
 public class JsonData {
+
+    File public_dir = new File(Environment.getExternalStorageDirectory() + File.separator + "HitApp" + File.separator + "Informatie");
+
+    public File lastFileModified() {
+        File fl = public_dir;
+        File[] files = fl.listFiles(new FileFilter() {
+            public boolean accept(File file) {
+
+                return file.isFile();
+            }
+        });
+        long lastMod = Long.MIN_VALUE;
+        File choise = null;
+        for (File file : files) {
+            if (file.lastModified() > lastMod) {
+                choise = file;
+                lastMod = file.lastModified();
+            }
+        }
+
+
+        return choise;
+    }
+
+
+
     private final Context context;
 
     public JsonData(Context myContext) {
@@ -38,8 +67,11 @@ public class JsonData {
         StringBuilder result = new StringBuilder();
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new InputStreamReader(context.getAssets().open(
-                    "hitapp." + year + ".json")));
+            //br = new BufferedReader(new InputStreamReader(context.getAssets().open("hitapp." + year + ".json")));
+
+            br = new BufferedReader(new FileReader(lastFileModified()));
+
+
             String temp;
             while ((temp = br.readLine()) != null) {
                 result.append(temp);
