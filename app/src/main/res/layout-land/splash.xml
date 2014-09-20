@@ -21,14 +21,14 @@
         android:src="@drawable/bwebdesign_logo" />
 
     <ImageView
-        android:layout_width="wrap_content"
         android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:src="@drawable/scoutinglogo"
         android:layout_above="@+id/app_name"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:paddingTop="10dp"
-        android:layout_gravity="center_horizontal" />
+        android:src="@drawable/scoutinglogo" />
 
     <TextView
         android:id="@+id/app_name"
@@ -50,5 +50,18 @@
         android:text="@string/app_version"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#fffafff2" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:singleLine="false"
+        android:text="@string/app_status"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffaeab" />
 
 </LinearLayout>

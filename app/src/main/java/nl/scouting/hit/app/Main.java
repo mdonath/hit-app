@@ -16,123 +16,122 @@ import nl.scouting.hit.app.courant.Plaats;
 import nl.scouting.hit.app.misc.About;
 import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitProject;
-
+import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
 /**
  * Main of the app.
  */
 public class Main extends Activity
-        implements NavigationDrawer.NavigationDrawerCallbacks {
+		implements NavigationDrawer.NavigationDrawerCallbacks {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
-    private NavigationDrawer mNavigationDrawer;
+	/**
+	 * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
+	 */
+	private NavigationDrawer mNavigationDrawer;
 
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
-    private CharSequence mLastScreenTitle;
+	/**
+	 * Used to store the last screen title. For use in {@link #restoreActionBar()}.
+	 */
+	private CharSequence mLastScreenTitle;
 
-    private HitProject hitProject;
+	private HitProject hitProject;
 
-    public HitProject getHitProject() {
-        if (hitProject == null) {
-            hitProject = new JsonData(getApplicationContext()).parse(2014);
-        }
-        return hitProject;
-    }
+	public HitProject getHitProject() {
+		if (hitProject == null) {
+			hitProject = new JsonData(getApplicationContext()).parse(KampInfoDownloadViaDownloadManager.getLocalDataFile());
+		}
+		return hitProject;
+	}
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main);
 
-        mNavigationDrawer = (NavigationDrawer)
-                getFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mLastScreenTitle = getTitle();
+		mNavigationDrawer = (NavigationDrawer)
+				getFragmentManager().findFragmentById(R.id.navigation_drawer);
+		mLastScreenTitle = getTitle();
 
-        mNavigationDrawer.setUp(
-                R.id.navigation_drawer,
-                (DrawerLayout) findViewById(R.id.drawer_layout));
-    }
+		mNavigationDrawer.setUp(
+				R.id.navigation_drawer,
+				(DrawerLayout) findViewById(R.id.drawer_layout));
+	}
 
-    @Override
-    public void onNavigationDrawerItemSelected(int position) {
-        AbstractHitEntity obj = getHitProject().getByIndex(position);
-        mLastScreenTitle = obj.getLabel();
+	@Override
+	public void onNavigationDrawerItemSelected(int position) {
+		AbstractHitEntity obj = getHitProject().getByIndex(position);
+		mLastScreenTitle = obj.getLabel();
 
-        // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
+		// update the main content by replacing fragments
+		FragmentManager fragmentManager = getFragmentManager();
 
-        Fragment fragment;
-        switch (obj.getType()) {
-            case KAMP: {
-                fragment = new Kamp();
-                Bundle bundle = new Bundle();
-                bundle.putLong(Kamp.PARAM_ID, obj.getId());
-                bundle.putString(Kamp.PARAM_NAAM, obj.getLabel());
-                fragment.setArguments(bundle);
-                break;
-            }
-            case PLAATS: {
-                fragment = new Plaats();
-                Bundle bundle = new Bundle();
-                bundle.putLong(Plaats.PARAM_ID, obj.getId());
-                bundle.putString(Plaats.PARAM_NAAM, obj.getLabel());
-                fragment.setArguments(bundle);
+		Fragment fragment;
+		switch (obj.getType()) {
+			case KAMP: {
+				fragment = new Kamp();
+				Bundle bundle = new Bundle();
+				bundle.putLong(Kamp.PARAM_ID, obj.getId());
+				bundle.putString(Kamp.PARAM_NAAM, obj.getLabel());
+				fragment.setArguments(bundle);
+				break;
+			}
+			case PLAATS: {
+				fragment = new Plaats();
+				Bundle bundle = new Bundle();
+				bundle.putLong(Plaats.PARAM_ID, obj.getId());
+				bundle.putString(Plaats.PARAM_NAAM, obj.getLabel());
+				fragment.setArguments(bundle);
 
-                break;
-            }
-            default:
-            case PROJECT: {
-                fragment = new Welcome();
-                break;
-            }
-        }
+				break;
+			}
+			default:
+			case PROJECT: {
+				fragment = new Welcome();
+				break;
+			}
+		}
 
-        restoreActionBar();
+		restoreActionBar();
 
-        fragmentManager //
-                .beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
-    }
+		fragmentManager //
+				.beginTransaction()
+				.replace(R.id.container, fragment)
+				.commit();
+	}
 
-    private void restoreActionBar() {
-        Log.i("restoreActionBar", "Tabblad restored met titel: " + mLastScreenTitle);
+	private void restoreActionBar() {
+		Log.i("restoreActionBar", "Tabblad restored met titel: " + mLastScreenTitle);
 
-        ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mLastScreenTitle);
-    }
+		ActionBar actionBar = getActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+		actionBar.setDisplayShowTitleEnabled(true);
+		actionBar.setTitle(mLastScreenTitle);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (!mNavigationDrawer.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
-            restoreActionBar();
-            return true;
-        }
-        return super.onCreateOptionsMenu(menu);
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		if (!mNavigationDrawer.isDrawerOpen()) {
+			// Only show items in the action bar relevant to this screen
+			// if the drawer is not showing. Otherwise, let the drawer
+			// decide what to show in the action bar.
+			getMenuInflater().inflate(R.menu.main, menu);
+			restoreActionBar();
+			return true;
+		}
+		return super.onCreateOptionsMenu(menu);
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_about) {
-            startActivity(new Intent(this, About.class));
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_about) {
+			startActivity(new Intent(this, About.class));
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 }
