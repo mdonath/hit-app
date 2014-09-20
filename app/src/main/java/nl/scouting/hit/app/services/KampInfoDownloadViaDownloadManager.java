@@ -11,6 +11,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,15 +23,109 @@ import java.util.List;
 /**
  * Downloads new data using the Android DownloadManager.
  */
-public class KampInfoDownloadViaDownloadManager {
+public final class KampInfoDownloadViaDownloadManager {
 
-	public static final String HIT_COURANT_ASSET_DATA = "hitcourant.json";
-	public static final String HIT_COURANT_LOCAL_DATA = "HitApp/Courant/" + HIT_COURANT_ASSET_DATA;
+	private static final String TAG = "KampInfoDownloadViaDownloadManager";
+
+	private static final String HIT_COURANT_ASSET_DATA = "hitcourant.json";
+	private static final String HIT_COURANT_LOCAL_DATA = "HitApp/Courant/" + HIT_COURANT_ASSET_DATA;
+
+	private Context context;
+	private String url;
+
+	private StatusListener statusListener = StatusListener.NULL_LISTENER;
+
+	/**
+	 * Interface for communicating status messages.
+	 */
+	public interface StatusListener {
+		void update(String message);
+
+		/** Null implementation of this interface. */
+		StatusListener NULL_LISTENER = new StatusListener() {
+			@Override
+			public void update(String message) {
+				// NOP (NO Operation == it does nothing)
+			}
+		};
+	}
+
+	public KampInfoDownloadViaDownloadManager(Context context) {
+		this.context = context;
+	}
+
+	/**
+	 * Registers a StatusListener.
+	 *
+	 * @param statusListener
+	 * @return this
+	 */
+	public KampInfoDownloadViaDownloadManager addListener(StatusListener statusListener) {
+		this.statusListener = statusListener;
+		return this; // fluent
+	}
+
+	/**
+	 * Sets the download url on hit.scouting.nl.
+	 *
+	 * @param url
+	 * @return this
+	 */
+	public KampInfoDownloadViaDownloadManager setDownloadUrl(String url) {
+		this.url = url;
+		return this; // fluent
+	}
+
+	/**
+	 * Updates the data file.
+	 */
+	public void update() {
+		if (url == null || url.isEmpty()) {
+			statusListener.update("Ik weet niet waar ik het moet zoeken");
+			Log.e(TAG, "Geen url geconfigureerd!");
+		} else {
+			Uri uri = Uri.parse(url);
+
+			if (isNetworkAvailable(context)) {
+				Log.i(TAG, "Er is netwerk");
+				if (isLocalDataAvailable()) {
+					Log.i(TAG, "Er is al een bestand");
+					if (isUpdateNeeded()) {
+						Log.i(TAG, "Het bestand moet nu bijgewerkt worden");
+						statusListener.update("Controleer op updates...");
+						startDownload(uri);
+					} else {
+						Log.i(TAG, "Het bestand hoeft nog niet bijgewerkt te worden");
+						statusListener.update("Gegevens zijn nog actueel genoeg");
+					}
+				} else {
+					Log.i(TAG, "Het bestand moet voor de eerste keer opgehaald worden");
+					statusListener.update("Eerste keer downloaden...");
+					startDownload(uri);
+				}
+			} else {
+				Log.i(TAG, "Er is geen netwerk");
+				if (isLocalDataAvailable()) {
+					// doe niets,
+					Log.i(TAG, "Er staat al een bestand en kan nu niet bijwerken, doe nu niets");
+					statusListener.update("Geen netwerk gevonden, bestaande gegevens worden getoond");
+				} else {
+					Log.i(TAG, "Copieer voor het eerst de met de app meegeleverde data");
+					if (copyFromAssetsToLocalData()) {
+						statusListener.update("Geen netwerk gevonden, met app meegeleverde gegevens worden getoond");
+					} else {
+						Log.e(TAG, "Copiëren data ging fout?!");
+						statusListener.update("Geen netwerk gevonden, met app meegeleverde gegevens worden getoond");
+					}
+				}
+			}
+		}
+	}
 
 	/**
 	 * Checks the availability of the DownloadManager.
 	 *
-	 * @param context used to check the device version and DownloadManager information
+	 * @param context used to update the device version and DownloadManager information
 	 * @return true if the download manager is available
 	 */
 	public static boolean isDownloadManagerAvailable(Context context) {
@@ -63,15 +158,23 @@ public class KampInfoDownloadViaDownloadManager {
 	}
 
 	/**
+	 * @return the location of the local data file itself.
+	 */
+	public static File getLocalDataFile() {
+		return new File( //
+				Environment.getExternalStorageDirectory() //
+				, HIT_COURANT_LOCAL_DATA);
+	}
+
+	/**
 	 * Checks whether an update of the data is needed.
 	 *
-	 * @param context
 	 * @return true if an update is needed
 	 */
-	public static boolean isUpdateNeeded(Context context) {
+	private boolean isUpdateNeeded() {
 		boolean result = false;
 		if (isNetworkAvailable(context) && isDownloadManagerAvailable(context)) {
-			if (isLocalDataAvailable(context)) {
+			if (isLocalDataAvailable()) {
 				result = isLastUpdateAtLeastOneHourAgo();
 			} else {
 				result = true;
@@ -85,7 +188,7 @@ public class KampInfoDownloadViaDownloadManager {
 	 *
 	 * @return true if update occurred more than an hour ago.
 	 */
-	private static boolean isLastUpdateAtLeastOneHourAgo() {
+	private boolean isLastUpdateAtLeastOneHourAgo() {
 		long lastUpdated = getLocalDataFile().lastModified();
 		long now = System.currentTimeMillis();
 		return Math.abs(now - lastUpdated) > 1000 * 60 * 60;
@@ -94,29 +197,18 @@ public class KampInfoDownloadViaDownloadManager {
 	/**
 	 * Checks for the existence of the local data file.
 	 *
-	 * @param context
 	 * @return true if the local data file exists.
 	 */
-	public static boolean isLocalDataAvailable(Context context) {
+	private boolean isLocalDataAvailable() {
 		return getLocalDataFile().exists();
-	}
-
-	/**
-	 * @return the location of the local data file itself.
-	 */
-	public static File getLocalDataFile() {
-		return new File( //
-				Environment.getExternalStorageDirectory() //
-				, HIT_COURANT_LOCAL_DATA);
 	}
 
 	/**
 	 * Copies the prepackaged data file to the local data file location.
 	 *
-	 * @param context
 	 * @return true if successfully copied
 	 */
-	public static boolean copyFromAssetsToLocalData(Context context) {
+	private boolean copyFromAssetsToLocalData() {
 		File localDataFile = getLocalDataFile();
 		File parent = localDataFile.getParentFile();
 		if (!parent.exists()) {
@@ -133,8 +225,8 @@ public class KampInfoDownloadViaDownloadManager {
 	 * @param toPath
 	 * @return true if file has been copied successfully.
 	 */
-	private static boolean copyAsset(final AssetManager assetManager,
-									 final String fromAssetPath, final File toPath) {
+	private boolean copyAsset(final AssetManager assetManager,
+							  final String fromAssetPath, final File toPath) {
 		InputStream in = null;
 		OutputStream out = null;
 		try {
@@ -178,11 +270,10 @@ public class KampInfoDownloadViaDownloadManager {
 	/**
 	 * Starts the download from the remote server.
 	 *
-	 * @param context
-	 * @param url
+	 * @param uri
 	 */
-	public static void startDownload(final Context context, final String url) {
-		final DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+	private void startDownload(final Uri uri) {
+		final DownloadManager.Request request = new DownloadManager.Request(uri);
 		request.setDescription("Nu wordt de laatste versie van de kampcourant opgehaald");
 		request.setTitle("Ophalen laatste gegevens HIT Courant");
 		// in order for this if to run, you must use the android 3.2 to compile your app

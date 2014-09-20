@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -15,15 +14,10 @@ import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
-import static nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager.isLocalDataAvailable;
-import static nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager.isNetworkAvailable;
-import static nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager.isUpdateNeeded;
-import static nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager.startDownload;
-
 /**
  * Shows a splashscreen for a few seconds with logo, name and version.
  */
-public class Splash extends Activity {
+public class Splash extends Activity implements KampInfoDownloadViaDownloadManager.StatusListener {
 
 	private static final String TAG = "Splash";
 
@@ -47,40 +41,16 @@ public class Splash extends Activity {
 		doorsturen();
 	}
 
+	@Override
+	public void update(String message) {
+		updateSplashStatus(message);
+	}
+
 	private void checkForUpdates() {
-		if (isNetworkAvailable(this)) {
-			Log.i(TAG, "Er is netwerk");
-			if (isLocalDataAvailable(this)) {
-				Log.i(TAG, "Er is al een bestand");
-				if (isUpdateNeeded(this)) {
-					Log.i(TAG, "Het bestand moet nu bijgewerkt worden");
-					updateSplashStatus("Controleer op updates...");
-					startDownload(this, "https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
-				} else {
-					Log.i(TAG, "Het bestand hoeft nog niet bijgewerkt te worden");
-					updateSplashStatus("Gegevens zijn nog actueel genoeg");
-				}
-			} else {
-				Log.i(TAG, "Het bestand moet voor de eerste keer opgehaald worden");
-				updateSplashStatus("Eerste keer downloaden...");
-				startDownload(this, "https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate");
-			}
-		} else {
-			Log.i(TAG, "Er is geen netwerk");
-			if (isLocalDataAvailable(this)) {
-				// doe niets,
-				Log.i(TAG, "Er staat al een bestand en kan nu niet bijwerken, doe nu niets");
-				updateSplashStatus("Geen netwerk gevonden, bestaande gegevens worden getoond");
-			} else {
-				Log.i(TAG, "Copieer voor het eerst de met de app meegeleverde data");
-				if (KampInfoDownloadViaDownloadManager.copyFromAssetsToLocalData(this)) {
-					updateSplashStatus("Geen netwerk gevonden, met app meegeleverde gegevens worden getoond");
-				} else {
-					Log.e(TAG, "Copiëren data ging fout?!");
-					updateSplashStatus("Geen netwerk gevonden, met app meegeleverde gegevens worden getoond");
-				}
-			}
-		}
+		new KampInfoDownloadViaDownloadManager(this)
+				.addListener(this)
+				.setDownloadUrl("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate")
+				.update();
 	}
 
 	/**
@@ -115,7 +85,6 @@ public class Splash extends Activity {
 			public void run() {
 				TextView statusTextView = (TextView) findViewById(R.id.status);
 				statusTextView.setText(newStatus);
-				Log.d("Splash", "Status aangepast: " + newStatus);
 			}
 		});
 	}

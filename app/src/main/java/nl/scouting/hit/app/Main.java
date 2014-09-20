@@ -16,6 +16,7 @@ import nl.scouting.hit.app.courant.Plaats;
 import nl.scouting.hit.app.misc.About;
 import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitProject;
+import nl.scouting.hit.app.services.JsonData;
 import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
 /**
