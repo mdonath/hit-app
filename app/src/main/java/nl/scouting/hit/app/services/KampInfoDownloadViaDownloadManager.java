@@ -210,11 +210,15 @@ public final class KampInfoDownloadViaDownloadManager {
 	 */
 	private boolean copyFromAssetsToLocalData() {
 		File localDataFile = getLocalDataFile();
+		checkParentAndCreate(localDataFile);
+		return copyAsset(context.getAssets(), HIT_COURANT_ASSET_DATA, localDataFile);
+	}
+
+	private void checkParentAndCreate(File localDataFile) {
 		File parent = localDataFile.getParentFile();
 		if (!parent.exists()) {
 			parent.mkdirs();
 		}
-		return copyAsset(context.getAssets(), HIT_COURANT_ASSET_DATA, localDataFile);
 	}
 
 	/**
@@ -278,11 +282,13 @@ public final class KampInfoDownloadViaDownloadManager {
 		request.setTitle("Ophalen laatste gegevens HIT Courant");
 		// in order for this if to run, you must use the android 3.2 to compile your app
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			request.allowScanningByMediaScanner();
-			request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+			request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
 		}
+		final File localDataFile = getLocalDataFile();
+		request.setDestinationUri(Uri.fromFile(localDataFile));
 
-		request.setDestinationInExternalFilesDir(context, null, HIT_COURANT_LOCAL_DATA);
+		// Create destination
+		checkParentAndCreate(localDataFile);
 
 		// get download service
 		final DownloadManager manager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
