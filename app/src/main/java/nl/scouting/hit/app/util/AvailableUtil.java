@@ -1,4 +1,4 @@
-package nl.scouting.hit.app.services;
+package nl.scouting.hit.app.util;
 
 import android.content.Context;
 import android.content.Intent;

@@ -19,5 +19,6 @@
     <string name="courant_kamp_info">Je kan in deze App de informatie van dit kamp bekijken!</string>
     <string name="link_to_website">Link naar website</string>
     <string name="acc_plaats_logo">Logo van de plaats</string>
+    <string name="kampen_in_plaats_label">Dit zijn de kampen in %s:</string>
 
 </resources>

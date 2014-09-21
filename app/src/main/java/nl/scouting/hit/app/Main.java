@@ -73,7 +73,6 @@ public class Main extends Activity
 				fragment = new Kamp();
 				Bundle bundle = new Bundle();
 				bundle.putLong(Kamp.PARAM_ID, obj.getId());
-				bundle.putString(Kamp.PARAM_NAAM, obj.getLabel());
 				fragment.setArguments(bundle);
 				break;
 			}
@@ -81,7 +80,6 @@ public class Main extends Activity
 				fragment = new Plaats();
 				Bundle bundle = new Bundle();
 				bundle.putLong(Plaats.PARAM_ID, obj.getId());
-				bundle.putString(Plaats.PARAM_NAAM, obj.getLabel());
 				fragment.setArguments(bundle);
 
 				break;

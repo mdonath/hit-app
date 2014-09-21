@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,10 +14,12 @@ import java.util.List;
 
 import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
+import nl.scouting.hit.app.components.ExpandableHeightListView;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitPlaats;
-import nl.scouting.hit.app.services.AvailableUtil;
-import nl.scouting.hit.app.services.TextUtil;
+import nl.scouting.hit.app.style.PlaatsStyle;
+import nl.scouting.hit.app.util.AvailableUtil;
+import nl.scouting.hit.app.util.TextUtil;
 
 /**
  * Shows the information for a 'HIT-plaats'.
@@ -25,7 +27,6 @@ import nl.scouting.hit.app.services.TextUtil;
 public class Plaats extends Fragment {
 
 	public static final String PARAM_ID = "courant.plaats.id";
-	public static final String PARAM_NAAM = "courant.plaats.naam";
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
@@ -34,9 +35,12 @@ public class Plaats extends Fragment {
 		final HitPlaats plaats = getHitPlaats();
 
 		setTitle(inflater, plaats, view);
-		setCourantTekst(inflater, plaats, view);
-		setKampen(inflater, plaats, view);
+		setLogo(inflater, plaats, view);
 		setWeblink(inflater, plaats, view);
+
+		setCourantTekst(inflater, plaats, view);
+
+		setKampen(inflater, plaats, view);
 
 		return view;
 	}
@@ -49,6 +53,11 @@ public class Plaats extends Fragment {
 	private void setTitle(LayoutInflater inflater, HitPlaats plaats, View view) {
 		final TextView tv = (TextView) view.findViewById(R.id.naam);
 		tv.setText(inflater.getContext().getString(R.string.courant_plaats_title, plaats.getNaam()));
+	}
+
+	private void setLogo(LayoutInflater inflater, HitPlaats plaats, View view) {
+		final ImageView iv = (ImageView) view.findViewById(R.id.logo);
+		iv.setImageResource(PlaatsStyle.by(plaats).logoBig);
 	}
 
 	private void setWeblink(final LayoutInflater inflater, final HitPlaats plaats, final View view) {
@@ -69,6 +78,8 @@ public class Plaats extends Fragment {
 	}
 
 	private void setKampen(LayoutInflater inflater, HitPlaats plaats, View view) {
+		TextView label = (TextView) view.findViewById(R.id.kampen_label);
+		label.setText(inflater.getContext().getString(R.string.kampen_in_plaats_label, plaats.getNaam()));
 
 		final List<String> list = new ArrayList<String>();
 		for (HitKamp kamp : plaats.getKampen()) {
@@ -82,7 +93,8 @@ public class Plaats extends Fragment {
 				, list.toArray(new String[list.size()])
 		);
 
-		final ListView listview = (ListView) view.findViewById(R.id.kampen);
+		final ExpandableHeightListView listview = (ExpandableHeightListView) view.findViewById(R.id.kampen);
+		listview.setExpanded(true);
 		listview.setAdapter(adapter);
 	}
 }

@@ -15,7 +15,7 @@ import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
 /**
- * Shows a splashscreen for a few seconds with logo, name and version.
+ * Shows a splashscreen for a few seconds with logoSmall, name and version.
  */
 public class Splash extends Activity implements KampInfoDownloadViaDownloadManager.StatusListener {
 

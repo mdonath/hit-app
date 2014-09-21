@@ -10,7 +10,7 @@ import android.widget.TextView;
 import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitKamp;
-import nl.scouting.hit.app.services.TextUtil;
+import nl.scouting.hit.app.util.TextUtil;
 
 /**
  * Shows the info for a 'Kamponderdeel'.
@@ -18,7 +18,6 @@ import nl.scouting.hit.app.services.TextUtil;
 public class Kamp extends Fragment {
 
 	public static final String PARAM_ID = "courant.kamp.id";
-	public static final String PARAM_NAAM = "courant.kamp.naam";
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {

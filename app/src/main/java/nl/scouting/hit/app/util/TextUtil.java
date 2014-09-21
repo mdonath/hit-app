@@ -1,4 +1,4 @@
-package nl.scouting.hit.app.services;
+package nl.scouting.hit.app.util;
 
 /**
  * Created by martijn on 21-9-14.

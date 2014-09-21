@@ -22,8 +22,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import static nl.scouting.hit.app.services.AvailableUtil.isDownloadManagerAvailable;
-import static nl.scouting.hit.app.services.AvailableUtil.isNetworkAvailable;
+import static nl.scouting.hit.app.util.AvailableUtil.isDownloadManagerAvailable;
+import static nl.scouting.hit.app.util.AvailableUtil.isNetworkAvailable;
 
 /**
  * Downloads new data using the Android DownloadManager.
