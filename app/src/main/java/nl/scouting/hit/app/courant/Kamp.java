@@ -10,35 +10,40 @@ import android.widget.TextView;
 import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitKamp;
+import nl.scouting.hit.app.services.TextUtil;
 
 /**
  * Shows the info for a 'Kamponderdeel'.
  */
 public class Kamp extends Fragment {
 
-    public static final String PARAM_ID = "courant.kamp.id";
-    public static final String PARAM_NAAM = "courant.kamp.naam";
+	public static final String PARAM_ID = "courant.kamp.id";
+	public static final String PARAM_NAAM = "courant.kamp.naam";
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_courant_kamp, container, false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+							 Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_courant_kamp, container, false);
 
-        long id = getArguments().getLong(PARAM_ID);
-        HitKamp kamp = ((Main) getActivity()).getHitProject().getHitKampById(id);
+		HitKamp kamp = getHitKamp();
 
-        setTitle(inflater, kamp, view);
-        setInfo(inflater, kamp, view);
-        return view;
-    }
+		setTitle(inflater, kamp, view);
+		setInfo(inflater, kamp, view);
 
-    private void setInfo(LayoutInflater inflater, HitKamp kamp, View view) {
-        TextView info = (TextView) view.findViewById(R.id.info);
-        info.setText(kamp.getHitCourantTekst());
-    }
+		return view;
+	}
 
-    private void setTitle(LayoutInflater inflater, HitKamp kamp, View view) {
-        TextView title = (TextView) view.findViewById(R.id.title);
-        title.setText(kamp.getNaam());
-    }
+	private HitKamp getHitKamp() {
+		long id = getArguments().getLong(PARAM_ID);
+		return ((Main) getActivity()).getHitProject().getHitKampById(id);
+	}
+
+	private void setTitle(LayoutInflater inflater, HitKamp kamp, View view) {
+		TextView title = (TextView) view.findViewById(R.id.naam);
+		title.setText(kamp.getNaam());
+	}
+
+	private void setInfo(LayoutInflater inflater, HitKamp kamp, View view) {
+		TextView info = (TextView) view.findViewById(R.id.courantTekst);
+		info.setText(TextUtil.cleanUp(kamp.getHitCourantTekst()));
+	}
 }

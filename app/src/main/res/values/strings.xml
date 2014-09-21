@@ -12,8 +12,12 @@
     <string name="about_developed_by">Deze App is ontwikkeld door Bwebdesign.nl</string>
     <string name="about_get_help">Bezoek onze website voor meer informatie of ondersteuning. Druk op het logo hierboven.</string>
     <string name="app_status">Ophalen van informatie&#8230;</string>
-    <string name="courant_plaats_title">Informatie over de plaats: %s</string>
+
+    <string name="courant_plaats_title">HIT %s</string>
+    <string name="courant_plaats_tekst">Hier moet informatie over de plaats staan.</string>
     <string name="courant_kamp_title">Informatie over het kamponderdeel: %s</string>
     <string name="courant_kamp_info">Je kan in deze App de informatie van dit kamp bekijken!</string>
+    <string name="link_to_website">Link naar website</string>
+    <string name="acc_plaats_logo">Logo van de plaats</string>
 
 </resources>

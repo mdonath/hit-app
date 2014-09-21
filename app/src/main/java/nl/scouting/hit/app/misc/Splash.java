@@ -79,7 +79,7 @@ public class Splash extends Activity implements KampInfoDownloadViaDownloadManag
 				startActivity(new Intent(Splash.this, Main.class));
 				finish();
 			}
-		}, 5000);
+		}, 3000);
 	}
 
 	private void updateSplashStatus(final String newStatus) {
