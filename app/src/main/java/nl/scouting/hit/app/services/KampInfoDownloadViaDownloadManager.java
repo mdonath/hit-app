@@ -1,19 +1,26 @@
 package nl.scouting.hit.app.services;
 
 import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.ParcelFileDescriptor;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,12 +35,18 @@ public final class KampInfoDownloadViaDownloadManager {
 	private static final String TAG = "KampInfoDownloadViaDownloadManager";
 
 	private static final String HIT_COURANT_ASSET_DATA = "hitcourant.json";
-	private static final String HIT_COURANT_LOCAL_DATA = "HitApp/Courant/" + HIT_COURANT_ASSET_DATA;
+	public static final String APP_PATH = "HitApp/Courant/";
+	private static final String HIT_COURANT_LOCAL_DATA = APP_PATH + HIT_COURANT_ASSET_DATA;
+	private static final String HIT_COURANT_TEMP_DATA = APP_PATH + HIT_COURANT_ASSET_DATA + ".tmp";
 
-	private Context context;
-	private String url;
+	private static final String DL_ID = "downloadId";
+	private final SharedPreferences prefs;
+	private final DownloadManager manager;
 
 	private StatusListener statusListener = StatusListener.NULL_LISTENER;
+	private Context context;
+	private String url;
+	private long updateInterval = 1000 * 60 * 60;
 
 	/**
 	 * Interface for communicating status messages.
@@ -52,6 +65,9 @@ public final class KampInfoDownloadViaDownloadManager {
 
 	public KampInfoDownloadViaDownloadManager(Context context) {
 		this.context = context;
+		prefs = PreferenceManager.getDefaultSharedPreferences(context);
+		// get download service
+		manager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
 	}
 
 	/**
@@ -77,9 +93,20 @@ public final class KampInfoDownloadViaDownloadManager {
 	}
 
 	/**
+	 * Sets the download url on hit.scouting.nl.
+	 *
+	 * @param updateInterval
+	 * @return this
+	 */
+	public KampInfoDownloadViaDownloadManager setUpdateInterval(long updateInterval) {
+		this.updateInterval = updateInterval;
+		return this; // fluent
+	}
+
+	/**
 	 * Updates the data file.
 	 */
-	public void update() {
+	public KampInfoDownloadViaDownloadManager update() {
 		if (url == null || url.isEmpty()) {
 			statusListener.update("Ik weet niet waar ik het moet zoeken");
 			Log.e(TAG, "Geen url geconfigureerd!");
@@ -120,6 +147,7 @@ public final class KampInfoDownloadViaDownloadManager {
 				}
 			}
 		}
+		return this;
 	}
 
 	/**
@@ -166,6 +194,12 @@ public final class KampInfoDownloadViaDownloadManager {
 				, HIT_COURANT_LOCAL_DATA);
 	}
 
+	private static File getLocalTempFile() {
+		return new File( //
+				Environment.getExternalStorageDirectory() //
+				, HIT_COURANT_TEMP_DATA);
+	}
+
 	/**
 	 * Checks whether an update of the data is needed.
 	 *
@@ -191,7 +225,7 @@ public final class KampInfoDownloadViaDownloadManager {
 	private boolean isLastUpdateAtLeastOneHourAgo() {
 		long lastUpdated = getLocalDataFile().lastModified();
 		long now = System.currentTimeMillis();
-		return Math.abs(now - lastUpdated) > 1000 * 60 * 60;
+		return Math.abs(now - lastUpdated) > updateInterval;
 	}
 
 	/**
@@ -277,22 +311,79 @@ public final class KampInfoDownloadViaDownloadManager {
 	 * @param uri
 	 */
 	private void startDownload(final Uri uri) {
-		final DownloadManager.Request request = new DownloadManager.Request(uri);
-		request.setDescription("Nu wordt de laatste versie van de kampcourant opgehaald");
-		request.setTitle("Ophalen laatste gegevens HIT Courant");
-		// in order for this if to run, you must use the android 3.2 to compile your app
+		final File localTempFile = getLocalTempFile();
+		checkParentAndCreate(localTempFile);
+
+		final DownloadManager.Request request = new DownloadManager.Request(uri)
+				.setDescription("Nu wordt de laatste versie van de kampcourant opgehaald")
+				.setTitle("Ophalen laatste gegevens HIT Courant")
+				.setDestinationUri(Uri.fromFile(localTempFile));
+
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
 		}
-		final File localDataFile = getLocalDataFile();
-		request.setDestinationUri(Uri.fromFile(localDataFile));
 
-		// Create destination
-		checkParentAndCreate(localDataFile);
-
-		// get download service
-		final DownloadManager manager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
 		// and enqueue file
-		manager.enqueue(request);
+		long id = manager.enqueue(request);
+		prefs.edit()
+				.putLong(DL_ID, id)
+				.apply();
+
+		receiver = new BroadcastReceiver() {
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				queryDownloadStatus();
+			}
+		};
+		context.registerReceiver(receiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+	}
+
+	private BroadcastReceiver receiver;
+
+	public void stahp() {
+		if (receiver != null) {
+			context.unregisterReceiver(receiver);
+			receiver = null;
+		}
+	}
+
+	private void queryDownloadStatus() {
+		Log.i(TAG, "queryDownloadStatus");
+		DownloadManager.Query query = new DownloadManager.Query();
+		query.setFilterById(prefs.getLong(DL_ID, 0));
+		Cursor c = manager.query(query);
+		if (c.moveToFirst()) {
+			int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+			Log.d(TAG, "Status Check: " + status);
+			switch (status) {
+				case DownloadManager.STATUS_PAUSED:
+				case DownloadManager.STATUS_PENDING:
+				case DownloadManager.STATUS_RUNNING:
+					break;
+				case DownloadManager.STATUS_SUCCESSFUL:
+					try {
+						Log.i(TAG, "Download was succesvol");
+						long id = prefs.getLong(DL_ID, 0);
+						ParcelFileDescriptor file = manager.openDownloadedFile(id);
+						FileInputStream fis = new ParcelFileDescriptor.AutoCloseInputStream(file);
+						File localDataFile = getLocalDataFile();
+						copyFile(fis, new FileOutputStream(localDataFile));
+						Log.i(TAG, "copy file naar " + localDataFile);
+						removeIdFromPrefs();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					break;
+				case DownloadManager.STATUS_FAILED:
+					Log.i(TAG, "Download is mislukt!");
+					removeIdFromPrefs();
+					break;
+			}
+		}
+	}
+
+	private void removeIdFromPrefs() {
+		manager.remove(prefs.getLong(DL_ID, 0));
+		prefs.edit().clear().commit();
 	}
 }

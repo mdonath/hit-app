@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HIT App 2015</string>
+    <string name="app_name">HIT Courant</string>
     <string name="app_version">Versie: %s</string>
     <string name="navigation_drawer_open">Open het menu</string>
     <string name="navigation_drawer_close">Sluit het menu</string>
@@ -9,14 +9,9 @@
 
     <string name="title_activity_about">Over</string>
 
-    <string name="title_section1">Algemeen</string>
-    <string name="title_section2">HIT Alphen</string>
-    <string name="title_section3">Pleisterkamp</string>
-    <string name="title_section4">Punniken</string>
-
     <string name="about_developed_by">Deze App is ontwikkeld door Bwebdesign.nl</string>
     <string name="about_get_help">Bezoek onze website voor meer informatie of ondersteuning. Druk op het logo hierboven.</string>
-    <string name="app_status">Ophalen van informatie...</string>
+    <string name="app_status">Ophalen van informatie&#8230;</string>
     <string name="courant_plaats_title">Informatie over de plaats: %s</string>
     <string name="courant_kamp_title">Informatie over het kamponderdeel: %s</string>
     <string name="courant_kamp_info">Je kan in deze App de informatie van dit kamp bekijken!</string>

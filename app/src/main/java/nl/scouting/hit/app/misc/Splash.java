@@ -20,6 +20,7 @@ import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 public class Splash extends Activity implements KampInfoDownloadViaDownloadManager.StatusListener {
 
 	private static final String TAG = "Splash";
+	private KampInfoDownloadViaDownloadManager kampInfoDownloadViaDownloadManager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +48,10 @@ public class Splash extends Activity implements KampInfoDownloadViaDownloadManag
 	}
 
 	private void checkForUpdates() {
-		new KampInfoDownloadViaDownloadManager(this)
+		kampInfoDownloadViaDownloadManager = new KampInfoDownloadViaDownloadManager(this)
 				.addListener(this)
 				.setDownloadUrl("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate")
+				.setUpdateInterval(24*60*60*1000) // wacht maar een dag
 				.update();
 	}
 
@@ -87,5 +89,11 @@ public class Splash extends Activity implements KampInfoDownloadViaDownloadManag
 				statusTextView.setText(newStatus);
 			}
 		});
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		kampInfoDownloadViaDownloadManager.stahp();
 	}
 }
