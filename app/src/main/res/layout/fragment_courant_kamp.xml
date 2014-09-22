@@ -1,32 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="#ffffffff"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
-    <TextView
-        android:id="@+id/naam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:paddingBottom="20dp"
-        android:text="@string/courant_kamp_title"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#000000"
-        android:textSize="30sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        >
 
-    <TextView
-        android:id="@+id/courantTekst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/naam"
-        android:text="@string/courant_kamp_info"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/naam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/courant_kamp_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="30sp"/>
 
-</RelativeLayout>
+        <HorizontalScrollView
+            android:id="@+id/icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/naam"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/icons_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/infobar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icons"
+            >
+
+            <TextView
+                android:id="@+id/dagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/dummy_dagen"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/separator1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/separator"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/leeftijd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/dummy_leeftijd"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/separator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/separator"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/groep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/dummy_groep"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/separator3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/separator"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/prijs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/dummy_bedrag"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/courantTekst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/infobar"
+            android:text="@string/courant_kamp_info"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingBottom="10dp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -15,10 +15,16 @@
 
     <string name="courant_plaats_title">HIT %s</string>
     <string name="courant_plaats_tekst">Hier moet informatie over de plaats staan.</string>
-    <string name="courant_kamp_title">Informatie over het kamponderdeel: %s</string>
+    <string name="courant_kamp_title">Naam kamponderdeel</string>
     <string name="courant_kamp_info">Je kan in deze App de informatie van dit kamp bekijken!</string>
     <string name="link_to_website">Link naar website</string>
     <string name="acc_plaats_logo">Logo van de plaats</string>
     <string name="kampen_in_plaats_label">Dit zijn de kampen in %s:</string>
+    <string name="separator">|</string>
+    <string name="prijs">€ %d</string>
+    <string name="dummy_dagen">4 - 6 april</string>
+    <string name="dummy_leeftijd">13 - 17 jaar</string>
+    <string name="dummy_groep">1 - 3 pers</string>
+    <string name="dummy_bedrag">€ 42</string>
 
 </resources>

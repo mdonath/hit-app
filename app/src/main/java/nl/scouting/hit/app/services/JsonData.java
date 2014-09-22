@@ -31,6 +31,7 @@ public class JsonData {
 	public static final String ENCODING = "ISO-8859-15";
 
 	private static final HitProject DUMMY = createDummy();
+	public static final String RESOURCE_ICON_PREFIX = "nl.scouting.hit.app:drawable/hit_icon_";
 
 	private static HitProject createDummy() {
 		final HitProject result = new HitProject();
@@ -110,7 +111,10 @@ public class JsonData {
 		final JSONArray iconen = object.getJSONArray(name);
 		for (int i = 0; i < iconen.length(); i++) {
 			final JSONObject icon = iconen.getJSONObject(i);
-			result.add(HitIcon.create(icon.getString("naam"), icon.getString("tekst")));
+
+			final String naam = icon.getString("naam");
+			int resId = context.getResources().getIdentifier(RESOURCE_ICON_PREFIX + naam, null, null);
+			result.add(HitIcon.create(naam, icon.getString("tekst"), resId));
 		}
 		return result;
 	}
@@ -153,6 +157,19 @@ public class JsonData {
 		result.setDeelnamekosten(kamp.getInt("deelnamekosten"));
 		result.setStartDatumTijd(asDateTime(kamp.getString("startDatumTijd")));
 		result.setEindDatumTijd(asDateTime(kamp.getString("eindDatumTijd")));
+		result.setIcoontjes(parseKampIconen(kamp, "icoontjes"));
+		return result;
+	}
+
+	private List<HitIcon> parseKampIconen(final JSONObject kamp, final String name) throws JSONException {
+		final List<HitIcon> result = new ArrayList<HitIcon>();
+		final JSONArray json = kamp.getJSONArray(name);
+		for (int i = 0; i < json.length(); i++) {
+			final HitIcon icon = HitIcon.getByNaam(json.getString(i));
+			if (icon != null) {
+				result.add(icon);
+			}
+		}
 		return result;
 	}
 

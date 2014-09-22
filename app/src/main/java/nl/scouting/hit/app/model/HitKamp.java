@@ -1,5 +1,6 @@
 package nl.scouting.hit.app.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -8,105 +9,128 @@ import java.util.List;
  */
 public class HitKamp extends AbstractHitEntity {
 
-    private HitPlaats plaats;
-    private String naam;
-    private Date startDatumTijd;
-    private Date eindDatumTijd;
-    private int minimumLeeftijd;
-    private int maximumLeeftijd;
-    private String subgroep;
-    private int deelnamekosten;
-    private String hitCourantTekst;
-    private List<HitIcon> icoontjes;
+	private HitPlaats plaats;
+	private String naam;
+	private Date startDatumTijd;
+	private Date eindDatumTijd;
+	private int minimumLeeftijd;
+	private int maximumLeeftijd;
+	private String subgroep;
+	private int deelnamekosten;
+	private String hitCourantTekst;
+	private List<HitIcon> icoontjes;
 
-    @Override
-    public HitEntityEnum getType() {
-        return HitEntityEnum.KAMP;
-    }
+	@Override
+	public HitEntityEnum getType() {
+		return HitEntityEnum.KAMP;
+	}
 
+	public final String formatLeeftijd() {
+		return new StringBuilder()
+				.append(getMinimumLeeftijd())
+				.append(" - ")
+				.append(getMaximumLeeftijd())
+				.toString();
+	}
 
-    @Override
-    public String getLabel() {
-        return getNaam() + " (" + getId() + ")";
-    }
+	public final String formatPeriode() {
+		String vanFormat;
+		if (isSameMonth(this.startDatumTijd, this.eindDatumTijd)) {
+			vanFormat = "dd";
+		} else {
+			vanFormat = "dd MMMM";
+		}
+		return new StringBuilder(new SimpleDateFormat(vanFormat).format(this.startDatumTijd))
+				.append(new SimpleDateFormat(" - dd MMMM").format(this.eindDatumTijd))
+				.toString();
+	}
 
-    public String getNaam() {
-        return naam;
-    }
+	private boolean isSameMonth(final Date startDatumTijd, final Date eindDatumTijd) {
+		return startDatumTijd.getMonth() == eindDatumTijd.getMonth();
+	}
 
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
+	@Override
+	public String getLabel() {
+		return getNaam() + " (" + getId() + ")";
+	}
 
-    public Date getStartDatumTijd() {
-        return startDatumTijd;
-    }
+	public String getNaam() {
+		return naam;
+	}
 
-    public void setStartDatumTijd(Date startDatumTijd) {
-        this.startDatumTijd = startDatumTijd;
-    }
+	public void setNaam(String naam) {
+		this.naam = naam;
+	}
 
-    public Date getEindDatumTijd() {
-        return eindDatumTijd;
-    }
+	public Date getStartDatumTijd() {
+		return startDatumTijd;
+	}
 
-    public void setEindDatumTijd(Date eindDatumTijd) {
-        this.eindDatumTijd = eindDatumTijd;
-    }
+	public void setStartDatumTijd(Date startDatumTijd) {
+		this.startDatumTijd = startDatumTijd;
+	}
 
-    public int getMinimumLeeftijd() {
-        return minimumLeeftijd;
-    }
+	public Date getEindDatumTijd() {
+		return eindDatumTijd;
+	}
 
-    public void setMinimumLeeftijd(int minimumLeeftijd) {
-        this.minimumLeeftijd = minimumLeeftijd;
-    }
+	public void setEindDatumTijd(Date eindDatumTijd) {
+		this.eindDatumTijd = eindDatumTijd;
+	}
 
-    public int getMaximumLeeftijd() {
-        return maximumLeeftijd;
-    }
+	public int getMinimumLeeftijd() {
+		return minimumLeeftijd;
+	}
 
-    public void setMaximumLeeftijd(int maximumLeeftijd) {
-        this.maximumLeeftijd = maximumLeeftijd;
-    }
+	public void setMinimumLeeftijd(int minimumLeeftijd) {
+		this.minimumLeeftijd = minimumLeeftijd;
+	}
 
-    public String getSubgroep() {
-        return subgroep;
-    }
+	public int getMaximumLeeftijd() {
+		return maximumLeeftijd;
+	}
 
-    public void setSubgroep(String subgroep) {
-        this.subgroep = subgroep;
-    }
+	public void setMaximumLeeftijd(int maximumLeeftijd) {
+		this.maximumLeeftijd = maximumLeeftijd;
+	}
 
-    public int getDeelnamekosten() {
-        return deelnamekosten;
-    }
+	public String getSubgroep() {
+		return subgroep;
+	}
 
-    public void setDeelnamekosten(int deelnamekosten) {
-        this.deelnamekosten = deelnamekosten;
-    }
+	public void setSubgroep(String subgroep) {
+		this.subgroep = subgroep;
+	}
 
-    public String getHitCourantTekst() {
-        return hitCourantTekst;
-    }
+	public int getDeelnamekosten() {
+		return deelnamekosten;
+	}
 
-    public void setHitCourantTekst(String hitCourantTekst) {
-        this.hitCourantTekst = hitCourantTekst;
-    }
+	public void setDeelnamekosten(int deelnamekosten) {
+		this.deelnamekosten = deelnamekosten;
+	}
 
-    public List<HitIcon> getIcoontjes() {
-        return icoontjes;
-    }
+	public String getHitCourantTekst() {
+		return hitCourantTekst;
+	}
 
-    public void setIcoontjes(List<HitIcon> icoontjes) {
-        this.icoontjes = icoontjes;
-    }
+	public void setHitCourantTekst(String hitCourantTekst) {
+		this.hitCourantTekst = hitCourantTekst;
+	}
 
-    public HitPlaats getPlaats() {
-        return plaats;
-    }
+	public List<HitIcon> getIcoontjes() {
+		return icoontjes;
+	}
 
-    public void setPlaats(HitPlaats plaats) {
-        this.plaats = plaats;
-    }
+	public void setIcoontjes(List<HitIcon> icoontjes) {
+		this.icoontjes = icoontjes;
+	}
+
+	public HitPlaats getPlaats() {
+		return plaats;
+	}
+
+	public void setPlaats(HitPlaats plaats) {
+		this.plaats = plaats;
+	}
 }
