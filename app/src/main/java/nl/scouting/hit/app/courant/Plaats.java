@@ -2,9 +2,11 @@ package nl.scouting.hit.app.courant;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.components.ExpandableHeightListView;
 import nl.scouting.hit.app.model.HitKamp;
+import nl.scouting.hit.app.model.HitKampRO;
 import nl.scouting.hit.app.model.HitPlaats;
 import nl.scouting.hit.app.style.PlaatsStyle;
 import nl.scouting.hit.app.util.AvailableUtil;
@@ -27,6 +30,7 @@ import nl.scouting.hit.app.util.TextUtil;
 public class Plaats extends Fragment {
 
 	public static final String PARAM_ID = "courant.plaats.id";
+	private static final String TAG = "PlaatsFragment";
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
@@ -81,20 +85,40 @@ public class Plaats extends Fragment {
 		TextView label = (TextView) view.findViewById(R.id.kampen_label);
 		label.setText(inflater.getContext().getString(R.string.kampen_in_plaats_label, plaats.getNaam()));
 
-		final List<String> list = new ArrayList<String>();
+		final List<HitKamp> list = new ArrayList<HitKamp>();
 		for (HitKamp kamp : plaats.getKampen()) {
-			list.add(kamp.getNaam());
+			list.add(new HitKampRO(kamp) {
+				@Override
+				public String toString() {
+					return getNaam();
+				}
+			});
 		}
 
-		final ArrayAdapter adapter = new ArrayAdapter(
+		final ArrayAdapter<HitKamp> adapter = new ArrayAdapter<HitKamp>(
 				getActivity().getApplicationContext()
 				, R.layout.list_plaats_kampen
 				, R.id.naam
-				, list.toArray(new String[list.size()])
+				, list
 		);
-
 		final ExpandableHeightListView listview = (ExpandableHeightListView) view.findViewById(R.id.kampen);
 		listview.setExpanded(true);
 		listview.setAdapter(adapter);
+
+		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
+				HitKamp kamp = (HitKamp) parent.getItemAtPosition(position);
+				Log.i(TAG, "Kamp gevonden: " + kamp);
+				Fragment fragment = new Kamp();
+				Bundle bundle = new Bundle();
+				bundle.putLong(Kamp.PARAM_ID, kamp.getId());
+				fragment.setArguments(bundle);
+				getFragmentManager()
+						.beginTransaction()
+						.replace(R.id.container, fragment)
+						.commit();
+			}
+		});
 	}
 }
