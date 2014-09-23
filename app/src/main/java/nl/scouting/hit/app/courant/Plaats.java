@@ -20,6 +20,7 @@ import nl.scouting.hit.app.components.ExpandableHeightListView;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitKampRO;
 import nl.scouting.hit.app.model.HitPlaats;
+import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.style.PlaatsStyle;
 import nl.scouting.hit.app.util.AvailableUtil;
 import nl.scouting.hit.app.util.TextUtil;
@@ -51,7 +52,7 @@ public class Plaats extends Fragment {
 
 	private HitPlaats getHitPlaats() {
 		final long id = getArguments().getLong(PARAM_ID);
-		return ((Main) getActivity()).getHitProject().getHitPlaatsById(id);
+		return ((HitProjectContainable) getActivity()).getHitProject().getHitPlaatsById(id);
 	}
 
 	private void setTitle(LayoutInflater inflater, HitPlaats plaats, View view) {

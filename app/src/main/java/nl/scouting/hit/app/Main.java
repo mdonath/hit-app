@@ -16,6 +16,7 @@ import nl.scouting.hit.app.courant.Plaats;
 import nl.scouting.hit.app.misc.About;
 import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitProject;
+import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.services.JsonData;
 import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
@@ -23,7 +24,7 @@ import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
  * Main of the app.
  */
 public class Main extends Activity
-		implements NavigationDrawer.NavigationDrawerCallbacks {
+		implements NavigationDrawer.NavigationDrawerCallbacks, HitProjectContainable {
 
 	/**
 	 * Fragment managing the behaviors, interactions and presentation of the navigation drawer.

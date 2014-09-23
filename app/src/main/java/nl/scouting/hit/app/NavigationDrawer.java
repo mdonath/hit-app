@@ -21,6 +21,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import nl.scouting.hit.app.model.HitProject;
+import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.nav.HitEntityArrayAdapter;
 
 /**
@@ -177,7 +178,7 @@ public class NavigationDrawer extends Fragment {
 	}
 
 	private ListAdapter createAdapter() {
-		final HitProject hitProject = ((Main) getActivity()).getHitProject();
+		final HitProject hitProject = ((HitProjectContainable) getActivity()).getHitProject();
 		return new HitEntityArrayAdapter(
 				getActionBar().getThemedContext(), hitProject.getOrderedList());
 	}

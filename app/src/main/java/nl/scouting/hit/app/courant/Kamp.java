@@ -13,6 +13,7 @@ import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitIcon;
 import nl.scouting.hit.app.model.HitKamp;
+import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.util.TextUtil;
 
 /**
@@ -39,7 +40,7 @@ public class Kamp extends Fragment {
 
 	private HitKamp getHitKamp() {
 		long id = getArguments().getLong(PARAM_ID);
-		return ((Main) getActivity()).getHitProject().getHitKampById(id);
+		return ((HitProjectContainable) getActivity()).getHitProject().getHitKampById(id);
 	}
 
 	private void setTitle(LayoutInflater inflater, HitKamp kamp, View view) {
