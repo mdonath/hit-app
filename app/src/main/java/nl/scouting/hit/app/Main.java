@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import nl.scouting.hit.app.courant.Kamp;
 import nl.scouting.hit.app.courant.Plaats;
@@ -133,5 +134,17 @@ public class Main extends Activity
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private static long back_pressed;
+
+	@Override
+	public void onBackPressed() {
+		if (back_pressed + 2000 > System.currentTimeMillis()) {
+			super.onBackPressed();
+		} else {
+			Toast.makeText(getBaseContext(), getString(R.string.double_back_to_exit), Toast.LENGTH_SHORT).show();
+		}
+		back_pressed = System.currentTimeMillis();
 	}
 }

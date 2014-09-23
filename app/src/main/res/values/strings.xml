@@ -26,5 +26,6 @@
     <string name="dummy_leeftijd">13 - 17 jaar</string>
     <string name="dummy_groep">1 - 3 pers</string>
     <string name="dummy_bedrag">€ 42</string>
+    <string name="double_back_to_exit">Twee keer om af te sluiten!</string>
 
 </resources>
