@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    android:orientation="horizontal"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#ffffffff">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welkom,"
-        android:id="@+id/textView"
-        android:textColor="#000000"
-        android:layout_above="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="26dp"
-        android:textSize="30dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Je kan in deze App de verschillende HIT onderdelen bekijken!"
-        android:id="@+id/textView2"
-        android:textColor="#000000"
-        android:layout_gravity="center_vertical"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="41dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:text="@string/welcome"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="30sp"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/welcome_intro"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"/>
+
+        <nl.scouting.hit.app.components.ExpandableHeightListView
+            android:id="@+id/kampen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:scrollbars="none"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</ScrollView>

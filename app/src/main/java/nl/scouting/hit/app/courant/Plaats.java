@@ -2,11 +2,9 @@ package nl.scouting.hit.app.courant;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +12,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.scouting.hit.app.Main;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.components.ExpandableHeightListView;
 import nl.scouting.hit.app.model.HitKamp;
@@ -106,20 +103,6 @@ public class Plaats extends Fragment {
 		listview.setExpanded(true);
 		listview.setAdapter(adapter);
 
-		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			@Override
-			public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
-				HitKamp kamp = (HitKamp) parent.getItemAtPosition(position);
-				Log.i(TAG, "Kamp gevonden: " + kamp);
-				Fragment fragment = new Kamp();
-				Bundle bundle = new Bundle();
-				bundle.putLong(Kamp.PARAM_ID, kamp.getId());
-				fragment.setArguments(bundle);
-				getFragmentManager()
-						.beginTransaction()
-						.replace(R.id.container, fragment)
-						.commit();
-			}
-		});
+		listview.setOnItemClickListener(new KampOnItemClickListener(this));
 	}
 }

@@ -68,6 +68,18 @@ public class HitProject extends AbstractHitEntity {
 		return this.orderedList;
 	}
 
+	public List<HitKamp> getKampen() {
+		final List<HitKamp> result = new ArrayList<HitKamp>();
+		if (plaatsen != null) {
+			for (HitPlaats plaats : plaatsen) {
+				for (HitKamp kamp : plaats.getKampen()) {
+					result.add(kamp);
+				}
+			}
+		}
+		return result;
+	}
+
 	private List<AbstractHitEntity> createOrderedList() {
 		List<AbstractHitEntity> result = new ArrayList<AbstractHitEntity>();
 		result.add(this);

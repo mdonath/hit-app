@@ -98,6 +98,7 @@ public class Main extends Activity
 		fragmentManager //
 				.beginTransaction()
 				.replace(R.id.container, fragment)
+				.addToBackStack(null)
 				.commit();
 	}
 
@@ -140,10 +141,10 @@ public class Main extends Activity
 
 	@Override
 	public void onBackPressed() {
-		if (back_pressed + 2000 > System.currentTimeMillis()) {
-			super.onBackPressed();
-		} else {
+		if (getFragmentManager().getBackStackEntryCount() == 0 && back_pressed + 1000 <= System.currentTimeMillis()) {
 			Toast.makeText(getBaseContext(), getString(R.string.double_back_to_exit), Toast.LENGTH_SHORT).show();
+		} else {
+			super.onBackPressed();
 		}
 		back_pressed = System.currentTimeMillis();
 	}
