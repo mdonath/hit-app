@@ -3,7 +3,6 @@ package nl.scouting.hit.app;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -66,7 +65,7 @@ public class NavigationDrawer extends Fragment {
 	 * @param fragmentId   The android:id of this fragment in its activity's layout.
 	 * @param drawerLayout The DrawerLayout containing this fragment's UI.
 	 */
-	public void setUp(int fragmentId, DrawerLayout drawerLayout) {
+	public void setUp(final int fragmentId, final DrawerLayout drawerLayout) {
 		mFragmentContainerView = getActivity().findViewById(fragmentId);
 		mDrawerLayout = drawerLayout;
 
@@ -93,8 +92,6 @@ public class NavigationDrawer extends Fragment {
 				if (!isAdded()) {
 					return;
 				}
-
-				getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 
 			@Override
@@ -108,12 +105,11 @@ public class NavigationDrawer extends Fragment {
 					// The user manually opened the drawer; store this flag to prevent auto-showing
 					// the navigation drawer automatically in the future.
 					mUserLearnedDrawer = true;
-					SharedPreferences sp = PreferenceManager
-							.getDefaultSharedPreferences(getActivity());
-					sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER, true).apply();
+					PreferenceManager.getDefaultSharedPreferences(getActivity())
+							.edit()
+							.putBoolean(PREF_USER_LEARNED_DRAWER, true)
+							.apply();
 				}
-
-				getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 		};
 
@@ -140,8 +136,8 @@ public class NavigationDrawer extends Fragment {
 
 		// Read in the flag indicating whether or not the user has demonstrated awareness of the
 		// drawer. See PREF_USER_LEARNED_DRAWER for details.
-		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-		mUserLearnedDrawer = sp.getBoolean(PREF_USER_LEARNED_DRAWER, false);
+		mUserLearnedDrawer = PreferenceManager.getDefaultSharedPreferences(getActivity())
+				.getBoolean(PREF_USER_LEARNED_DRAWER, false);
 
 		if (savedInstanceState != null) {
 			mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);

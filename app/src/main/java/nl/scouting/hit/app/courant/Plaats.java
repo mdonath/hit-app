@@ -1,10 +1,11 @@
 package nl.scouting.hit.app.courant;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import java.util.List;
 
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.components.ExpandableHeightListView;
+import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitKampRO;
 import nl.scouting.hit.app.model.HitPlaats;
@@ -22,10 +24,12 @@ import nl.scouting.hit.app.style.PlaatsStyle;
 import nl.scouting.hit.app.util.AvailableUtil;
 import nl.scouting.hit.app.util.TextUtil;
 
+import static nl.scouting.hit.app.util.TextUtil.setText;
+
 /**
  * Shows the information for a 'HIT-plaats'.
  */
-public class Plaats extends Fragment {
+public class Plaats extends Fragment implements AdapterView.OnItemClickListener {
 
 	public static final String PARAM_ID = "courant.plaats.id";
 	private static final String TAG = "PlaatsFragment";
@@ -49,12 +53,15 @@ public class Plaats extends Fragment {
 
 	private HitPlaats getHitPlaats() {
 		final long id = getArguments().getLong(PARAM_ID);
-		return ((HitProjectContainable) getActivity()).getHitProject().getHitPlaatsById(id);
+		return getHitContainer().getHitProject().getHitPlaatsById(id);
+	}
+
+	private HitProjectContainable getHitContainer() {
+		return ((HitProjectContainable) getActivity());
 	}
 
 	private void setTitle(LayoutInflater inflater, HitPlaats plaats, View view) {
-		final TextView tv = (TextView) view.findViewById(R.id.naam);
-		tv.setText(inflater.getContext().getString(R.string.courant_plaats_title, plaats.getNaam()));
+		setText(view, R.id.naam, inflater.getContext().getString(R.string.courant_plaats_title, plaats.getNaam()));
 	}
 
 	private void setLogo(LayoutInflater inflater, HitPlaats plaats, View view) {
@@ -63,20 +70,17 @@ public class Plaats extends Fragment {
 	}
 
 	private void setWeblink(final LayoutInflater inflater, final HitPlaats plaats, final View view) {
-		final TextView tv = (TextView) view.findViewById(R.id.weblink);
 		String url;
 		if (AvailableUtil.isNetworkAvailable(inflater.getContext())) {
 			url = "https://hit.scouting.nl/" + plaats.getNaam().toLowerCase() + "/";
 		} else {
 			url = "";
 		}
-		tv.setText(url);
+		setText(view, R.id.weblink, url);
 	}
 
 	private void setCourantTekst(LayoutInflater inflater, HitPlaats plaats, View view) {
-		final TextView courantTekst = (TextView) view.findViewById(R.id.courantTekst);
-
-		courantTekst.setText(TextUtil.cleanUp(plaats.getHitCourantTekst()));
+		setText(view, R.id.courantTekst, TextUtil.cleanUp(plaats.getHitCourantTekst()));
 	}
 
 	private void setKampen(LayoutInflater inflater, HitPlaats plaats, View view) {
@@ -103,6 +107,11 @@ public class Plaats extends Fragment {
 		listview.setExpanded(true);
 		listview.setAdapter(adapter);
 
-		listview.setOnItemClickListener(new KampOnItemClickListener(this));
+		listview.setOnItemClickListener(this);
+	}
+
+	@Override
+	public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
+		getHitContainer().show((AbstractHitEntity) parent.getItemAtPosition(position));
 	}
 }

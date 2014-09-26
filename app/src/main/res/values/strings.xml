@@ -28,6 +28,6 @@
     <string name="dummy_bedrag">€ 42</string>
     <string name="double_back_to_exit">Twee keer om af te sluiten!</string>
     <string name="welcome">Welkom,</string>
-    <string name="welcome_intro">Je kan in deze App de HIT Courant bekijken met de volgende kampen:</string>
+    <string name="welcome_intro">Dit jaar kun je kiezen uit de volgende HIT\'s:</string>
 
 </resources>

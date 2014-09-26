@@ -37,7 +37,8 @@
                     android:text="@string/courant_plaats_title"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textSize="30sp"/>
 
                 <TextView
                     android:id="@+id/weblink"

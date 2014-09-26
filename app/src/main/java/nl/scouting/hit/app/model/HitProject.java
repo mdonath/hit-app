@@ -81,12 +81,14 @@ public class HitProject extends AbstractHitEntity {
 	}
 
 	private List<AbstractHitEntity> createOrderedList() {
+		int kampIndex = 1;
 		List<AbstractHitEntity> result = new ArrayList<AbstractHitEntity>();
 		result.add(this);
 		if (plaatsen != null) {
 			for (HitPlaats plaats : plaatsen) {
 				result.add(plaats);
 				for (HitKamp kamp : plaats.getKampen()) {
+					kamp.setKampIndex(kampIndex++);
 					result.add(kamp);
 				}
 			}

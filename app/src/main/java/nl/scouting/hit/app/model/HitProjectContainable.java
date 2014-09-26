@@ -9,4 +9,6 @@ public interface HitProjectContainable {
 	 * @return the current HitProject
 	 */
 	HitProject getHitProject();
+
+	void show(AbstractHitEntity hitEntity);
 }

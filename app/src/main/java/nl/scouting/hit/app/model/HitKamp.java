@@ -19,6 +19,7 @@ public class HitKamp extends AbstractHitEntity {
 	private int deelnamekosten;
 	private String hitCourantTekst;
 	private List<HitIcon> icoontjes;
+	private int kampIndex;
 
 	@Override
 	public HitEntityEnum getType() {
@@ -132,5 +133,13 @@ public class HitKamp extends AbstractHitEntity {
 
 	public void setPlaats(HitPlaats plaats) {
 		this.plaats = plaats;
+	}
+
+	public int getKampIndex() {
+		return kampIndex;
+	}
+
+	public void setKampIndex(final int kampIndex) {
+		this.kampIndex = kampIndex;
 	}
 }

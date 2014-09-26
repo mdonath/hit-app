@@ -13,6 +13,9 @@ public class HitKampRO extends HitKamp {
 		this.wrapped = wrapped;
 	}
 
+	public boolean equals(Object o) {
+		return this.wrapped.equals(o);
+	}
 	@Override
 	public HitPlaats getPlaats() {
 		return wrapped.getPlaats();
