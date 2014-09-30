@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/image_icon_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/text_icon_alert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff2d2d2d"
+        android:layout_toRightOf="@+id/image_icon_alert"
+        android:paddingBottom="30dp" />/>
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Sluit dit venster "
+        android:singleLine="true"
+        android:background="#ffd9d9d9"
+        android:padding="5dp"
+        android:layout_below="@+id/text_icon_alert"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp" />
+
+</RelativeLayout>

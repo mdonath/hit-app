@@ -31,6 +31,7 @@ public class HitKamp extends AbstractHitEntity {
 				.append(getMinimumLeeftijd())
 				.append(" - ")
 				.append(getMaximumLeeftijd())
+                .append(" jaar")
 				.toString();
 	}
 

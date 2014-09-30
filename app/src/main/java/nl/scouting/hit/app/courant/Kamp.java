@@ -3,6 +3,7 @@ package nl.scouting.hit.app.courant;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitIcon;
+import nl.scouting.hit.app.model.HitIconAlert;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.style.HitColor;
@@ -54,11 +58,34 @@ public class Kamp extends Fragment {
 		setText(view, R.id.index, String.valueOf(kamp.getKampIndex() + "/" + kamp.getPlaats().getProject().getKampen().size()));
 	}
 
+
+
+
+
+
 	private void setIconsbar(final LayoutInflater inflater, final HitKamp kamp, final View view) {
-		final LinearLayout iconsView = (LinearLayout) view.findViewById(R.id.icons_container);
+
+        ArrayList<ImageView> imageViews = new ArrayList<ImageView>();
+        final LinearLayout iconsView = (LinearLayout) view.findViewById(R.id.icons_container);
 
 		for (final HitIcon icon : kamp.getIcoontjes()) {
-			iconsView.addView(createImageView(inflater, icon));
+            ImageView verwerk_imageview = createImageView(inflater, icon);
+
+			iconsView.addView(verwerk_imageview);
+            imageViews.add(verwerk_imageview);
+
+            //Onclick voor meer informatie over icoon
+            final HitIconAlert detail_alert = new HitIconAlert(getActivity());
+
+            verwerk_imageview.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    detail_alert.tonen(icon);
+                    Log.i("KampIconAlert", "Getoond voor "+icon.getNaam());
+
+                }
+            });
+
 		}
 	}
 

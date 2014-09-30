@@ -27,6 +27,7 @@ public class HitIcon {
 		return null;
 	}
 
+
 	public HitIcon(String naam, String tekst, final int resId) {
 		this.naam = naam;
 		this.tekst = tekst;
