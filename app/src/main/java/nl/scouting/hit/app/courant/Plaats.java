@@ -32,7 +32,6 @@ import static nl.scouting.hit.app.util.TextUtil.setText;
 public class Plaats extends Fragment implements AdapterView.OnItemClickListener {
 
 	public static final String PARAM_ID = "courant.plaats.id";
-	private static final String TAG = "PlaatsFragment";
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
@@ -40,13 +39,13 @@ public class Plaats extends Fragment implements AdapterView.OnItemClickListener 
 
 		final HitPlaats plaats = getHitPlaats();
 
-		setTitle(inflater, plaats, view);
-		setLogo(inflater, plaats, view);
-		setWeblink(inflater, plaats, view);
+		setTitle(plaats, view);
+		setLogo(plaats, view);
+		setWeblink(plaats, view);
 
-		setCourantTekst(inflater, plaats, view);
+		setCourantTekst(plaats, view);
 
-		setKampen(inflater, plaats, view);
+		setKampen(plaats, view);
 
 		return view;
 	}
@@ -60,18 +59,18 @@ public class Plaats extends Fragment implements AdapterView.OnItemClickListener 
 		return ((HitProjectContainable) getActivity());
 	}
 
-	private void setTitle(LayoutInflater inflater, HitPlaats plaats, View view) {
-		setText(view, R.id.naam, inflater.getContext().getString(R.string.courant_plaats_title, plaats.getNaam()));
+	private void setTitle(final HitPlaats plaats, final View view) {
+		setText(view, R.id.naam, view.getContext().getString(R.string.courant_plaats_title, plaats.getNaam()));
 	}
 
-	private void setLogo(LayoutInflater inflater, HitPlaats plaats, View view) {
+	private void setLogo(final HitPlaats plaats, final View view) {
 		final ImageView iv = (ImageView) view.findViewById(R.id.logo);
 		iv.setImageResource(PlaatsStyle.by(plaats).logoBig);
 	}
 
-	private void setWeblink(final LayoutInflater inflater, final HitPlaats plaats, final View view) {
+	private void setWeblink(final HitPlaats plaats, final View view) {
 		String url;
-		if (AvailableUtil.isNetworkAvailable(inflater.getContext())) {
+		if (AvailableUtil.isNetworkAvailable(view.getContext())) {
 			url = "https://hit.scouting.nl/" + plaats.getNaam().toLowerCase() + "/";
 		} else {
 			url = "";
@@ -79,13 +78,13 @@ public class Plaats extends Fragment implements AdapterView.OnItemClickListener 
 		setText(view, R.id.weblink, url);
 	}
 
-	private void setCourantTekst(LayoutInflater inflater, HitPlaats plaats, View view) {
+	private void setCourantTekst(final HitPlaats plaats, final View view) {
 		setText(view, R.id.courantTekst, TextUtil.cleanUp(plaats.getHitCourantTekst()));
 	}
 
-	private void setKampen(LayoutInflater inflater, HitPlaats plaats, View view) {
+	private void setKampen(final HitPlaats plaats, final View view) {
 		TextView label = (TextView) view.findViewById(R.id.kampen_label);
-		label.setText(inflater.getContext().getString(R.string.kampen_in_plaats_label, plaats.getNaam()));
+		label.setText(view.getContext().getString(R.string.kampen_in_plaats_label, plaats.getNaam()));
 
 		final List<HitKamp> list = new ArrayList<HitKamp>();
 		for (HitKamp kamp : plaats.getKampen()) {

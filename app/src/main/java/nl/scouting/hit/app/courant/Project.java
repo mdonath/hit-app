@@ -32,9 +32,9 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		View inflate = inflater.inflate(R.layout.fragment_welcome, container, false);
-		setKampen(inflater, inflate);
-		return inflate;
+		View view = inflater.inflate(R.layout.fragment_welcome, container, false);
+		setKampen(view);
+		return view;
 	}
 
 	private HitProject getHitProject() {
@@ -45,7 +45,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 		return ((HitProjectContainable) this.getActivity());
 	}
 
-	private void setKampen(final LayoutInflater inflater, final View view) {
+	private void setKampen(final View view) {
 		final ExpandableHeightListView listview = (ExpandableHeightListView) view.findViewById(R.id.kampen);
 		listview.setExpanded(true);
 		listview.setAdapter(new HitKampArrayAdapter(
@@ -58,7 +58,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 	/**
 	 * Returns only items of type HitKamp, sorted by name.
 	 *
-	 * @return
+	 * @return a list containing only HitKamp
 	 */
 	private List<HitKamp> getHitKampsOnly() {
 		final List<HitKamp> list = new ArrayList<HitKamp>();
@@ -104,7 +104,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 			HitKamp kamp = getItem(position);
 			View view;
 			if (convertView == null) {
-				view = (View) mInflater.inflate(R.layout.list_plaats_kampen_met_plaats, null);
+				view = mInflater.inflate(R.layout.list_plaats_kampen_met_plaats, null);
 				// Do some initialization
 			} else {
 				view = convertView;
