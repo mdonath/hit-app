@@ -30,5 +30,11 @@
     <string name="welcome">Welkom,</string>
     <string name="welcome_intro">Dit jaar kun je kiezen uit de volgende HIT\'s:</string>
     <string name="dummy_plaats">Alphen</string>
+    <string name="action_search">Zoeken</string>
+    <string name="zoek_intro">Zoek naar je favoriete HIT:</string>
+    <string name="leeftijdLabel">Leeftijd:</string>
+    <string name="prijsLabel">Prijs:</string>
+    <string name="plaatsLabel">Plaats:</string>
+    <string name="aantal_gevonden">De volgende %1$d kampen zijn gevonden %2$s:</string>
 
 </resources>

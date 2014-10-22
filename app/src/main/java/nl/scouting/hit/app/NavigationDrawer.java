@@ -243,7 +243,7 @@ public class NavigationDrawer extends Fragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Show the navigation drawer or else...
-		return mDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+		return (mDrawerToggle != null && mDrawerToggle.onOptionsItemSelected(item)) || super.onOptionsItemSelected(item);
 	}
 
 	/**
