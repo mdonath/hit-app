@@ -10,4 +10,5 @@
     android:singleLine="true"
     android:paddingBottom="2dp"
     android:paddingTop="2dp"
-    android:textAlignment="inherit"/>
+    android:textAlignment="inherit"
+    android:textColor="#ff000001" />
