@@ -374,7 +374,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 					} else {
 						result.append(" met");
 					}
-					result.append(" een prijs niet hoger dan ").append(prijs);
+					result.append(" een prijs niet hoger dan €").append(prijs);
 				}
 				if (plaats != null) {
 					if (result.length() > 0) {
