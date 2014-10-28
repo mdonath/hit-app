@@ -23,7 +23,7 @@
             android:textColor="#000001"/>
 
         <GridLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
             android:rowOrderPreserved="true">
@@ -36,7 +36,7 @@
 
             <SeekBar
                 android:id="@+id/leeftijd"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:max="88"
 
@@ -71,7 +71,10 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:text="@string/aantal_gevonden"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp" />
 
         <nl.scouting.hit.app.components.ExpandableHeightListView
             android:id="@+id/kampen"

@@ -244,8 +244,16 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 				filter.filter("leeftijd", new Filter.FilterListener() {
 					@Override
 					public void onFilterComplete(final int count) {
-						TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
-						aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
+                        TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
+                        if(count > 1) {
+                            aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
+                        }else{
+                            if (count < 1){
+                                aantal.setText(view.getContext().getString(R.string.aantal_gevonden_geen, count, filter.criteria()));
+                            } else {
+                                aantal.setText(view.getContext().getString(R.string.aantal_gevonden_enkelvoud, count, filter.criteria()));
+                            }
+                        }
 					}
 				});
 			}
@@ -374,7 +382,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 					} else {
 						result.append(" met");
 					}
-					result.append(" een prijs niet hoger dan €").append(prijs);
+					result.append(" een prijs niet hoger dan ").append(prijs);
 				}
 				if (plaats != null) {
 					if (result.length() > 0) {
