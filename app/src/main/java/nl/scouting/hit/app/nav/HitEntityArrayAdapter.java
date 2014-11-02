@@ -18,7 +18,7 @@ public class HitEntityArrayAdapter extends ArrayAdapter<Item> {
 	private LayoutInflater mInflater;
 
 	public enum RowType {
-		KAMP_ITEM, PLAATS_ITEM
+		KAMP_ITEM, PLAATS_ITEM, PROJECT_ITEM, KIEZER_ITEM, ICOONTJES_ITEM;
 	}
 
 	public HitEntityArrayAdapter(Context context, List<AbstractHitEntity> items) {
@@ -27,19 +27,27 @@ public class HitEntityArrayAdapter extends ArrayAdapter<Item> {
 	}
 
 	private static List<Item> convert(List<AbstractHitEntity> items) {
+		int index = 0;
 		List<Item> result = new ArrayList<Item>();
 		for (AbstractHitEntity e : items) {
 			switch (e.getType()) {
 				case PROJECT:
-					result.add(new ProjectItem((HitProject) e));
+					result.add(new ProjectItem((HitProject) e, index));
+					break;
+				case KIEZER:
+					result.add(new KiezerItem(index));
+					break;
+				case ICOONTJES:
+					result.add(new IcoontjesItem(index));
 					break;
 				case PLAATS:
-					result.add(new PlaatsItem((HitPlaats) e));
+					result.add(new PlaatsItem((HitPlaats) e, index));
 					break;
 				case KAMP:
-					result.add(new KampItem((HitKamp) e));
+					result.add(new KampItem((HitKamp) e, index));
 					break;
 			}
+			index++;
 		}
 		return result;
 	}

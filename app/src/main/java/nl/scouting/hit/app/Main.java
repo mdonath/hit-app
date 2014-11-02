@@ -1,27 +1,23 @@
 package nl.scouting.hit.app;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.util.Stack;
 
-import nl.scouting.hit.app.courant.Kamp;
-import nl.scouting.hit.app.courant.Plaats;
-import nl.scouting.hit.app.courant.Project;
+import nl.scouting.hit.app.components.HitCourantPagerAdapter;
+import nl.scouting.hit.app.components.ZoomOutPageTransformer;
 import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitProject;
 import nl.scouting.hit.app.model.HitProjectContainable;
+import nl.scouting.hit.app.nav.AbstractIndexedItem;
+import nl.scouting.hit.app.nav.Item;
 import nl.scouting.hit.app.services.JsonData;
 import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 
@@ -31,41 +27,20 @@ import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 public class Main extends FragmentActivity
 		implements NavigationDrawer.NavigationDrawerCallbacks, HitProjectContainable {
 
+	private static final String TAG = "Main";
 	private ViewPager viewPager;
 
 	private HitProject hitProject;
 
-    private ArrayList<Integer> HuidigFragmentPosition = new ArrayList<Integer>();
+	private Stack<Integer> huidigFragmentPosition = new Stack<Integer>();
 
 	public HitProject getHitProject() {
 		if (hitProject == null) {
+			Log.i(TAG, "Loading data!!!!");
 			hitProject = new JsonData(getApplicationContext()).parse(KampInfoDownloadViaDownloadManager.getLocalDataFile());
 		}
 		return hitProject;
 	}
-
-	public void show(AbstractHitEntity hitEntity) {
-		getSupportFragmentManager().beginTransaction().addToBackStack(hitEntity.getLabel()).commit();
-		int position = getHitProject().getOrderedList().indexOf(hitEntity);
-
-		showItemAtPosition(position);
-	}
-
-    public void goBackFragment() {
-
-        if (viewPager != null) {
-
-            if(HuidigFragmentPosition.isEmpty()){}else {
-
-                int laatsteIndex = HuidigFragmentPosition.size()-1;
-                int position = HuidigFragmentPosition.get(laatsteIndex);
-
-
-                showItemAtPosition(position);
-            }
-
-        }
-    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +49,12 @@ public class Main extends FragmentActivity
 		setContentView(R.layout.activity_main);
 
 		viewPager = (ViewPager) findViewById(R.id.container);
-		viewPager.setAdapter(new CustomPagerAdapter(getSupportFragmentManager()));
+		viewPager.setAdapter(new HitCourantPagerAdapter(getSupportFragmentManager(), new HitCourantPagerAdapter.DataContext() {
+			@Override
+			public HitProject getHitProject() {
+				return Main.this.getHitProject();
+			}
+		}));
 		viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
 
 		final NavigationDrawer mNavigationDrawer = (NavigationDrawer)
@@ -82,154 +62,71 @@ public class Main extends FragmentActivity
 		mNavigationDrawer.setUp(
 				R.id.navigation_drawer,
 				(DrawerLayout) findViewById(R.id.drawer_layout));
-
-
-
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int arg0) {
-
-                //Aan array voor back button toevoegen
-                HuidigFragmentPosition.add(arg0);
-
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-
-
-            }
-        });
-
-
-
-
-	}
-
-	private class ZoomOutPageTransformer implements ViewPager.PageTransformer {
-		private static final float MIN_SCALE = 0.85f;
-		private static final float MIN_ALPHA = 0.5f;
-
-		public void transformPage(View view, float position) {
-			int pageWidth = view.getWidth();
-			int pageHeight = view.getHeight();
-
-			if (position < -1) { // [-Infinity,-1)
-				// This page is way off-screen to the left.
-				view.setAlpha(0);
-			} else if (position <= 1) { // [-1,1]
-				// Modify the default slide transition to shrink the page as well
-				float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
-				float vertMargin = pageHeight * (1 - scaleFactor) / 2;
-				float horzMargin = pageWidth * (1 - scaleFactor) / 2;
-				if (position < 0) {
-					view.setTranslationX(horzMargin - vertMargin / 2);
-				} else {
-					view.setTranslationX(-horzMargin + vertMargin / 2);
-				}
-
-				// Scale the page down (between MIN_SCALE and 1)
-				view.setScaleX(scaleFactor);
-				view.setScaleY(scaleFactor);
-
-				// Fade the page relative to its size.
-				view.setAlpha(MIN_ALPHA +
-						(scaleFactor - MIN_SCALE) /
-								(1 - MIN_SCALE) * (1 - MIN_ALPHA));
-			} else { // (1,+Infinity]
-				// This page is way off-screen to the right.
-				view.setAlpha(0);
-			}
-		}
-	}
-
-	private class CustomPagerAdapter extends FragmentStatePagerAdapter {
-
-		public CustomPagerAdapter(FragmentManager fragmentManager) {
-			super(fragmentManager);
-		}
-
-		@Override
-		public Fragment getItem(final int position) {
-			final AbstractHitEntity obj = getHitProject().getByIndex(position);
-			return createFragmentForHitEntity(obj);
-		}
-
-		private Fragment createFragmentForHitEntity(final AbstractHitEntity obj) {
-			final Fragment fragment;
-			switch (obj.getType()) {
-				case KAMP: {
-					fragment = addArguments(new Kamp(), Kamp.PARAM_ID, obj);
-					break;
-				}
-				case PLAATS: {
-					fragment = addArguments(new Plaats(), Plaats.PARAM_ID, obj);
-					break;
-				}
-				default:
-				case PROJECT: {
-					fragment = new Project();
-					break;
-				}
-			}
-			return fragment;
-		}
-
-		private Fragment addArguments(final Fragment fragment, final String key, final AbstractHitEntity obj) {
-			final Bundle bundle = new Bundle();
-			bundle.putLong(key, obj.getId());
-			fragment.setArguments(bundle);
-			return fragment;
-		}
-
-		@Override
-		public int getCount() {
-			return getHitProject().getOrderedList().size();
-		}
+		showItemAtPosition(0);
 	}
 
 	@Override
-	public void onNavigationDrawerItemSelected(int position) {
+	public void onNavigationDrawerItemSelected(Item item) {
+		showItemAtPosition(((AbstractIndexedItem) item).getIndex());
+	}
 
+	public void show(AbstractHitEntity hitEntity) {
+//		getSupportFragmentManager() //
+//				.beginTransaction() //
+//				.addToBackStack(hitEntity.getLabel()) //
+//				.commit();
+		int position = getHitProject().getOrderedList().indexOf(hitEntity);
 		showItemAtPosition(position);
 	}
 
 	private void showItemAtPosition(final int position) {
-
 		if (viewPager != null) {
-
 			viewPager.setCurrentItem(position);
-
+			// zet het huidige fragment op de eigen implementatie van de backstack
+			pushToCustomBackStack(position);
+			Log.i(TAG, "eigen stack na push: " + huidigFragmentPosition);
 		}
-
 	}
 
-	private static long back_pressed;
+	private void pushToCustomBackStack(int position) {
+		if (huidigFragmentPosition.isEmpty() || huidigFragmentPosition.peek() != position) {
+			huidigFragmentPosition.push(position);
+		}
+	}
 
 	@Override
 	public void onBackPressed() {
-		int count = getSupportFragmentManager().getBackStackEntryCount();
-		Log.i("Main", "BackStackCount: " + count);
-
-		if (count == 0 && back_pressed + 1000 <= System.currentTimeMillis()) {
-			Toast.makeText(getBaseContext(), getString(R.string.double_back_to_exit), Toast.LENGTH_SHORT).show();
-
-            //Vorig fragment laden
-            goBackFragment();
-
-		} else {
-
+		if (goBackFragment()) {
 			super.onBackPressed();
 		}
-		back_pressed = System.currentTimeMillis();
+	}
 
+	private boolean goBackFragment() {
+		if (viewPager != null) {
+			if (!huidigFragmentPosition.isEmpty()) {
+				final int position = popFromCustomBackStack();
+				if (position == -1) {
+					return true; // QUIT
+				}
+
+				showItemAtPosition(position);
+			}
+		}
+		return false;
+	}
+
+	private int popFromCustomBackStack() {
+		// kieper de huidige weg
+		huidigFragmentPosition.pop();
+
+		// Nog iets over?
+		if (huidigFragmentPosition.isEmpty()) {
+			// Nope
+			return -1;
+		} else {
+			// haal nu de VORIGE op
+			return huidigFragmentPosition.pop();
+		}
 	}
 
 	@Override
@@ -256,6 +153,12 @@ public class Main extends FragmentActivity
 	}
 
 	private void openSearch() {
-		showItemAtPosition(0);
+		Log.i(TAG, "TODO Open HITKIEZER");
+		showItemAtPosition(1);
+	}
+
+	private void openIcoontjes() {
+		Log.i(TAG, "TODO Open icoontjes");
+		showItemAtPosition(2);
 	}
 }

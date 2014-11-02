@@ -9,11 +9,12 @@ import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitPlaats;
 import nl.scouting.hit.app.style.PlaatsStyle;
 
-public class PlaatsItem implements Item {
+public class PlaatsItem extends AbstractIndexedItem  {
 
 	private HitPlaats plaats;
 
-	public PlaatsItem(HitPlaats plaats) {
+	public PlaatsItem(HitPlaats plaats, int index) {
+		super(index);
 		this.plaats = plaats;
 	}
 

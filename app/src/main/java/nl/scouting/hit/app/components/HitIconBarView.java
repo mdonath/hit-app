@@ -62,25 +62,13 @@ public class HitIconBarView extends RelativeLayout {
 			final TextView tooltipView = (TextView) HitIconBarView.this.findViewById(R.id.tooltip);
 			if (tooltipView != null) {
 				setOnClickListener(new View.OnClickListener() {
+
+					private static final long NORMAL_DELAY = 4000;
+					private static final long LONG_DELAY = 6000;
+
 					public void onClick(View v) {
 						// show text in tooltip
-
-
-                        final String weergevenTekst = icon.getTekst();
-
-                            int weergevenTekst_lengte = weergevenTekst.length();
-
-                            int ms_totsluiten;
-
-                            if(weergevenTekst_lengte > 30)
-                            {
-                                ms_totsluiten = 6000;
-
-                            }else{
-                                ms_totsluiten = 4000;
-                            }
-
-						tooltipView.setText(weergevenTekst);
+						tooltipView.setText(icon.getTekst());
 						tooltipView.setVisibility(View.VISIBLE);
 						tooltipView.bringToFront();
 						tooltipLastStartedAt = System.currentTimeMillis();
@@ -89,12 +77,21 @@ public class HitIconBarView extends RelativeLayout {
 							@Override
 							public void run() {
 								// if *another* thread was started less than 2900 ms ago then do NOT hide
-
-								if (System.currentTimeMillis() - tooltipLastStartedAt > 2900) {
+								if (System.currentTimeMillis() - tooltipLastStartedAt > NORMAL_DELAY - 100) {
 									tooltipView.setVisibility(View.INVISIBLE);
 								}
 							}
-						}, ms_totsluiten);
+						}, calculateDelay());
+					}
+
+					private long calculateDelay() {
+						final long delayMillis;
+						if (icon.getTekst().length() > 30) {
+							delayMillis = LONG_DELAY;
+						} else {
+							delayMillis = NORMAL_DELAY;
+						}
+						return delayMillis;
 					}
 				});
 			}

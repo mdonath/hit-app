@@ -38,5 +38,7 @@
     <string name="aantal_gevonden">De volgende %1$d kampen zijn gevonden %2$s:</string>
     <string name="aantal_gevonden_enkelvoud">Het volgende kamp is gevonden %2$s:</string>
     <string name="aantal_gevonden_geen">Er zijn geen kampen gevonden %2$s:</string>
+    <string name="hitkiezer_name">HIT Kiezer</string>
+    <string name="icoontjes_name">Uitleg icoontjes</string>
 
 </resources>

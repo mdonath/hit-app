@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +23,7 @@ import android.widget.ListView;
 import nl.scouting.hit.app.model.HitProject;
 import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.nav.HitEntityArrayAdapter;
+import nl.scouting.hit.app.nav.Item;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -30,6 +32,7 @@ import nl.scouting.hit.app.nav.HitEntityArrayAdapter;
  */
 public class NavigationDrawer extends Fragment {
 
+	private static final String TAG = "NavigationDrawer";
 	/**
 	 * Remember the position of the selected item.
 	 */
@@ -196,7 +199,12 @@ public class NavigationDrawer extends Fragment {
 			mDrawerLayout.closeDrawer(mFragmentContainerView);
 		}
 		if (mCallbacks != null) {
-			mCallbacks.onNavigationDrawerItemSelected(position);
+			Log.i(TAG, "selected item @"+position);
+			if (mDrawerListView!=null) {
+				Item item = (Item) mDrawerListView.getItemAtPosition(position);
+				Log.i(TAG, "selected item @" + position + ": " + item);
+				mCallbacks.onNavigationDrawerItemSelected(item);
+			}
 		}
 	}
 
@@ -268,6 +276,6 @@ public class NavigationDrawer extends Fragment {
 		/**
 		 * Called when an item in the navigation drawer is selected.
 		 */
-		void onNavigationDrawerItemSelected(int position);
+		void onNavigationDrawerItemSelected(Item item);
 	}
 }

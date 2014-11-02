@@ -20,6 +20,6 @@ public abstract class AbstractHitEntity {
     public abstract String getLabel();
 
     public enum HitEntityEnum {
-        PROJECT, PLAATS, KAMP;
+        PROJECT, PLAATS, KAMP, KIEZER, ICOONTJES;
     }
 }

@@ -32,23 +32,20 @@ import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.style.PlaatsStyle;
 
 /**
- * Shows the welcome information.
+ * Created by martijn on 10-10-14.
  */
-public class Project extends Fragment implements AdapterView.OnItemClickListener {
+public class KiezerFragment extends Fragment  implements AdapterView.OnItemClickListener {
 
 	private ExpandableHeightListView kampenLijst;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-//		int layout = R.layout.fragment_welcome;
-		int layout = R.layout.fragment_courant_kiezer;
-		View view = inflater.inflate(layout, container, false);
+		View view = inflater.inflate(R.layout.fragment_courant_kiezer, container, false);
 		kampenLijst = (ExpandableHeightListView) view.findViewById(R.id.kampen);
 		setPrijzen(view);
 		setPlaatsen(view);
 		setLeeftijd(view);
-
 		setKampen(view);
 		return view;
 	}
@@ -152,8 +149,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 		private List<HitPlaatsSpinnerModel> data;
 
 		public HitPlaatsArrayAdapter(Context context, int resource, List<HitPlaatsSpinnerModel> data) {
-			super(context, resource, data);
-			this.data = data;
+			this(context, resource, 0, data);
 		}
 
 		public HitPlaatsArrayAdapter(Context context, int resource, int id, List<HitPlaatsSpinnerModel> data) {
@@ -244,16 +240,16 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 				filter.filter("leeftijd", new Filter.FilterListener() {
 					@Override
 					public void onFilterComplete(final int count) {
-                        TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
-                        if(count > 1) {
-                            aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
-                        }else{
-                            if (count < 1){
-                                aantal.setText(view.getContext().getString(R.string.aantal_gevonden_geen, count, filter.criteria()));
-                            } else {
-                                aantal.setText(view.getContext().getString(R.string.aantal_gevonden_enkelvoud, count, filter.criteria()));
-                            }
-                        }
+						TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
+						if(count > 1) {
+							aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
+						}else{
+							if (count < 1){
+								aantal.setText(view.getContext().getString(R.string.aantal_gevonden_geen, count, filter.criteria()));
+							} else {
+								aantal.setText(view.getContext().getString(R.string.aantal_gevonden_enkelvoud, count, filter.criteria()));
+							}
+						}
 					}
 				});
 			}
@@ -382,7 +378,7 @@ public class Project extends Fragment implements AdapterView.OnItemClickListener
 					} else {
 						result.append(" met");
 					}
-					result.append(" een prijs niet hoger dan €").append(prijs);
+					result.append(" een prijs niet hoger dan € ").append(prijs);
 				}
 				if (plaats != null) {
 					if (result.length() > 0) {

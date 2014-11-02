@@ -9,7 +9,7 @@ import nl.scouting.hit.app.R;
 /**
  * Shows the About screen, displays contributors and ThankYou's.
  */
-public class About extends Activity {
+public class AboutActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

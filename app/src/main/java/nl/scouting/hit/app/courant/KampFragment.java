@@ -20,7 +20,7 @@ import static nl.scouting.hit.app.util.TextUtil.setText;
 /**
  * Shows the info for a 'Kamponderdeel'.
  */
-public class Kamp extends Fragment {
+public class KampFragment extends Fragment {
 
 	public static final String PARAM_ID = "courant.kamp.id";
 

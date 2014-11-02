@@ -1,6 +1,5 @@
 package nl.scouting.hit.app.nav;
 
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -9,12 +8,12 @@ import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.style.PlaatsStyle;
 
-public class KampItem implements Item {
+public class KampItem extends AbstractIndexedItem {
 
 	private HitKamp kamp;
 
-	public KampItem(HitKamp kamp) {
-
+	public KampItem(HitKamp kamp, int index) {
+		super(index);
 		this.kamp = kamp;
 	}
 

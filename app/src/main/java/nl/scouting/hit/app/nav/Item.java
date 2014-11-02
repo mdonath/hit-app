@@ -9,4 +9,6 @@ public interface Item {
 	HitEntityArrayAdapter.RowType getViewType();
 
 	View getView(LayoutInflater inflater, View convertView);
+
+	int getIndex();
 }

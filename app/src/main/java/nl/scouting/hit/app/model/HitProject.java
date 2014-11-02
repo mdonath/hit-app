@@ -84,6 +84,8 @@ public class HitProject extends AbstractHitEntity {
 		int kampIndex = 1;
 		List<AbstractHitEntity> result = new ArrayList<AbstractHitEntity>();
 		result.add(this);
+		result.add(new HitKiezer());
+		result.add(new HitIcoontjes());
 		if (plaatsen != null) {
 			for (HitPlaats plaats : plaatsen) {
 				result.add(plaats);

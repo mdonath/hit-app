@@ -17,7 +17,7 @@ import nl.scouting.hit.app.services.KampInfoDownloadViaDownloadManager;
 /**
  * Shows a splashscreen for a few seconds with logoSmall, name and version.
  */
-public class Splash extends Activity implements KampInfoDownloadViaDownloadManager.StatusListener {
+public class SplashActivity extends Activity implements KampInfoDownloadViaDownloadManager.StatusListener {
 
 	private static final String TAG = "Splash";
 	private KampInfoDownloadViaDownloadManager kampInfoDownloadViaDownloadManager;
@@ -76,7 +76,7 @@ public class Splash extends Activity implements KampInfoDownloadViaDownloadManag
 		new Handler().postDelayed(new Runnable() {
 			public void run() {
 				updateSplashStatus("Klaar");
-				startActivity(new Intent(Splash.this, Main.class));
+				startActivity(new Intent(SplashActivity.this, Main.class));
 				finish();
 			}
 		}, 3000);

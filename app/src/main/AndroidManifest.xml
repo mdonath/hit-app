@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
-            android:name=".misc.Splash"
+            android:name=".misc.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -29,7 +29,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".misc.About"
+            android:name=".misc.AboutActivity"
             android:label="@string/title_activity_about"
             android:parentActivityName=".Main">
             <meta-data

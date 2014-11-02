@@ -29,7 +29,7 @@ import static nl.scouting.hit.app.util.TextUtil.setText;
 /**
  * Shows the information for a 'HIT-plaats'.
  */
-public class Plaats extends Fragment implements AdapterView.OnItemClickListener {
+public class PlaatsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
 	public static final String PARAM_ID = "courant.plaats.id";
 

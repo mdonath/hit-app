@@ -7,16 +7,17 @@
     android:background="@drawable/splashbg"
     android:orientation="horizontal"
     tools:context="nl.scouting.hit.app.Main">
-    />
 
+    <!-- Op grote schermen staat de lijst met alle kampen per plaats altijd op het scherm. -->
     <fragment
         android:id="@+id/navigation_drawer"
         android:name="nl.scouting.hit.app.NavigationDrawer"
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         tools:layout="@layout/fragment_navigation_drawer"/>
 
+    <!-- Deze view toont de detailinformatie. -->
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"

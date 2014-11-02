@@ -7,18 +7,18 @@ import android.widget.TextView;
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitProject;
 
-public class ProjectItem implements Item {
+public class ProjectItem extends AbstractIndexedItem {
 
 	private HitProject project;
 
-	public ProjectItem(HitProject project) {
-
+	public ProjectItem(HitProject project, int index) {
+		super(index);
 		this.project = project;
 	}
 
 	@Override
 	public HitEntityArrayAdapter.RowType getViewType() {
-		return HitEntityArrayAdapter.RowType.PLAATS_ITEM;
+		return HitEntityArrayAdapter.RowType.PROJECT_ITEM;
 	}
 
 	@Override
