@@ -103,7 +103,7 @@ public class Main extends FragmentActivity
 
             @Override
             public void onPageScrollStateChanged(int arg0) {
-                
+
 
             }
         });

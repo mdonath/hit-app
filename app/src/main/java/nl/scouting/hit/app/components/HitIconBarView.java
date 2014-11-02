@@ -64,7 +64,23 @@ public class HitIconBarView extends RelativeLayout {
 				setOnClickListener(new View.OnClickListener() {
 					public void onClick(View v) {
 						// show text in tooltip
-						tooltipView.setText(icon.getTekst());
+
+
+                        final String weergevenTekst = icon.getTekst();
+
+                            int weergevenTekst_lengte = weergevenTekst.length();
+
+                            int ms_totsluiten;
+
+                            if(weergevenTekst_lengte > 30)
+                            {
+                                ms_totsluiten = 6000;
+
+                            }else{
+                                ms_totsluiten = 4000;
+                            }
+
+						tooltipView.setText(weergevenTekst);
 						tooltipView.setVisibility(View.VISIBLE);
 						tooltipView.bringToFront();
 						tooltipLastStartedAt = System.currentTimeMillis();
@@ -73,11 +89,12 @@ public class HitIconBarView extends RelativeLayout {
 							@Override
 							public void run() {
 								// if *another* thread was started less than 2900 ms ago then do NOT hide
+
 								if (System.currentTimeMillis() - tooltipLastStartedAt > 2900) {
 									tooltipView.setVisibility(View.INVISIBLE);
 								}
 							}
-						}, 3000);
+						}, ms_totsluiten);
 					}
 				});
 			}
