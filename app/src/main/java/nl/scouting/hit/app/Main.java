@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import nl.scouting.hit.app.courant.Kamp;
 import nl.scouting.hit.app.courant.Plaats;
 import nl.scouting.hit.app.courant.Project;
@@ -33,6 +35,8 @@ public class Main extends FragmentActivity
 
 	private HitProject hitProject;
 
+    private ArrayList<Integer> HuidigFragmentPosition = new ArrayList<Integer>();
+
 	public HitProject getHitProject() {
 		if (hitProject == null) {
 			hitProject = new JsonData(getApplicationContext()).parse(KampInfoDownloadViaDownloadManager.getLocalDataFile());
@@ -43,8 +47,25 @@ public class Main extends FragmentActivity
 	public void show(AbstractHitEntity hitEntity) {
 		getSupportFragmentManager().beginTransaction().addToBackStack(hitEntity.getLabel()).commit();
 		int position = getHitProject().getOrderedList().indexOf(hitEntity);
+
 		showItemAtPosition(position);
 	}
+
+    public void goBackFragment() {
+
+        if (viewPager != null) {
+
+            if(HuidigFragmentPosition.isEmpty()){}else {
+
+                int laatsteIndex = HuidigFragmentPosition.size()-1;
+                int position = HuidigFragmentPosition.get(laatsteIndex);
+
+
+                showItemAtPosition(position);
+            }
+
+        }
+    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +82,35 @@ public class Main extends FragmentActivity
 		mNavigationDrawer.setUp(
 				R.id.navigation_drawer,
 				(DrawerLayout) findViewById(R.id.drawer_layout));
+
+
+
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageSelected(int arg0) {
+
+                //Aan array voor back button toevoegen
+                HuidigFragmentPosition.add(arg0);
+
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+                
+
+            }
+        });
+
+
+
+
 	}
 
 	private class ZoomOutPageTransformer implements ViewPager.PageTransformer {
@@ -147,13 +197,18 @@ public class Main extends FragmentActivity
 
 	@Override
 	public void onNavigationDrawerItemSelected(int position) {
+
 		showItemAtPosition(position);
 	}
 
 	private void showItemAtPosition(final int position) {
+
 		if (viewPager != null) {
+
 			viewPager.setCurrentItem(position);
+
 		}
+
 	}
 
 	private static long back_pressed;
@@ -162,12 +217,19 @@ public class Main extends FragmentActivity
 	public void onBackPressed() {
 		int count = getSupportFragmentManager().getBackStackEntryCount();
 		Log.i("Main", "BackStackCount: " + count);
+
 		if (count == 0 && back_pressed + 1000 <= System.currentTimeMillis()) {
 			Toast.makeText(getBaseContext(), getString(R.string.double_back_to_exit), Toast.LENGTH_SHORT).show();
+
+            //Vorig fragment laden
+            goBackFragment();
+
 		} else {
+
 			super.onBackPressed();
 		}
 		back_pressed = System.currentTimeMillis();
+
 	}
 
 	@Override
