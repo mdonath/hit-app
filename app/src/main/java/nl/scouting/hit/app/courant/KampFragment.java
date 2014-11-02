@@ -13,6 +13,7 @@ import nl.scouting.hit.app.components.HitIconBarView;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.style.HitColor;
+import nl.scouting.hit.app.util.FontUtil;
 import nl.scouting.hit.app.util.TextUtil;
 
 import static nl.scouting.hit.app.util.TextUtil.setText;
@@ -46,8 +47,7 @@ public class KampFragment extends Fragment {
 
 	private void setTitle(final HitKamp kamp, final View view) {
 		final TextView tv = setText(view, R.id.naam, kamp.getNaam());
-		tv.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(), "fonts/impact.ttf"));
-		tv.setTextColor(HitColor.RED.getColorValue());
+		FontUtil.setTypeface(view, R.id.naam);
 		setText(view, R.id.index, String.valueOf(kamp.getKampIndex() + "/" + kamp.getPlaats().getProject().getKampen().size()));
 	}
 

@@ -20,8 +20,10 @@ import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitKampRO;
 import nl.scouting.hit.app.model.HitPlaats;
 import nl.scouting.hit.app.model.HitProjectContainable;
+import nl.scouting.hit.app.style.HitColor;
 import nl.scouting.hit.app.style.PlaatsStyle;
 import nl.scouting.hit.app.util.AvailableUtil;
+import nl.scouting.hit.app.util.FontUtil;
 import nl.scouting.hit.app.util.TextUtil;
 
 import static nl.scouting.hit.app.util.TextUtil.setText;
@@ -36,6 +38,7 @@ public class PlaatsFragment extends Fragment implements AdapterView.OnItemClickL
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		final View view = inflater.inflate(R.layout.fragment_courant_plaats, container, false);
+		FontUtil.setTypeface(view, R.id.naam);
 
 		final HitPlaats plaats = getHitPlaats();
 

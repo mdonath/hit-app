@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
+<WebView
+    android:id="@+id/content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffffff"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:text="@string/welcome_intro"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#000000"/>
-
-        <nl.scouting.hit.app.components.ExpandableHeightListView
-            android:id="@+id/kampen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fadingEdge="none"
-            android:focusable="false"
-            android:scrollbars="none"
-            android:textColor="#000000"/>
-    </LinearLayout>
-</ScrollView>
+    android:background="#fff"
+    />

@@ -4,6 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="#fff"
+              android:padding="8dp"
               android:orientation="vertical">
 
     <TextView
@@ -11,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Uitleg icoontjes"
-        android:textColor="#000"
-        android:textSize="20sp"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ff0000"
+        android:textSize="30sp"/>
 
     <TextView
         android:id="@+id/intro"

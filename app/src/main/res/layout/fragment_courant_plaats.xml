@@ -3,17 +3,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:background="#ffffffff">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
+        android:padding="8dp"
         android:scrollbars="vertical">
 
         <LinearLayout
@@ -36,7 +32,7 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/courant_plaats_title"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#000000"
+                    android:textColor="#ff0000"
                     android:textStyle="bold"
                     android:textSize="30sp"/>
 
@@ -76,7 +72,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="8dp"
             android:text="@string/kampen_in_plaats_label"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000"
             android:textStyle="bold"
             />

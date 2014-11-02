@@ -43,9 +43,9 @@ public class KiezerFragment extends Fragment  implements AdapterView.OnItemClick
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_courant_kiezer, container, false);
 		kampenLijst = (ExpandableHeightListView) view.findViewById(R.id.kampen);
+		setLeeftijd(view);
 		setPrijzen(view);
 		setPlaatsen(view);
-		setLeeftijd(view);
 		setKampen(view);
 		return view;
 	}
