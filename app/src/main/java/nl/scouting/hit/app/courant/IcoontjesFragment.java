@@ -40,7 +40,11 @@ public class IcoontjesFragment extends Fragment {
 
 		LinearLayout listview = (LinearLayout) view.findViewById(R.id.iconlist);
 
-		List<HitIcon> list = new ArrayList(getHitProject().getGebruikteIconen());
+		List<HitIcon> gebruikteIconen = getHitProject().getGebruikteIconen();
+		List<HitIcon> list = new ArrayList();
+		if (gebruikteIconen != null) {
+			list.addAll(gebruikteIconen);
+		}
 		Collections.sort(list);
 
 		for (HitIcon icon : list) {

@@ -338,7 +338,7 @@ public final class KampInfoDownloadViaDownloadManager {
 					}
 					break;
 				case DownloadManager.STATUS_FAILED:
-					Log.i(TAG, "Download is mislukt!");
+					Log.e(TAG, "Download is mislukt! "+ c.getInt(c.getColumnIndex(DownloadManager.COLUMN_REASON)));
 					removeIdFromPrefs();
 					break;
 			}

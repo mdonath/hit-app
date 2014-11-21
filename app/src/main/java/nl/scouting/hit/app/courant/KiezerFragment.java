@@ -34,7 +34,7 @@ import nl.scouting.hit.app.style.PlaatsStyle;
 /**
  * Created by martijn on 10-10-14.
  */
-public class KiezerFragment extends Fragment  implements AdapterView.OnItemClickListener {
+public class KiezerFragment extends Fragment implements AdapterView.OnItemClickListener {
 
 	private ExpandableHeightListView kampenLijst;
 
@@ -160,8 +160,10 @@ public class KiezerFragment extends Fragment  implements AdapterView.OnItemClick
 		public static final List<HitPlaatsSpinnerModel> getModel(HitProject project) {
 			final List<HitPlaatsSpinnerModel> result = new ArrayList<HitPlaatsSpinnerModel>();
 			result.add(new HitPlaatsSpinnerModel(null));
-			for (HitPlaats p : project.getPlaatsen()) {
-				result.add(new HitPlaatsSpinnerModel(p));
+			if (project.getPlaatsen() != null) {
+				for (HitPlaats p : project.getPlaatsen()) {
+					result.add(new HitPlaatsSpinnerModel(p));
+				}
 			}
 			return result;
 		}
@@ -241,10 +243,10 @@ public class KiezerFragment extends Fragment  implements AdapterView.OnItemClick
 					@Override
 					public void onFilterComplete(final int count) {
 						TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
-						if(count > 1) {
+						if (count > 1) {
 							aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
-						}else{
-							if (count < 1){
+						} else {
+							if (count < 1) {
 								aantal.setText(view.getContext().getString(R.string.aantal_gevonden_geen, count, filter.criteria()));
 							} else {
 								aantal.setText(view.getContext().getString(R.string.aantal_gevonden_enkelvoud, count, filter.criteria()));
