@@ -51,7 +51,7 @@ public class SplashActivity extends Activity implements KampInfoDownloadViaDownl
 		kampInfoDownloadViaDownloadManager = new KampInfoDownloadViaDownloadManager(this)
 				.addListener(this)
 				.setDownloadUrl("https://hit.scouting.nl/index.php?option=com_kampinfo&task=hitapp.generate")
-				.setUpdateInterval(24*60*60*1000) // wacht maar een dag
+				.setUpdateInterval(1*60*60*1000) // hooguit één keer per uur kijken
 				.update();
 	}
 

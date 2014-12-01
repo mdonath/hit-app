@@ -117,7 +117,7 @@ public final class KampInfoDownloadViaDownloadManager {
 					Log.i(TAG, "Er is al een bestand");
 					if (isUpdateNeeded()) {
 						Log.i(TAG, "Het bestand moet nu bijgewerkt worden");
-						statusListener.update("Controleer op updates...");
+						statusListener.update("Gegevens worden bijgewerkt...");
 						startDownload(uri);
 					} else {
 						Log.i(TAG, "Het bestand hoeft nog niet bijgewerkt te worden");
@@ -125,7 +125,7 @@ public final class KampInfoDownloadViaDownloadManager {
 					}
 				} else {
 					Log.i(TAG, "Het bestand moet voor de eerste keer opgehaald worden");
-					statusListener.update("Eerste keer downloaden...");
+					statusListener.update("Eerste keer gegevens downloaden...");
 					startDownload(uri);
 				}
 			} else {
