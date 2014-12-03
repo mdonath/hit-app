@@ -49,11 +49,11 @@ public class ProjectFragment extends Fragment {
 					"h1 {font-family: \"Impact\"; color: red;} " +
 					"</style>" +
 					"</head><body>" +
-					"<h1>HIT " + jaar + ": Een geweldige uitdaging!</h1>" +
-					"<p><b>Wat ga jij doen met Pasen " + jaar + "? Naar de HIT natuurlijk! Want in " + jaar + " kun je bij de HIT kiezen uit " + aantalHits + " totaal verschillende, spannende en uitdagende activiteiten op " +
+					"<h1>HIT " + jaar + ": Feest in de tent!</h1>" +
+					"<p><b>In " + jaar + " wordt de HIT voor de 60e keer georganiseerd. Dus wat ga jij doen met Pasen " + jaar + "? Naar de HIT natuurlijk! Want in " + jaar + " kun je bij de HIT kiezen uit " + aantalHits + " totaal verschillende, spannende en uitdagende activiteiten op " +
 					aantalHitPlaatsen + " plaatsen in Nederland, of zelfs in het buitenland!</b></p>" +
-					"<p>In " + jaar + " is het landelijke thema \"Waterproof\". Maar tijdens de HIT houden we het zeker droog. Door het hele land organiseren we een \"Dijk van een HIT!\" De HIT staat voor Hikes, Interessekampen en Trappersexpedities en wordt elk jaar gehouden tijdens de paasdagen." +
-					" Meer dan tweeduizend scouts tussen de 7 en de 88 jaar beleven een fantastische Scoutingactiviteit waarin je alles kunt tegenkomen wat Scouting te bieden heeft.</p>" +
+					"<p>Door het hele land organiseren we een gezellig feest!\" De HIT staat voor Hikes, Interessekampen en Trappersexpedities en wordt elk jaar gehouden tijdens de paasdagen." +
+					" Meer dan tweeduizend scouts tussen de 5 en de 88 jaar beleven een fantastische Scoutingactiviteit waarin je alles kunt tegenkomen wat Scouting te bieden heeft.</p>" +
 					"<p>In " + jaar + " vindt de HIT plaats tussen " + hitdagen +
 					". Vanaf " + startInschrijving + " kun je weer inschrijven. Lees snel verder in deze HIT-courant of kijk op de website welke te gekke HIT voor jou en je Scoutingvrienden er dit jaar weer bij zit!</p>" +
 					"<h1>Hoe kan ik me inschrijven?</h1>" +

@@ -38,12 +38,12 @@ public class HitKamp extends AbstractHitEntity {
 	public final String formatPeriode() {
 		String vanFormat;
 		if (isSameMonth(this.startDatumTijd, this.eindDatumTijd)) {
-			vanFormat = "dd";
+			vanFormat = "d";
 		} else {
-			vanFormat = "dd MMMM";
+			vanFormat = "d MMMM";
 		}
 		return new StringBuilder(new SimpleDateFormat(vanFormat).format(this.startDatumTijd))
-				.append(new SimpleDateFormat(" - dd MMMM").format(this.eindDatumTijd))
+				.append(new SimpleDateFormat(" - d MMMM").format(this.eindDatumTijd))
 				.toString();
 	}
 

@@ -45,14 +45,39 @@
 
         </RelativeLayout>
 
-        <nl.scouting.hit.app.components.HitIconBarView
-            android:id="@+id/icons"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/iconBar"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_below="@id/regel1"
-            android:layout_gravity="center_vertical"
-            android:paddingBottom="8dp">
+            >
+
+            <ImageView
+                android:id="@+id/arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left_arrow"/>
+
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow"/>
+
+            <nl.scouting.hit.app.components.HitIconBarView
+                android:id="@+id/icons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/arrow_right"
+                android:layout_toRightOf="@id/arrow_left"
+                android:fadingEdge="horizontal"
+                android:paddingBottom="8dp"
+                android:scrollbars="none"/>
 
             <TextView
                 android:id="@+id/tooltip"
@@ -62,17 +87,17 @@
                 android:background="@drawable/back"
                 android:text="TEST"
                 android:textSize="20sp"
+                android:visibility="invisible"
                 />
-        </nl.scouting.hit.app.components.HitIconBarView>
-
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/infobar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/icons"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_below="@id/iconBar"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/plaats"
