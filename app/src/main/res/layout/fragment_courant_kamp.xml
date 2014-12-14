@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/left_arrow"/>
+                android:src="@drawable/ic_action_previous_item"/>
 
             <ImageView
                 android:id="@+id/arrow_right"
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/right_arrow"/>
+                android:src="@drawable/ic_action_next_item"/>
 
             <nl.scouting.hit.app.components.HitIconBarView
                 android:id="@+id/icons"
