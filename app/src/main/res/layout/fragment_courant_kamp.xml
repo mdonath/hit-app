@@ -29,7 +29,7 @@
                 android:layout_alignParentTop="true"
                 android:text="@string/courant_kamp_title"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ff0000"
+                android:textColor="#000000"
                 android:textSize="30sp"/>
 
             <TextView

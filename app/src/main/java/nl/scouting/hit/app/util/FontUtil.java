@@ -14,7 +14,7 @@ public final class FontUtil {
 	public static TextView setTypeface(View view, int header) {
 		final TextView textView = (TextView) view.findViewById(header);
 		textView.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(), "fonts/impact.ttf"));
-		textView.setTextColor(HitColor.RED.getColorValue());
+		textView.setTextColor(HitColor.GREEN.getColorValue());
 		return textView;
 	}
 

@@ -1,5 +1,6 @@
 package nl.scouting.hit.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -13,6 +14,7 @@ import java.util.Stack;
 
 import nl.scouting.hit.app.components.HitCourantPagerAdapter;
 import nl.scouting.hit.app.components.ZoomOutPageTransformer;
+import nl.scouting.hit.app.misc.AboutActivity;
 import nl.scouting.hit.app.model.AbstractHitEntity;
 import nl.scouting.hit.app.model.HitProject;
 import nl.scouting.hit.app.model.HitProjectContainable;
@@ -144,21 +146,23 @@ public class Main extends FragmentActivity
 			case R.id.action_search:
 				openSearch();
 				return true;
-			case R.id.action_settings:
-				// openSettings();
-				return true;
+			case R.id.action_about:
+				openAbout();
 			default:
 				return super.onOptionsItemSelected(item);
 		}
 	}
 
 	private void openSearch() {
-		Log.i(TAG, "TODO Open HITKIEZER");
 		showItemAtPosition(1);
 	}
 
 	private void openIcoontjes() {
-		Log.i(TAG, "TODO Open icoontjes");
 		showItemAtPosition(2);
+	}
+
+	private void openAbout() {
+		Intent aboutIntent = new Intent(this, AboutActivity.class);
+		startActivity(aboutIntent);
 	}
 }
