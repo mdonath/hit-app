@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="horizontal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="horizontal">
 
     <TextView
         android:id="@+id/naam"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
         android:layout_margin="5dip"
         android:clickable="false"
-        android:gravity="left"
         android:linksClickable="false"
         android:longClickable="false"
         android:paddingBottom="1dip"
         android:paddingTop="1dip"
         android:text="sample"
         android:textColor="#000000"
-        android:textSize="17dip"/>
+        android:textSize="17sp"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/vol_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/naam"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/naam"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        android:src="@drawable/hit_icon_vol"
+        />
+</RelativeLayout>

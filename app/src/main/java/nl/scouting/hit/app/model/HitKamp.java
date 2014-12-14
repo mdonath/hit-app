@@ -9,6 +9,9 @@ import java.util.List;
  */
 public class HitKamp extends AbstractHitEntity {
 
+	private long shantiId;
+	private boolean vol;
+	private String volTekst;
 	private HitPlaats plaats;
 	private String naam;
 	private Date startDatumTijd;
@@ -142,5 +145,29 @@ public class HitKamp extends AbstractHitEntity {
 
 	public void setKampIndex(final int kampIndex) {
 		this.kampIndex = kampIndex;
+	}
+
+	public long getShantiId() {
+		return shantiId;
+	}
+
+	public void setShantiId(final long shantiId) {
+		this.shantiId = shantiId;
+	}
+
+	public boolean isVol() {
+		return vol;
+	}
+
+	public void setVol(final boolean vol) {
+		this.vol = vol;
+	}
+
+	public String getVolTekst() {
+		return volTekst;
+	}
+
+	public void setVolTekst(final String volTekst) {
+		this.volTekst = volTekst;
 	}
 }

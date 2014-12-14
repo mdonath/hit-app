@@ -100,7 +100,7 @@ public class JsonData {
 		hitProject.setMaandag(asDate(project.getString("maandag")));
 		hitProject.setInschrijvingStartdatum(asDate(project.getString("inschrijvingStartdatum")));
 		hitProject.setInschrijvingEinddatum(asDate(project.getString("inschrijvingEinddatum")));
-
+		hitProject.setShantiUrl(project.getString("shantiUrl"));
 		hitProject.setGebruikteIconen(parseIconen(project, "gebruikteIconen"));
 		hitProject.setPlaatsen(parsePlaatsen(project, "plaatsen"));
 		return hitProject;
@@ -149,6 +149,7 @@ public class JsonData {
 	private HitKamp parseKamp(JSONObject kamp) throws JSONException, ParseException {
 		final HitKamp result = new HitKamp();
 		result.setId(kamp.getInt("id"));
+		result.setShantiId(kamp.getInt("shantiId"));
 		result.setNaam(kamp.getString("naam"));
 		result.setHitCourantTekst(kamp.getString("hitCourantTekst"));
 		result.setMinimumLeeftijd(kamp.getInt("minimumLeeftijd"));
@@ -158,6 +159,8 @@ public class JsonData {
 		result.setStartDatumTijd(asDateTime(kamp.getString("startDatumTijd")));
 		result.setEindDatumTijd(asDateTime(kamp.getString("eindDatumTijd")));
 		result.setIcoontjes(parseKampIconen(kamp, "icoontjes"));
+		result.setVol(kamp.getBoolean("vol"));
+		result.setVolTekst(kamp.getString("volTekst"));
 		return result;
 	}
 

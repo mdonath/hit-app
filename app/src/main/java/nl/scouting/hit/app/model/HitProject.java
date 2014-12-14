@@ -17,6 +17,7 @@ public class HitProject extends AbstractHitEntity {
 	private List<HitIcon> gebruikteIconen;
 	private List<HitPlaats> plaatsen;
 	private List<AbstractHitEntity> orderedList;
+	private String shantiUrl;
 
 	public void add(HitIcon hitIcon) {
 		if (gebruikteIconen == null) {
@@ -105,6 +106,10 @@ public class HitProject extends AbstractHitEntity {
 		this.plaatsen = plaatsen;
 	}
 
+	public boolean isInschrijvingGeopend() {
+		return inschrijvingStartdatum.compareTo(new Date()) <= 0;
+	}
+
 	@Override
 	public HitEntityEnum getType() {
 		return HitEntityEnum.PROJECT;
@@ -165,5 +170,13 @@ public class HitProject extends AbstractHitEntity {
 
 	public List<HitPlaats> getPlaatsen() {
 		return plaatsen;
+	}
+
+	public void setShantiUrl(final String shantiUrl) {
+		this.shantiUrl = shantiUrl;
+	}
+
+	public String getShantiUrl() {
+		return shantiUrl;
 	}
 }

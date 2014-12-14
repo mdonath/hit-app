@@ -33,6 +33,19 @@
                 android:textSize="30sp"/>
 
             <TextView
+                android:id="@+id/vol_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5sp"
+                android:layout_toRightOf="@+id/naam"
+                android:text="VOL!"
+                android:textColor="#f00"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                />
+
+            <TextView
                 android:id="@+id/index"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,11 +216,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@id/infobar"
             android:paddingBottom="10dp"
             android:text="@string/courant_kamp_info"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000"/>
 
+        <Button
+            android:id="@+id/openInschrijving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/courantTekst"
+            android:background="#FF1c63b7"
+            android:text="@string/direct_inschrijven"
+            android:textColor="#FFFFFFFF"
+            />
     </RelativeLayout>
 </ScrollView>

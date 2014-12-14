@@ -2,11 +2,11 @@ package nl.scouting.hit.app.nav;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.model.HitKamp;
-import nl.scouting.hit.app.style.PlaatsStyle;
 
 public class KampItem extends AbstractIndexedItem {
 
@@ -32,10 +32,11 @@ public class KampItem extends AbstractIndexedItem {
 			view = convertView;
 		}
 
-		PlaatsStyle style = PlaatsStyle.by(kamp);
-
 		TextView tv = (TextView) view.findViewById(R.id.naam);
 		tv.setText(kamp.getNaam());
+
+		ImageView volIndicator = (ImageView) view.findViewById(R.id.vol_indicator);
+		volIndicator.setVisibility(kamp.isVol() ? View.VISIBLE : View.INVISIBLE);
 
 		return view;
 	}

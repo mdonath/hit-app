@@ -34,6 +34,21 @@ public class HitKampRO extends HitKamp {
 	}
 
 	@Override
+	public long getShantiId() {
+		return wrapped.getShantiId();
+	}
+
+	@Override
+	public boolean isVol() {
+		return wrapped.isVol();
+	}
+
+	@Override
+	public String getVolTekst() {
+		return wrapped.getVolTekst();
+	}
+
+	@Override
 	public Date getEindDatumTijd() {
 		return wrapped.getEindDatumTijd();
 	}
