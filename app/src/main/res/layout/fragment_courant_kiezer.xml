@@ -63,6 +63,78 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icoonLabel"/>
+
+            <HorizontalScrollView
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/iconen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_staand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_staand"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_mobieltje"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_mobieltje"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_rolstoel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_rolstoel"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_gebouw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_gebouw"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_zeilboot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_zeilboot"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_fiets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_fiets"
+                        />
+
+                    <nl.scouting.hit.app.components.HitKiezerIconView
+                        android:id="@+id/hit_icon_auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:src="@drawable/hit_icon_auto"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
+
         </GridLayout>
 
         <TextView

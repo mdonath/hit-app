@@ -41,5 +41,6 @@
     <string name="hitkiezer_name">HIT Kiezer</string>
     <string name="icoontjes_name">Uitleg icoontjes</string>
     <string name="direct_inschrijven"><![CDATA[Direct inschrijven! >>]]></string>
+    <string name="icoonLabel">Zoek op icoon:</string>
 
 </resources>

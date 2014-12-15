@@ -24,6 +24,8 @@ import java.util.TreeSet;
 
 import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.components.ExpandableHeightListView;
+import nl.scouting.hit.app.components.HitKiezerIconView;
+import nl.scouting.hit.app.model.HitIcon;
 import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitKampRO;
 import nl.scouting.hit.app.model.HitPlaats;
@@ -47,6 +49,7 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 		setPrijzen(view);
 		setPlaatsen(view);
 		setKampen(view);
+		setIconen(view);
 		return view;
 	}
 
@@ -74,18 +77,22 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 				}
 			});
 		}
-		Collections.sort(list, new Comparator<HitKamp>() {
+		Collections.sort(list, KampComparator.NAAM_ASC);
+		return list;
+	}
+
+	private static enum KampComparator implements Comparator<HitKamp> {
+		NAAM_ASC {
 			@Override
 			public int compare(final HitKamp lhs, final HitKamp rhs) {
 				return strip(lhs.getNaam()).compareTo(strip(rhs.getNaam()));
 			}
+		};
 
-			// ignore quotes while sorting
-			private String strip(String s) {
-				return s.replace("\"", "");
-			}
-		});
-		return list;
+		// ignore quotes while sorting
+		private static String strip(String s) {
+			return s.replace("\"", "");
+		}
 	}
 
 	private void setKampen(final View view) {
@@ -101,6 +108,97 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 	public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
 		HitKamp kamp = (HitKamp) parent.getItemAtPosition(position);
 		getHitContainer().show(kamp);
+	}
+
+	private abstract class MyIconListener implements HitKiezerIconView.IconStateListener {
+		@Override
+		public void iconClicked(final HitKiezerIconView.IconState state) {
+			final HitKampArrayAdapter.KampFilter filter = (HitKampArrayAdapter.KampFilter) ((Filterable) kampenLijst.getAdapter()).getFilter();
+			changeFilter(filter, getFilterValue(state));
+			filter(filter);
+		}
+
+		protected abstract void changeFilter(HitKampArrayAdapter.KampFilter filter, Boolean value);
+
+		private void filter(final HitKampArrayAdapter.KampFilter filter) {
+			final View view = KiezerFragment.this.getView(); // **
+			filter.filter("icoon", new Filter.FilterListener() {
+				@Override
+				public void onFilterComplete(final int count) {
+					TextView aantal = (TextView) view.findViewById(R.id.aantal_gevonden);
+					aantal.setText(view.getContext().getString(R.string.aantal_gevonden, count, filter.criteria()));
+				}
+			});
+		}
+
+		private Boolean getFilterValue(final HitKiezerIconView.IconState state) {
+			Boolean filterValue;
+			switch (state) {
+				case SELECTED_YES:
+					filterValue = Boolean.TRUE;
+					break;
+				case SELECTED_NO:
+					filterValue = Boolean.FALSE;
+					break;
+				case UNSELECTED:
+				default:
+					filterValue = null;
+			}
+			return filterValue;
+		}
+	}
+
+	private void setIconen(final View view) {
+		final HitKampArrayAdapter.KampFilter filter = (HitKampArrayAdapter.KampFilter) ((Filterable) kampenLijst.getAdapter()).getFilter();
+
+		HitKiezerIconView staand = (HitKiezerIconView) view.findViewById(R.id.hit_icon_staand);
+		staand.setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.staand = value;
+			}
+		});
+
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_mobieltje)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.mobieltje = value;
+			}
+		});
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_rolstoel)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.rolstoel = value;
+			}
+		});
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_gebouw)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.gebouw = value;
+			}
+		});
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_zeilboot)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.boot = value;
+			}
+		});
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_fiets)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.fiets = value;
+			}
+		});
+		((HitKiezerIconView) view.findViewById(R.id.hit_icon_auto)).setIconStateListener(new MyIconListener() {
+			@Override
+			protected void changeFilter(HitKampArrayAdapter.KampFilter filter, final Boolean value) {
+				filter.auto = value;
+			}
+		});
+	}
+
+	private HitKiezerIconView.IconState booleanToIconState(final Boolean b) {
+		return b == null ? HitKiezerIconView.IconState.UNSELECTED : b ? HitKiezerIconView.IconState.SELECTED_YES : HitKiezerIconView.IconState.SELECTED_NO;
 	}
 
 	static class HitPlaatsSpinnerModel {
@@ -270,15 +368,13 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 
 	public class HitKampArrayAdapter extends ArrayAdapter<HitKamp> {
 		private List<HitKamp> originalList;
-		private List<HitKamp> currentList;
 		private KampFilter filter;
 
 		private LayoutInflater mInflater;
 
-		public HitKampArrayAdapter(Context context, List<HitKamp> items) {
+		public HitKampArrayAdapter(final Context context, final List<HitKamp> items) {
 			super(context, 0, items);
 			this.originalList = new ArrayList<HitKamp>(items);
-			this.currentList = new ArrayList<HitKamp>(items);
 			mInflater = LayoutInflater.from(context);
 		}
 
@@ -315,6 +411,14 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 			public Integer prijs;
 			public HitPlaats plaats;
 			public Integer leeftijd;
+			// icoontjes:
+			public Boolean staand;
+			public Boolean mobieltje;
+			public Boolean rolstoel;
+			public Boolean gebouw;
+			public Boolean boot;
+			public Boolean fiets;
+			public Boolean auto;
 
 			public boolean matches(HitKamp kamp) {
 				boolean result = true;
@@ -329,6 +433,55 @@ public class KiezerFragment extends Fragment implements AdapterView.OnItemClickL
 						return false;
 					}
 				}
+				if (staand != null) {
+					if (staand != kamp.getIcoontjes().contains(HitIcon.getByNaam("staand"))) {
+						return false;
+					}
+				}
+				if (mobieltje != null) {
+					if (mobieltje && !kamp.getIcoontjes().contains(HitIcon.getByNaam("mobieltje"))) {
+						return false;
+					}
+					if (!mobieltje && !kamp.getIcoontjes().contains(HitIcon.getByNaam("geenmobieltje"))) {
+						return false;
+					}
+				}
+				if (rolstoel != null) {
+					if (rolstoel != kamp.getIcoontjes().contains(HitIcon.getByNaam("rolstoel"))) {
+						return false;
+					}
+				}
+				if (gebouw != null) {
+					if (gebouw != kamp.getIcoontjes().contains(HitIcon.getByNaam("gebouw"))) {
+						return false;
+					}
+				}
+				if (boot != null) {
+					if (boot != (kamp.getIcoontjes().contains(HitIcon.getByNaam("zeilboot"))
+							|| kamp.getIcoontjes().contains(HitIcon.getByNaam("kano"))
+							|| kamp.getIcoontjes().contains(HitIcon.getByNaam("kano10")))) {
+						return false;
+					}
+				}
+
+				if (fiets != null)
+
+				{
+					if (fiets != (kamp.getIcoontjes().contains(HitIcon.getByNaam("fiets"))
+							|| kamp.getIcoontjes().contains(HitIcon.getByNaam("fiets60")))
+							) {
+						return false;
+					}
+				}
+
+				if (auto != null)
+
+				{
+					if (auto != kamp.getIcoontjes().contains(HitIcon.getByNaam("auto"))) {
+						return false;
+					}
+				}
+
 				return result;
 			}
 
