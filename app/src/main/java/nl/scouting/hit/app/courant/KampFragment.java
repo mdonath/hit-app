@@ -1,6 +1,7 @@
 package nl.scouting.hit.app.courant;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -42,6 +43,8 @@ public class KampFragment extends Fragment {
 		setInfobar(kamp, view);
 		setCourantTekst(kamp, view);
 		setOpenInschrijvingButton(kamp, view);
+        setWebsiteButton(kamp, view);
+
 
 		return view;
 	}
@@ -62,6 +65,24 @@ public class KampFragment extends Fragment {
 			openInschrijving.setVisibility(View.INVISIBLE);
 		}
 	}
+
+    private void setWebsiteButton(final HitKamp kamp, final View view) {
+        Button openWebsite = (Button) view.findViewById(R.id.websiteknop);
+        if (AvailableUtil.isNetworkAvailable(view.getContext())) {
+            /*openWebsite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(final View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(getHitProject().getShantiUrl() + kamp.getShantiId()));
+                    startActivity(intent);
+                }
+            });*/
+            openWebsite.setVisibility(View.INVISIBLE);
+        } else {
+            // Verstop de knop
+            openWebsite.setVisibility(View.INVISIBLE);
+        }
+    }
 
 	private HitKamp getHitKamp() {
 		final long id = getArguments().getLong(PARAM_ID);
@@ -84,11 +105,34 @@ public class KampFragment extends Fragment {
 			}
 		});
 
-		// Vol indicator
+		// Vol indicator & Tekst
+
 		if (kamp.isVol()) {
+
 			final TextView vol = (TextView) view.findViewById(R.id.vol_indicator);
 			vol.setVisibility(View.VISIBLE);
-		}
+
+                    final TextView vol_tekst_status = (TextView) view.findViewById(R.id.vol);
+                    final TextView vol_tekst_details = (TextView) view.findViewById(R.id.vol_details);
+
+                    vol_tekst_status.setTextColor(Color.parseColor("#FFB70800"));
+                    vol_tekst_status.setText("Dit onderdeel vol, er zijn geen plaatsen meer beschikbaar");
+
+                    vol_tekst_details.setText( "" );
+
+		}else{
+
+            final TextView vol_tekst_status = (TextView) view.findViewById(R.id.vol);
+            final TextView vol_tekst_details = (TextView) view.findViewById(R.id.vol_details);
+
+            vol_tekst_status.setTextColor(Color.parseColor("#FF00803B"));
+            vol_tekst_status.setText("Goed");
+
+            String voltekst = kamp.getVolTekst().replace(".","");
+            vol_tekst_details.setText( "("+voltekst+")" );
+
+        }
+
 		// Nummering
 		setText(view, R.id.index, String.valueOf(kamp.getKampIndex() + "/" + kamp.getPlaats().getProject().getKampen().size()));
 	}

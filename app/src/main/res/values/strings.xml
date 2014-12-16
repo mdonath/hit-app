@@ -40,7 +40,8 @@
     <string name="aantal_gevonden_geen">Er zijn geen kampen gevonden %2$s:</string>
     <string name="hitkiezer_name">HIT Kiezer</string>
     <string name="icoontjes_name">Uitleg icoontjes</string>
-    <string name="direct_inschrijven"><![CDATA[Direct inschrijven! >>]]></string>
+    <string name="direct_inschrijven"><![CDATA[Direct inschrijven!]]></string>
+    <string name="website_knop">Bezoek de Website</string>
     <string name="icoonLabel">Zoek op icoon:</string>
 
 </resources>

@@ -22,7 +22,7 @@ public class AboutActivity extends Activity {
 				+ "<h1>Aan deze app hebben meegewerkt:</h1>"
 				+ "<h2>Ontwikkelaars:</h1>"
 				+ "<p>Martijn Donath (<a href=\"https://hit.scouting.nl\">hit.scouting.nl</a>)</p>" //
-				+ "<p>Bas de Vries (<a href=\"http://www.bwebdesign.nl\">bwebdesign.nl</a>)</p>" //
+				+ "<p>Bastiaan Willem de Vries (<a href=\"http://www.bwebdesign.nl\">bwebdesign.nl</a>)</p>" //
 				+ "<h2>Testers:</h2>"
 				+ "<p>Ivo</p>" //
 				+ "<p>Sven</p>" //

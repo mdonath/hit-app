@@ -223,16 +223,68 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Beschikbaarheid van dit onderdeel:"
+            android:id="@+id/beschikbaarheid_titel"
+            android:layout_below="@+id/courantTekst"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            android:textColor="#ff2e2e2e"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp" />
+
         <Button
             android:id="@+id/openInschrijving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/courantTekst"
-            android:background="#FF1c63b7"
+            android:background="#ff007d3e"
             android:text="@string/direct_inschrijven"
             android:textColor="#FFFFFFFF"
-            />
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/courantTekst"
+            android:layout_alignEnd="@+id/courantTekst"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/websiteknop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF1c63b7"
+            android:text="@string/website_knop"
+            android:textColor="#FFFFFFFF"
+            android:layout_below="@+id/vol_details"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Nog niet vol"
+            android:id="@+id/vol"
+            android:padding="5dp"
+            android:textColor="#ff2e2e2e"
+            android:layout_below="@+id/beschikbaarheid_titel"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Nog niet vol"
+            android:id="@+id/vol_details"
+            android:padding="5dp"
+            android:textColor="#ff2e2e2e"
+            android:layout_alignTop="@+id/vol"
+            android:layout_toRightOf="@+id/vol"
+            android:layout_toEndOf="@+id/vol"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="10dp" />
     </RelativeLayout>
 </ScrollView>

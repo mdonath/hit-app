@@ -103,6 +103,7 @@ public class JsonData {
 		hitProject.setShantiUrl(project.getString("shantiUrl"));
 		hitProject.setGebruikteIconen(parseIconen(project, "gebruikteIconen"));
 		hitProject.setPlaatsen(parsePlaatsen(project, "plaatsen"));
+
 		return hitProject;
 	}
 
