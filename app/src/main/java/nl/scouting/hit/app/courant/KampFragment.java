@@ -116,9 +116,13 @@ public class KampFragment extends Fragment {
                     final TextView vol_tekst_details = (TextView) view.findViewById(R.id.vol_details);
 
                     vol_tekst_status.setTextColor(Color.parseColor("#FFB70800"));
-                    vol_tekst_status.setText("Dit onderdeel vol, er zijn geen plaatsen meer beschikbaar");
+                    vol_tekst_status.setText("Dit onderdeel is vol, er zijn geen plaatsen meer beschikbaar");
 
                     vol_tekst_details.setText( "" );
+
+            Button openInschrijving = (Button) view.findViewById(R.id.openInschrijving);
+            openInschrijving.setVisibility(View.INVISIBLE);
+
 
 		}else{
 
