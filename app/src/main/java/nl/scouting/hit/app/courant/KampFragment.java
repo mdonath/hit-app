@@ -43,8 +43,8 @@ public class KampFragment extends Fragment {
 		setInfobar(kamp, view);
 		setCourantTekst(kamp, view);
 		setOpenInschrijvingButton(kamp, view);
-        setWebsiteButton(kamp, view);
-
+		setVolIndicatie(kamp, view);
+		setWebsiteButton(kamp, view);
 
 		return view;
 	}
@@ -52,37 +52,26 @@ public class KampFragment extends Fragment {
 	private void setOpenInschrijvingButton(final HitKamp kamp, final View view) {
 		Button openInschrijving = (Button) view.findViewById(R.id.openInschrijving);
 		if (AvailableUtil.isNetworkAvailable(view.getContext()) && getHitProject().isInschrijvingGeopend()) {
-			openInschrijving.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(final View v) {
-					Intent intent = new Intent(Intent.ACTION_VIEW);
-					intent.setData(Uri.parse(getHitProject().getShantiUrl() + kamp.getShantiId()));
-					startActivity(intent);
-				}
-			});
+			openInschrijving.setOnClickListener(new OpenBrowserOnClickListener(getHitProject().getShantiUrl() + kamp.getShantiId()));
 		} else {
 			// Verstop de knop
-			openInschrijving.setVisibility(View.INVISIBLE);
+			openInschrijving.setVisibility(View.GONE);
 		}
 	}
 
-    private void setWebsiteButton(final HitKamp kamp, final View view) {
-        Button openWebsite = (Button) view.findViewById(R.id.websiteknop);
-        if (AvailableUtil.isNetworkAvailable(view.getContext())) {
-            /*openWebsite.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(final View v) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(getHitProject().getShantiUrl() + kamp.getShantiId()));
-                    startActivity(intent);
-                }
-            });*/
-            openWebsite.setVisibility(View.INVISIBLE);
-        } else {
-            // Verstop de knop
-            openWebsite.setVisibility(View.INVISIBLE);
-        }
-    }
+	private void setWebsiteButton(final HitKamp kamp, final View view) {
+		Button openWebsite = (Button) view.findViewById(R.id.websiteknop);
+		TextView weblink = setText(view, R.id.weblink, kamp.getHitnlUrl());
+		if (AvailableUtil.isNetworkAvailable(view.getContext())) {
+			openWebsite.setOnClickListener(new OpenBrowserOnClickListener(kamp.getHitnlUrl()));
+			openWebsite.setVisibility(View.VISIBLE);
+			weblink.setVisibility(View.VISIBLE);
+		} else {
+			// Verstop de knop
+			openWebsite.setVisibility(View.GONE);
+			weblink.setVisibility(View.GONE);
+		}
+	}
 
 	private HitKamp getHitKamp() {
 		final long id = getArguments().getLong(PARAM_ID);
@@ -93,9 +82,34 @@ public class KampFragment extends Fragment {
 		return ((HitProjectContainable) getActivity()).getHitProject();
 	}
 
+	private void setVolIndicatie(final HitKamp kamp, final View view) {
+		final TextView volTekstStatus = (TextView) view.findViewById(R.id.vol);
+		final TextView volTekstDetails = (TextView) view.findViewById(R.id.vol_details);
+
+		if (kamp.isVol()) {
+			final TextView vol = (TextView) view.findViewById(R.id.vol_indicator);
+			vol.setVisibility(View.VISIBLE);
+
+			volTekstStatus.setTextColor(Color.parseColor("#FFB70800"));
+			volTekstStatus.setText("Dit onderdeel is vol, er zijn geen plaatsen meer beschikbaar");
+
+			volTekstDetails.setText("");
+
+			Button openInschrijving = (Button) view.findViewById(R.id.openInschrijving);
+			openInschrijving.setVisibility(View.GONE);
+		} else {
+			volTekstStatus.setTextColor(Color.parseColor("#FF00803B"));
+			volTekstStatus.setText("Goed");
+
+			String voltekst = kamp.getVolTekst().replace(".", "");
+			volTekstDetails.setText("(" + voltekst + ")");
+		}
+	}
+
 	private void setTitle(final HitKamp kamp, final View view) {
 		final TextView tv = setText(view, R.id.naam, kamp.getNaam());
 		FontUtil.setTypeface(view, R.id.naam);
+
 		tv.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(final View v) {
@@ -104,38 +118,6 @@ public class KampFragment extends Fragment {
 				toast.show();
 			}
 		});
-
-		// Vol indicator & Tekst
-
-		if (kamp.isVol()) {
-
-			final TextView vol = (TextView) view.findViewById(R.id.vol_indicator);
-			vol.setVisibility(View.VISIBLE);
-
-                    final TextView vol_tekst_status = (TextView) view.findViewById(R.id.vol);
-                    final TextView vol_tekst_details = (TextView) view.findViewById(R.id.vol_details);
-
-                    vol_tekst_status.setTextColor(Color.parseColor("#FFB70800"));
-                    vol_tekst_status.setText("Dit onderdeel is vol, er zijn geen plaatsen meer beschikbaar");
-
-                    vol_tekst_details.setText( "" );
-
-            Button openInschrijving = (Button) view.findViewById(R.id.openInschrijving);
-            openInschrijving.setVisibility(View.INVISIBLE);
-
-
-		}else{
-
-            final TextView vol_tekst_status = (TextView) view.findViewById(R.id.vol);
-            final TextView vol_tekst_details = (TextView) view.findViewById(R.id.vol_details);
-
-            vol_tekst_status.setTextColor(Color.parseColor("#FF00803B"));
-            vol_tekst_status.setText("Goed");
-
-            String voltekst = kamp.getVolTekst().replace(".","");
-            vol_tekst_details.setText( "("+voltekst+")" );
-
-        }
 
 		// Nummering
 		setText(view, R.id.index, String.valueOf(kamp.getKampIndex() + "/" + kamp.getPlaats().getProject().getKampen().size()));
@@ -156,5 +138,24 @@ public class KampFragment extends Fragment {
 
 	private void setCourantTekst(final HitKamp kamp, final View view) {
 		setText(view, R.id.courantTekst, TextUtil.cleanUp(kamp.getHitCourantTekst()));
+	}
+
+	/**
+	 * Opens a url in a browser.
+	 */
+	private class OpenBrowserOnClickListener implements View.OnClickListener {
+
+		private final String url;
+
+		public OpenBrowserOnClickListener(String url) {
+			this.url = url;
+		}
+
+		@Override
+		public void onClick(final View v) {
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setData(Uri.parse(url));
+			startActivity(intent);
+		}
 	}
 }

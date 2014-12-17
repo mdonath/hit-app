@@ -12,6 +12,7 @@ public class HitKamp extends AbstractHitEntity {
 	private long shantiId;
 	private boolean vol;
 	private String volTekst;
+	private String hitnlUrl;
 	private HitPlaats plaats;
 	private String naam;
 	private Date startDatumTijd;
@@ -169,5 +170,13 @@ public class HitKamp extends AbstractHitEntity {
 
 	public void setVolTekst(final String volTekst) {
 		this.volTekst = volTekst;
+	}
+
+	public String getHitnlUrl() {
+		return hitnlUrl;
+	}
+
+	public void setHitnlUrl(final String hitnlUrl) {
+		this.hitnlUrl = hitnlUrl;
 	}
 }

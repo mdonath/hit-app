@@ -151,6 +151,7 @@ public class JsonData {
 		final HitKamp result = new HitKamp();
 		result.setId(kamp.getInt("id"));
 		result.setShantiId(kamp.getInt("shantiId"));
+		result.setHitnlUrl(kamp.getString("hitnlUrl"));
 		result.setNaam(kamp.getString("naam"));
 		result.setHitCourantTekst(kamp.getString("hitCourantTekst"));
 		result.setMinimumLeeftijd(kamp.getInt("minimumLeeftijd"));

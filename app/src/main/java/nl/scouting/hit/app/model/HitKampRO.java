@@ -97,4 +97,9 @@ public class HitKampRO extends HitKamp {
 	public String getSubgroep() {
 		return wrapped.getSubgroep();
 	}
+
+	@Override
+	public String getHitnlUrl() {
+		return wrapped.getHitnlUrl();
+	}
 }

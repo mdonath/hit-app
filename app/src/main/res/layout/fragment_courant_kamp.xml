@@ -58,11 +58,20 @@
 
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/weblink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regel1"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="@string/link_to_website"/>
+
         <RelativeLayout
             android:id="@+id/iconBar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/regel1"
+            android:layout_below="@id/weblink"
             >
 
             <ImageView
@@ -224,67 +233,67 @@
             android:textColor="#000000"/>
 
         <TextView
+            android:id="@+id/beschikbaarheid_titel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Beschikbaarheid van dit onderdeel:"
-            android:id="@+id/beschikbaarheid_titel"
-            android:layout_below="@+id/courantTekst"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_below="@+id/courantTekst"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
+            android:text="Beschikbaarheid van dit onderdeel:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#ff2e2e2e"
-            android:textSize="17dp"
-            android:layout_marginTop="10dp" />
+            android:textSize="17dp"/>
 
         <Button
             android:id="@+id/openInschrijving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ff007d3e"
-            android:text="@string/direct_inschrijven"
-            android:textColor="#FFFFFFFF"
+            android:layout_alignEnd="@+id/courantTekst"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/courantTekst"
-            android:layout_alignEnd="@+id/courantTekst"
-            android:padding="10dp" />
+            android:background="#ff007d3e"
+            android:padding="10dp"
+            android:text="@string/direct_inschrijven"
+            android:textColor="#FFFFFFFF"/>
 
         <Button
             android:id="@+id/websiteknop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#FF1c63b7"
-            android:text="@string/website_knop"
-            android:textColor="#FFFFFFFF"
-            android:layout_below="@+id/vol_details"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_below="@+id/vol_details"
             android:layout_marginTop="20dp"
-            android:padding="10dp" />
+            android:background="#FF1c63b7"
+            android:padding="10dp"
+            android:text="@string/website_knop"
+            android:textColor="#FFFFFFFF"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Nog niet vol"
             android:id="@+id/vol"
-            android:padding="5dp"
-            android:textColor="#ff2e2e2e"
-            android:layout_below="@+id/beschikbaarheid_titel"
-            android:layout_marginBottom="10dp" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Nog niet vol"
-            android:id="@+id/vol_details"
+            android:layout_below="@+id/beschikbaarheid_titel"
+            android:layout_marginBottom="10dp"
             android:padding="5dp"
-            android:textColor="#ff2e2e2e"
+            android:text="Nog niet vol"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff2e2e2e"/>
+
+        <TextView
+            android:id="@+id/vol_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignTop="@+id/vol"
-            android:layout_toRightOf="@+id/vol"
+            android:layout_marginLeft="10dp"
             android:layout_toEndOf="@+id/vol"
+            android:layout_toRightOf="@+id/vol"
+            android:padding="5dp"
             android:paddingRight="10dp"
-            android:layout_marginLeft="10dp" />
+            android:text="Nog niet vol"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff2e2e2e"/>
     </RelativeLayout>
 </ScrollView>

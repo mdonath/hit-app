@@ -33,7 +33,7 @@ public final class KampInfoDownloadViaDownloadManager {
 	private static final String TAG = "KampInfoDownloadViaDownloadManager";
 
 	private static final String HIT_COURANT_ASSET_DATA = "hitcourant.json";
-	public static final String APP_PATH = "HitApp/Courant/";
+	public static final String APP_PATH = "HitCourant/";
 	private static final String HIT_COURANT_LOCAL_DATA = APP_PATH + HIT_COURANT_ASSET_DATA;
 	private static final String HIT_COURANT_TEMP_DATA = APP_PATH + HIT_COURANT_ASSET_DATA + ".tmp";
 
