@@ -44,5 +44,6 @@
     <string name="direct_inschrijven"><![CDATA[Direct inschrijven!]]></string>
     <string name="website_knop">Bezoek de Website</string>
     <string name="icoonLabel">Zoek op icoon:</string>
+    <string name="action_share">Delen</string>
 
 </resources>

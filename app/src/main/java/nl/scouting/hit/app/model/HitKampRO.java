@@ -19,6 +19,11 @@ public class HitKampRO extends HitKamp {
 	}
 
 	@Override
+	public String getShareText() {
+		return this.wrapped.getShareText();
+	}
+
+	@Override
 	public HitPlaats getPlaats() {
 		return wrapped.getPlaats();
 	}

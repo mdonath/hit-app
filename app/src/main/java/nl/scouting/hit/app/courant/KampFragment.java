@@ -33,7 +33,7 @@ import static nl.scouting.hit.app.util.TextUtil.setText;
 /**
  * Shows the info for a 'Kamponderdeel'.
  */
-public class KampFragment extends Fragment {
+public class KampFragment extends AbstractHitFragment {
 
 	public static final String PARAM_ID = "courant.kamp.id";
 
@@ -67,15 +67,12 @@ public class KampFragment extends Fragment {
 
 	private void setWebsiteButton(final HitKamp kamp, final View view) {
 		Button openWebsite = (Button) view.findViewById(R.id.websiteknop);
-		TextView weblink = setText(view, R.id.weblink, kamp.getHitnlUrl());
 		if (AvailableUtil.isNetworkAvailable(view.getContext())) {
 			openWebsite.setOnClickListener(new OpenBrowserOnClickListener(kamp.getHitnlUrl()));
 			openWebsite.setVisibility(View.VISIBLE);
-			weblink.setVisibility(View.VISIBLE);
 		} else {
 			// Verstop de knop
 			openWebsite.setVisibility(View.GONE);
-			weblink.setVisibility(View.GONE);
 		}
 	}
 
@@ -146,22 +143,4 @@ public class KampFragment extends Fragment {
 		setText(view, R.id.courantTekst, TextUtil.cleanUp(kamp.getHitCourantTekst()));
 	}
 
-	/**
-	 * Opens a url in a browser.
-	 */
-	private class OpenBrowserOnClickListener implements View.OnClickListener {
-
-		private final String url;
-
-		public OpenBrowserOnClickListener(String url) {
-			this.url = url;
-		}
-
-		@Override
-		public void onClick(final View v) {
-			Intent intent = new Intent(Intent.ACTION_VIEW);
-			intent.setData(Uri.parse(url));
-			startActivity(intent);
-		}
-	}
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +32,7 @@ import static nl.scouting.hit.app.util.TextUtil.setText;
 /**
  * Shows the information for a 'HIT-plaats'.
  */
-public class PlaatsFragment extends Fragment implements AdapterView.OnItemClickListener {
+public class PlaatsFragment extends AbstractHitFragment implements AdapterView.OnItemClickListener {
 
 	public static final String PARAM_ID = "courant.plaats.id";
 
@@ -72,13 +73,14 @@ public class PlaatsFragment extends Fragment implements AdapterView.OnItemClickL
 	}
 
 	private void setWeblink(final HitPlaats plaats, final View view) {
-		String url;
+		Button openWebsite = (Button) view.findViewById(R.id.websiteknop);
 		if (AvailableUtil.isNetworkAvailable(view.getContext())) {
-			url = "https://hit.scouting.nl/" + plaats.getNaam().toLowerCase() + "/";
+			openWebsite.setOnClickListener(new OpenBrowserOnClickListener("https://hit.scouting.nl/" + plaats.getNaam().toLowerCase() + "/"));
+			openWebsite.setVisibility(View.VISIBLE);
 		} else {
-			url = "";
+			// Verstop de knop
+			openWebsite.setVisibility(View.GONE);
 		}
-		setText(view, R.id.weblink, url);
 	}
 
 	private void setCourantTekst(final HitPlaats plaats, final View view) {

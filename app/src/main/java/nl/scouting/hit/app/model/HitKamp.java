@@ -35,7 +35,7 @@ public class HitKamp extends AbstractHitEntity {
 				.append(getMinimumLeeftijd())
 				.append(" - ")
 				.append(getMaximumLeeftijd())
-                .append(" jaar")
+				.append(" jaar")
 				.toString();
 	}
 
@@ -58,6 +58,11 @@ public class HitKamp extends AbstractHitEntity {
 	@Override
 	public String getLabel() {
 		return getNaam() + " (" + getId() + ")";
+	}
+
+	@Override
+	public String getShareText() {
+		return "Bekijk dit HIT Kamp: '" + getNaam() + "', je kan de website bezoeken via " + getHitnlUrl();
 	}
 
 	public String getNaam() {

@@ -8,62 +8,66 @@ import java.util.List;
  */
 public class HitPlaats extends AbstractHitEntity {
 
-    private HitProject project;
-    private String naam;
-    private String hitCourantTekst;
-    private List<HitKamp> kampen;
+	private HitProject project;
+	private String naam;
+	private String hitCourantTekst;
+	private List<HitKamp> kampen;
 
-    public void add(HitKamp hitKamp) {
-        if (this.kampen == null) {
-            this.kampen = new ArrayList<HitKamp>();
-        }
-        hitKamp.setPlaats(this);
-        this.kampen.add(hitKamp);
-    }
+	public void add(HitKamp hitKamp) {
+		if (this.kampen == null) {
+			this.kampen = new ArrayList<HitKamp>();
+		}
+		hitKamp.setPlaats(this);
+		this.kampen.add(hitKamp);
+	}
 
-    public void setKampen(List<HitKamp> kampen) {
-        for (HitKamp kamp : kampen) {
-            kamp.setPlaats(this);
-        }
-        this.kampen = kampen;
-    }
+	public void setKampen(List<HitKamp> kampen) {
+		for (HitKamp kamp : kampen) {
+			kamp.setPlaats(this);
+		}
+		this.kampen = kampen;
+	}
 
-    @Override
-    public HitEntityEnum getType() {
-        return HitEntityEnum.PLAATS;
-    }
+	@Override
+	public HitEntityEnum getType() {
+		return HitEntityEnum.PLAATS;
+	}
 
-    @Override
-    public String getLabel() {
-        return "HIT " + naam + " (" + getId() + ")";
-    }
+	@Override
+	public String getLabel() {
+		return "HIT " + naam + " (" + getId() + ")";
+	}
 
+	@Override
+	public String getShareText() {
+		return "Mijn favoriete HIT plaats is: HIT " + getNaam() + ". Kijk voor meer info op https://hit.scouting.nl/hits-in-" + getNaam().toLowerCase() + "-" + project.getJaar();
+	}
 
-    public String getNaam() {
-        return naam;
-    }
+	public String getNaam() {
+		return naam;
+	}
 
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
+	public void setNaam(String naam) {
+		this.naam = naam;
+	}
 
-    public String getHitCourantTekst() {
-        return hitCourantTekst;
-    }
+	public String getHitCourantTekst() {
+		return hitCourantTekst;
+	}
 
-    public void setHitCourantTekst(String hitCourantTekst) {
-        this.hitCourantTekst = hitCourantTekst;
-    }
+	public void setHitCourantTekst(String hitCourantTekst) {
+		this.hitCourantTekst = hitCourantTekst;
+	}
 
-    public List<HitKamp> getKampen() {
-        return kampen;
-    }
+	public List<HitKamp> getKampen() {
+		return kampen;
+	}
 
-    public HitProject getProject() {
-        return project;
-    }
+	public HitProject getProject() {
+		return project;
+	}
 
-    public void setProject(HitProject project) {
-        this.project = project;
-    }
+	public void setProject(HitProject project) {
+		this.project = project;
+	}
 }

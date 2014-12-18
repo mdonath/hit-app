@@ -13,4 +13,10 @@ public class HitIcoontjes extends AbstractHitEntity {
 	public String getLabel() {
 		return "Icoontjes";
 	}
+
+	@Override
+	public String getShareText() {
+		// FIXME vervangen van jaartal door HitProject.getJaartal()
+		return "Snap je niets van al die icoontjes? Kijk hier voor meer info: https://hit.scouting.nl/hit-activiteiten-2015/symbolen";
+	}
 }

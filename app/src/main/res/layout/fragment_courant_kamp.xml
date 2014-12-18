@@ -58,20 +58,12 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/weblink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/regel1"
-            android:autoLink="web"
-            android:linksClickable="true"
-            android:text="@string/link_to_website"/>
 
         <RelativeLayout
             android:id="@+id/iconBar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/weblink"
+            android:layout_below="@id/regel1"
             >
 
             <ImageView
@@ -266,7 +258,7 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/vol_details"
             android:layout_marginTop="20dp"
-            android:background="#FF1c63b7"
+            android:background="#ff007d3e"
             android:padding="10dp"
             android:text="@string/website_knop"
             android:textColor="#FFFFFFFF"/>

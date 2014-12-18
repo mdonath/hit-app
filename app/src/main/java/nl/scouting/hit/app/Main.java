@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import java.util.Stack;
@@ -20,7 +19,6 @@ import nl.scouting.hit.app.components.HitCourantPagerAdapter;
 import nl.scouting.hit.app.components.ZoomOutPageTransformer;
 import nl.scouting.hit.app.misc.AboutActivity;
 import nl.scouting.hit.app.model.AbstractHitEntity;
-import nl.scouting.hit.app.model.HitKamp;
 import nl.scouting.hit.app.model.HitProject;
 import nl.scouting.hit.app.model.HitProjectContainable;
 import nl.scouting.hit.app.nav.AbstractIndexedItem;
@@ -48,11 +46,6 @@ public class Main extends FragmentActivity
 		}
 		return hitProject;
 	}
-
-    public static final String PARAM_ID = "courant.kamp.id";
-    private HitKamp getHitKamp() {
-        return getHitProject().getHitKampById(current_viewpager_item);
-    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,13 +84,13 @@ public class Main extends FragmentActivity
 		showItemAtPosition(position);
 	}
 
-    public long current_viewpager_item = 0;
+	public long current_viewpager_item = 0;
 
 	private void showItemAtPosition(final int position) {
 		if (viewPager != null) {
 			viewPager.setCurrentItem(position);
 
-            current_viewpager_item = viewPager.getCurrentItem();
+			current_viewpager_item = viewPager.getCurrentItem();
 
 			// zet het huidige fragment op de eigen implementatie van de backstack
 			pushToCustomBackStack(position);
@@ -146,15 +139,12 @@ public class Main extends FragmentActivity
 		}
 	}
 
-    public Menu openbaar_menu = null;
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu items for use in the action bar
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
 
-        openbaar_menu = menu;
+		// action_share uitzetten hoeft niet als er geen internet is. Delen kan ook naar notities of via bluetooth.
 
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -168,42 +158,39 @@ public class Main extends FragmentActivity
 				return true;
 			case R.id.action_about:
 				openAbout();
-            case R.id.action_delen:
-                shareButton(getHitKamp(), viewPager.getRootView());
+				return true;
+			case R.id.action_share:
+				shareCurrentItem();
+				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
 	}
 
-    private void shareButton(final HitKamp kamp, final View view) {
+	private void shareCurrentItem() {
+		int currentItemIndex = viewPager.getCurrentItem();
+		final AbstractHitEntity o = getHitProject().getByIndex(currentItemIndex);
 
-        String url = kamp.getHitnlUrl();
-        String titel = kamp.getNaam();
-        final String share_message = "Bekijk dit HIT Kamp! De titel is "+titel+", je kan de website bezoeken via "+url;
+		new AlertDialog.Builder(this)
+				.setMessage("Je staat op het punt om tekst te delen met anderen, aan het verzenden kunnen kosten verbonden zijn. Wil je doorgaan?")
+				.setPositiveButton("Natuurlijk! Deel het!", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-        builder.setMessage("Je staat op het punt om tekst te delen over dit HIT kamp, dit gaat via internet en kost je mobiele data. Wil je doorgaan?")
-                .setPositiveButton("Natuurlijk! Deel het!", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int id) {
-
-                        Intent sendIntent = new Intent();
-                        sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, share_message);
-                        sendIntent.setType("text/plain");
-                        startActivity(Intent.createChooser(sendIntent, "Deel dit HIT kamp"));
-
-                    }
-                })
-                .setNegativeButton("Nee, dit wil ik niet", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getApplicationContext(), "Er is niets gedeeld",
-                                Toast.LENGTH_LONG).show();
-                    }
-                });
-        builder.create();
-
-    }
+						Intent sendIntent = new Intent();
+						sendIntent.setAction(Intent.ACTION_SEND);
+						sendIntent.putExtra(Intent.EXTRA_TEXT, o.getShareText()); //
+						sendIntent.setType("text/plain");
+						startActivity(Intent.createChooser(sendIntent, "Deel deze info van de HIT"));
+					}
+				})
+				.setNegativeButton("Nee, dit wil ik niet", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						Toast.makeText(getApplicationContext(), "Er is niets gedeeld",
+								Toast.LENGTH_LONG).show();
+					}
+				})
+				.show();
+	}
 
 	private void openSearch() {
 		showItemAtPosition(1);

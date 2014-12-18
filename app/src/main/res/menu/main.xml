@@ -9,11 +9,11 @@
         android:title="@string/action_search"/>
 
     <item
-        android:id="@+id/action_delen"
+        android:id="@+id/action_share"
         android:icon="@android:drawable/ic_menu_share"
         android:showAsAction="ifRoom"
         android:visible="true"
-        android:title="Delen"/>
+        android:title="@string/action_share"/>
 
     <item
         android:id="@+id/action_about"

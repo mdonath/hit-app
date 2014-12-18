@@ -110,6 +110,10 @@ public class HitProject extends AbstractHitEntity {
 		return inschrijvingStartdatum.compareTo(new Date()) <= 0;
 	}
 
+	public String getShareText() {
+		return "Ik ga me opgeven voor de HIT! Kijk voor meer info op https://hit.scouting.nl";
+	}
+
 	@Override
 	public HitEntityEnum getType() {
 		return HitEntityEnum.PROJECT;

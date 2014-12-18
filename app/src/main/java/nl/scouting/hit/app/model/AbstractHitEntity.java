@@ -19,6 +19,8 @@ public abstract class AbstractHitEntity {
 
     public abstract String getLabel();
 
+	public abstract String getShareText();
+
     public enum HitEntityEnum {
         PROJECT, PLAATS, KAMP, KIEZER, ICOONTJES;
     }

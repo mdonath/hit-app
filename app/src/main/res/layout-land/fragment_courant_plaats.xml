@@ -41,14 +41,19 @@
                     android:textSize="30sp"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:id="@+id/weblink"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/websiteknop"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/naam"
-                    android:autoLink="web"
-                    android:linksClickable="true"
-                    android:text="@string/link_to_website"/>
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/naam"
+                    android:layout_marginTop="20dp"
+                    android:background="#ff007d3e"
+                    android:padding="10dp"
+                    android:text="@string/website_knop"
+                    android:textColor="#FFFFFFFF"/>
+
             </RelativeLayout>
 
             <ImageView

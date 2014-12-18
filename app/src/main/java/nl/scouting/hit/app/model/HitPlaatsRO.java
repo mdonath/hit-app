@@ -22,6 +22,11 @@ public class HitPlaatsRO extends HitPlaats {
 		return "HIT " + getNaam() + " (" + getId() + ")";
 	}
 
+	@Override
+	public String getShareText() {
+		return this.wrapped.getShareText();
+	}
+
 	public long getId() {
 		return wrapped.getId();
 	}
