@@ -51,6 +51,7 @@ public class KampFragment extends AbstractHitFragment {
 		setOpenInschrijvingButton(kamp, view);
 		setVolIndicatie(kamp, view);
 		setWebsiteButton(kamp, view);
+        setChecktijd(kamp, view);
 
         return view;
 	}
@@ -84,6 +85,11 @@ public class KampFragment extends AbstractHitFragment {
 	private HitProject getHitProject() {
 		return ((HitProjectContainable) getActivity()).getHitProject();
 	}
+
+    private void setChecktijd(final HitKamp kamp, final View view) {
+        final TextView checkTijdtextview = (TextView) view.findViewById(R.id.Checktijd);
+        checkTijdtextview.setText("Voor het laatst bijgewerkt op "+kamp.getChecktijd());
+    }
 
 	private void setVolIndicatie(final HitKamp kamp, final View view) {
 		final TextView volTekstStatus = (TextView) view.findViewById(R.id.vol);
