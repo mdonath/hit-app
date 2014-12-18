@@ -256,9 +256,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/vol_details"
+            android:layout_below="@+id/Checktijd"
             android:layout_marginTop="20dp"
-            android:background="#ff007d3e"
+            android:background="#ff135c7d"
             android:padding="10dp"
             android:text="@string/website_knop"
             android:textColor="#FFFFFFFF"/>
@@ -287,5 +287,20 @@
             android:text="Nog niet vol"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#ff2e2e2e"/>
+
+        <TextView
+            android:id="@+id/Checktijd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Voor het laatst bijgewerkt op 15-12-2014 om 11:00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff2e2e2e"
+            android:layout_below="@+id/vol"
+            android:background="#ffdad6d4"
+            android:layout_alignRight="@+id/openInschrijving"
+            android:layout_alignEnd="@+id/openInschrijving"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 </ScrollView>

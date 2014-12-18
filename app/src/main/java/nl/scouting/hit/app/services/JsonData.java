@@ -1,6 +1,7 @@
 package nl.scouting.hit.app.services;
 
 import android.content.Context;
+import android.provider.MediaStore;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,6 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,6 +34,7 @@ public class JsonData {
 
 	private static final HitProject DUMMY = createDummy();
 	public static final String RESOURCE_ICON_PREFIX = "nl.scouting.hit.app:drawable/hit_icon_";
+    private String datumtijdfile = "Onbekend";
 
 	private static HitProject createDummy() {
 		final HitProject result = new HitProject();
@@ -49,8 +52,35 @@ public class JsonData {
 		if (!file.exists()) {
 			return DUMMY;
 		}
+
+        //Sla de datum en tijd op
+        setDatumTijdfile(file);
+
 		return parse(readToString(file));
 	}
+
+    public void setDatumTijdfile(File file) {
+
+        Date lastModDate = new Date(file.lastModified());
+
+        DateFormat df_datum = new SimpleDateFormat("dd-MM-yyyy");
+        DateFormat df_tijd = new SimpleDateFormat("HH:mm");
+
+        String datum = df_datum.format(lastModDate);
+        String tijd = df_tijd.format(lastModDate);
+
+        String reportDate = datum+" om "+tijd;
+
+
+        datumtijdfile = reportDate;
+
+    }
+
+    public String getDatumTijdfile() {
+
+        return datumtijdfile;
+
+    }
 
 	public String readToString(File file) {
 		StringBuilder result = new StringBuilder();
@@ -163,6 +193,7 @@ public class JsonData {
 		result.setIcoontjes(parseKampIconen(kamp, "icoontjes"));
 		result.setVol(kamp.getBoolean("vol"));
 		result.setVolTekst(kamp.getString("volTekst"));
+        result.setChecktijd(getDatumTijdfile());
 		return result;
 	}
 

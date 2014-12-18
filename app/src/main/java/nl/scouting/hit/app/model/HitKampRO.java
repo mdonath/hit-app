@@ -1,5 +1,7 @@
 package nl.scouting.hit.app.model;
 
+import android.view.Menu;
+
 import java.util.Date;
 import java.util.List;
 
@@ -52,6 +54,11 @@ public class HitKampRO extends HitKamp {
 	public String getVolTekst() {
 		return wrapped.getVolTekst();
 	}
+
+    @Override
+    public String getChecktijd() {
+        return wrapped.getChecktijd();
+    }
 
 	@Override
 	public Date getEindDatumTijd() {

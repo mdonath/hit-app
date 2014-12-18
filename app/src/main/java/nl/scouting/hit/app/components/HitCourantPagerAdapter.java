@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import nl.scouting.hit.app.R;
 import nl.scouting.hit.app.courant.IcoontjesFragment;
 import nl.scouting.hit.app.courant.KampFragment;
 import nl.scouting.hit.app.courant.KiezerFragment;
@@ -29,14 +32,37 @@ public class HitCourantPagerAdapter extends FragmentStatePagerAdapter {
 		this.dataContext = dataContext;
 	}
 
+    public void hideShareButton(Menu menu, int position){
+
+        //Verberg Share button indien geen Kamp
+        final AbstractHitEntity o = dataContext.getHitProject().getByIndex(position);
+        final String viewPagerCurrentClassName = o.getClass().getSimpleName();
+
+        try {
+            MenuItem item = menu.findItem(R.id.action_share);
+
+            if (viewPagerCurrentClassName.equals("HitKamp")) {
+                //Tonen
+                item.setVisible(true);
+            } else {
+                //Verbergen
+                item.setVisible(false);
+            }
+        }catch (Exception e){}
+
+    }
+
 	@Override
 	public Fragment getItem(final int position) {
 		final AbstractHitEntity obj = dataContext.getHitProject().getByIndex(position);
+
 		return createFragmentForHitEntity(obj);
 	}
 
 	private Fragment createFragmentForHitEntity(final AbstractHitEntity obj) {
 		final Fragment fragment;
+
+
 		switch (obj.getType()) {
 			case KAMP: {
 				fragment = addArguments(new KampFragment(), KampFragment.PARAM_ID, obj);

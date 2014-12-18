@@ -36,18 +36,6 @@
                     android:textStyle="bold"
                     android:textSize="30sp"/>
 
-                <Button
-                    android:id="@+id/websiteknop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/naam"
-                    android:layout_marginTop="20dp"
-                    android:background="#ff007d3e"
-                    android:padding="10dp"
-                    android:text="@string/website_knop"
-                    android:textColor="#FFFFFFFF"/>
             </RelativeLayout>
 
             <ImageView
@@ -58,11 +46,27 @@
                 android:src="@drawable/hit_alp_logo_h_big"/>
         </LinearLayout>
 
+        <Button
+            android:id="@+id/websiteknop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="20dp"
+            android:background="#ff007d3e"
+            android:padding="10dp"
+            android:text="@string/website_knop"
+            android:textColor="#FFFFFFFF"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
         <TextView
             android:id="@+id/courantTekst"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/header"
+            android:layout_below="@id/websiteknop"
             android:layout_marginBottom="10dp"
             android:text="@string/courant_plaats_tekst"
             android:textAppearance="?android:attr/textAppearanceMedium"

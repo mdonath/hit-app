@@ -24,6 +24,7 @@ public class HitKamp extends AbstractHitEntity {
 	private String hitCourantTekst;
 	private List<HitIcon> icoontjes;
 	private int kampIndex;
+    private String Checktijd;
 
 	@Override
 	public HitEntityEnum getType() {
@@ -176,6 +177,14 @@ public class HitKamp extends AbstractHitEntity {
 	public void setVolTekst(final String volTekst) {
 		this.volTekst = volTekst;
 	}
+
+    public String getChecktijd() {
+        return Checktijd;
+    }
+
+    public void setChecktijd(final String Checktijd) {
+        this.Checktijd = Checktijd;
+    }
 
 	public String getHitnlUrl() {
 		return hitnlUrl;

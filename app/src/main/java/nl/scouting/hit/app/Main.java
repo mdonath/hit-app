@@ -34,10 +34,14 @@ public class Main extends FragmentActivity
 
 	private static final String TAG = "Main";
 	private ViewPager viewPager;
-
+    private Menu HeaderMenu;
 	private HitProject hitProject;
 
 	private Stack<Integer> huidigFragmentPosition = new Stack<Integer>();
+
+    public Menu getHeaderMenu(){
+        return HeaderMenu;
+    }
 
 	public HitProject getHitProject() {
 		if (hitProject == null) {
@@ -84,13 +88,10 @@ public class Main extends FragmentActivity
 		showItemAtPosition(position);
 	}
 
-	public long current_viewpager_item = 0;
 
 	private void showItemAtPosition(final int position) {
 		if (viewPager != null) {
 			viewPager.setCurrentItem(position);
-
-			current_viewpager_item = viewPager.getCurrentItem();
 
 			// zet het huidige fragment op de eigen implementatie van de backstack
 			pushToCustomBackStack(position);
@@ -144,6 +145,8 @@ public class Main extends FragmentActivity
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
 
+        HeaderMenu = menu;
+
 		// action_share uitzetten hoeft niet als er geen internet is. Delen kan ook naar notities of via bluetooth.
 
 		return super.onCreateOptionsMenu(menu);
@@ -172,8 +175,8 @@ public class Main extends FragmentActivity
 		final AbstractHitEntity o = getHitProject().getByIndex(currentItemIndex);
 
 		new AlertDialog.Builder(this)
-				.setMessage("Je staat op het punt om tekst te delen met anderen, aan het verzenden kunnen kosten verbonden zijn. Wil je doorgaan?")
-				.setPositiveButton("Natuurlijk! Deel het!", new DialogInterface.OnClickListener() {
+				.setMessage("Je staat op het punt om tekst te delen met anderen, aan het verzenden kunnen kosten verbonden zijn doordat je internet gebruikt. Wil je doorgaan?")
+				.setPositiveButton("Ja, natuurlijk!", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 
 						Intent sendIntent = new Intent();
