@@ -1,1 +1,1894 @@
-{ "project": { "id" : 4 , "jaar": 2015 , "vrijdag": "2015-04-03" , "maandag": "2015-04-06" , "inschrijvingStartdatum": "2015-01-02" , "inschrijvingEinddatum": "2015-03-08" , "gebruikteIconen" : [ { "naam": "staand", "tekst": "Staand kamp"} , { "naam": "fiets", "tekst": "Trekken per fiets"} , { "naam": "hike", "tekst": "Trekken met rugzak"} , { "naam": "kano", "tekst": "Trekken per kano"} , { "naam": "zeilboot", "tekst": "Trekkend per boot"} , { "naam": "geenrugz", "tekst": "Lopen zonder rugzak"} , { "naam": "hikevr", "tekst": "Lopen met een ander voorwerp"} , { "naam": "auto", "tekst": "Trekkend per auto"} , { "naam": "0pers", "tekst": "Inschrijven per persoon"} , { "naam": "groepje", "tekst": "Inschrijven per groep"} , { "naam": "tent", "tekst": "Overnachten in een zelfmeegenomen tent"} , { "naam": "friet", "tekst": "Overnachten in een frietbuil"} , { "naam": "nacht", "tekst": "Overnachten zonder tent"} , { "naam": "tent_opgezet", "tekst": "Overnachten in tenten verzorgd door staf"} , { "naam": "gebouw", "tekst": "Overnachten in gebouw"} , { "naam": "30km", "tekst": "Totale afstand is 30 km"} , { "naam": "vuur", "tekst": "Koken op houtvuur zonder pannen"} , { "naam": "opvuur", "tekst": "Koken op houtvuur met pannen"} , { "naam": "gas", "tekst": "Koken op gas met pannen"} , { "naam": "stafkookt", "tekst": "Gekookt door de staf"} , { "naam": "k_ks", "tekst": "Kennis van kaart en kompas op eenvoudig niveau"} , { "naam": "k_kv", "tekst": "Kennis van kaart en kompas op gevorderd niveau"} , { "naam": "k_kgv", "tekst": "Kennis van kaart en kompas op specialistisch niveau"} , { "naam": "insigne", "tekst": "Activiteit waarmee een insigne kan worden behaald"} , { "naam": "zwem", "tekst": "Zwemdiploma verplicht"} , { "naam": "mobieltje", "tekst": "Mobieltje meenemen"} , { "naam": "geenmobieltje", "tekst": "Mobieltjes zijn verboden"} , { "naam": "rolstoel", "tekst": "Geschikt voor minder validen (rolstoel)"} , { "naam": "vraagt", "tekst": "Vraagteken Mysterie elementen"} , { "naam": "buitenland", "tekst": "Buitenland - ID kaart of paspoort verplicht"} ] , "plaatsen": [ { "id" : 19 , "naam" : "Alphen" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3174 , "naam": "Alphen Team X-perience" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 13 , "maximumLeeftijd": 17 , "subgroep": "3 - 6 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Heb je zin om met Pasen met een gezellige, grote groep het weekend door te brengen? Dan is de ATX de juiste plek voor jou! Dit jaar zal alles in het teken staan van de televisie!\r\nDus wil jij met je eigen vrienden weg van huis maar toch voor de buis? Vind je het leuk om gave, uitdagende of rare tv-programma?s real-life mee te maken i.p.v. chillend op de bank? Terwijl je de tochten loopt, zap je van zender naar zender en beleef je op posten de wereld van de showbizz.\r\n\r\nDus pak je tent maar in en laat de flatscreen maar thuis want dit weekend staat in het teken van lol, gezelligheid, spanning en een grote verrassing!" , "icoontjes": [ "hike" , "hikevr" , "groepje" , "tent" , "30km" , "gas" , "k_ks" , "zwem" ] } , { "id" : 3169 , "naam": "Back 2 Basic" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 13 , "subgroep": "1 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Zit je pas bij Scouting? Of heb je nog niet\r\nzo veel ervaring met hiken, kamperen,\r\nkoken en pionieren? Dan is dit de HIT die\r\nbij je past! Back 2 Basic is een HIT waar je\r\nde basis van scouting kunt leren of\r\nverbeteren. Het is een weekend boordevol\r\ninformatie en leuke activiteiten rondom\r\nuitdagende scoutingtechnieken, expressie,\r\nsport & spel en veilig & gezond. Misschien\r\nbehaal je zelfs wel meerdere insignes!\r\nSchrijf je dus snel in voor Back 2 Basic!" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "tent" , "15km" , "gas" , "k_ks" , "insigne" ] } , { "id" : 3173 , "naam": "Brainiegek" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 15 , "subgroep": "1 - 4 pers" , "deelnamekosten": "37" , "hitCourantTekst": "Brainiegek; voor alle Scouts die zelf ook wel eens\r\nwillen uitzoeken of je inderdaad zelf een jacuzzi kan bouwen. Het team van Ster Weer en Meer is nu het team van Brainiegek en heeft weer de meest\r\nfantastische test activiteiten bedacht." , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "tent" , "vuur" , "stafkookt" , "k_ks" , "zwem" , "vraagt" ] } , { "id" : 3167 , "naam": "GPS-hike (Grote Paas Speurtocht)" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 18 , "maximumLeeftijd": 88 , "subgroep": "2 - 5 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Gezellig: je loopt van post naar post door de bossen en over de heide rond Alphen. Soms is het een beetje afzien: je loopt op vrijdag en maandag ongeveer 7 km en zaterdag en zondag ongeveer 18 km.\r\nPrimitief: gebakken eitje bij het ontbijt, koffie met iets lekkers op de posten, vier-uur-cup-a-soup, openluchtrestaurant in het bos en bij het kampvuur bittergarnituur. Want primitief is leuk, maar je moet het niet overdrijven.\r\nSpeurwerk: met een gps lopen vergt soms wel speurwerk; de coördinaten liggen niet altijd voor het oprapen maar we zijn wel zo sociaal om eerst uit te leggen hoe een gps werkt." , "icoontjes": [ "hike" , "groepje" , "tent" , "friet" , "60km" , "opvuur" , "gas" , "k_ks" ] } , { "id" : 3171 , "naam": "Het E.E.J.E.H Kamp" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 15 , "subgroep": "1 - 4 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Houd je je hoofd nou bij een bloedneus voor- of achterover? En mag je nu een pleister plakken op een schaafwond of niet?\r\n\r\nOp Het E.E.J.E.H. Kamp leren we je alles over EHBO. We geven vooral les in samenwerking met een echte L.O.T.U.S. (slachtoffer), maar proberen dit af te wisselen met spelletjes. We hebben de tijd nodig om alles te leren wat je moet kennen om op maandag je Examen te doen voor: Jeugd Eerste Hulp. Mocht je slagen krijg je tevens het Specialisatie Insigne EHBO. Bij het kamp krijg je een werkboek en een leerboek waaruit gewerkt gaat worden." , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "stafkookt" , "insigne" ] } , { "id" : 3170 , "naam": "HIT Kamperen" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 14 , "subgroep": "2 - 6 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Bij HIT Kamperen ga je niet hiken,\r\npionieren of knutselen maar leer je heel erg\r\nveel handige dingen. Wat dacht je van een\r\npatrouille-tent opzetten, een frietbuil maken\r\nwaar je ook een nachtje in blijft slapen,\r\nprimitief koken op een zelfgemaakt\r\nhoutvuur, zelfs zonder lucifers of aansteker.\r\nKortom veel handige dingen die van pas\r\nkomen als je gaat kamperen. En wat dacht\r\nje van actieve spellen, kampvuur en een\r\nnachtspel.... ?" , "icoontjes": [ "staand" , "groepje" , "friet" , "tent_opgezet" , "vuur" , "opvuur" , "gas" ] } , { "id" : 3172 , "naam": "Ouder-Kind Hike" , "startDatumTijd": "2015-04-03 17:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 11 , "subgroep": "2 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Ben je nog geen 12 maar ben je wel gek op\r\navontuur? Neem dan je vader of moeder\r\nmee naar de Ouder-Kind Hike. Je loopt\r\nsamen leuke tochten, koken doe je\r\nnatuurlijk samen en ?s avonds luister je\r\ngezellig naar de verhalen van anderen bij\r\nhet kampvuur. Dit wordt vast je gezelligste\r\nPasen ooit?.." , "icoontjes": [ "geenrugz" , "groepje" , "tent" , "20km" , "gas" , "k_ks" , "mobieltje" ] } , { "id" : 3175 , "naam": "The Challenge" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 18 , "subgroep": "1 - 4 pers" , "deelnamekosten": "37" , "hitCourantTekst": "Ben jij klaar voor een HIT vol spanning?\r\nEen HIT die je leven een weekend lang\r\nachterstevoren en op z?n kop zet? Wil jij\r\neen HIT die anders is dan alle andere\r\nkampen en een programma vol uitdagingen\r\nbevat? De vier dagen staan in het teken\r\nvan sportieve uitdagingen, hiken, koken,\r\nslapen in frietbuiltjes, chillen en nog veel\r\nmeer! Spreekt bovenstaande je aan? Dan\r\nis The Challenge iets voor jou! Schrijf je in\r\nen strijd om de Challengetrofee!" , "icoontjes": [ "hike" , "0pers" , "groepje" , "tent" , "friet" , "30km" , "vuur" , "opvuur" , "gas" , "k_ks" , "vraagt" ] } , { "id" : 3168 , "naam": "ThemaHIT" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 14 , "subgroep": "1 - 6 pers" , "deelnamekosten": "42" , "hitCourantTekst": "De ThemaHIT is de ultieme HIT voor`nieuwsgierige scouts die zin hebben in een\r\nweekend vol avontuur en bijzondere gebeurtenissen. Elk jaar weer worden de\r\nscouts verrast met een programma vol\r\nspanning en sensatie. Een kamp voor een\r\n100% scout dus! Kom naar Alphen en\r\nbeleef een mysterieus kamp. Als je nu al op\r\nde hoogte wilt blijven van de ThemaHIT,\r\nvolg ons dan op twitter en facebook (zie\r\nHIT-site), en schrijf je dan nu in. Snel doen,\r\nwant vol=vol!" , "icoontjes": [ "staand" , "geenrugz" , "hikevr" , "0pers" , "groepje" , "tent" , "15km" , "stafkookt" , "k_ks" , "vraagt" ] } ] } , { "id" : 20 , "naam" : "Baarn" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3181 , "naam": "\"De Gulden Hike 2\"" , "startDatumTijd": "2015-04-04 10:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 17 , "subgroep": "2 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "De crisis duurt voort. Op ons kampterrein is het een trieste boel, en van een luxe explorerkamp is geen sprake. Waren er maar wat scouts met een goed stel hersens en een berg economisch inzicht... De \r\nouderwetse gulden speelt dit weekend de hoofdrol.\r\nMet opdrachten en uitdagingen, of door slim te sparen, onderhandelen en investeren verdien je geld, wat je kan gebruiken om het Scoutingleven aangenamer te maken." , "icoontjes": [ "staand" , "geenrugz" , "groepje" , "tent" , "40km" , "gas" , "k_kv" , "k_kgv" , "zwem" , "mobieltje" ] } , { "id" : 3179 , "naam": "Do Dare Deal: Black & White, the final edition" , "startDatumTijd": "2015-04-03 20:00" , "eindDatumTijd": "2015-04-06 13:00" , "minimumLeeftijd": 18 , "maximumLeeftijd": 27 , "subgroep": "2 - 5 pers" , "deelnamekosten": "67" , "hitCourantTekst": "Schrijf je nu in voor het lustrum en laatste versie van de leukste HIT voor boven de 18. Do, Dare&Deal with it! komt nog 1 keer terug als de meest uitdagende en gezelligste programma HIT. Wat kunnen jullie verwachten? Verzamel tijdens het weekend credits, door het doen van uitdagende opdrachten waar je doorzettingsvermogen, creativiteit en veel lef voor nodig hebt. Denk dan aan typische scoutingelementen, ook te herkennen uit expeditie robinson.. And black and white? Laat je verassen! Afsluiten doen we in stijl: met een feest!\r\nEn wat we gaan doen in 2015? Dat is een verassing...\r\n\r\nBlijf op de hoogte via onze facebook:https:\/\/www.facebook.com\/dodaredeal" , "icoontjes": [ "staand" , "geenrugz" , "hikevr" , "groepje" , "tent" , "30km" , "vuur" , "gas" , "stafkookt" , "zwem" , "mobieltje" , "vraagt" ] } , { "id" : 3180 , "naam": "Niet Zomaar Een HIT" , "startDatumTijd": "2015-04-04 11:00" , "eindDatumTijd": "2015-04-06 16:00" , "minimumLeeftijd": 16 , "maximumLeeftijd": 88 , "subgroep": "1 - 80 pers" , "deelnamekosten": "57" , "hitCourantTekst": "Niet Zomaar een Hit wordt georganiseerd\r\ndoor een prettig gestoord stafteam. De\r\nomgeving van deze Hit is erg gevarieerd:\r\nVan Gotische kastelen tot het Pittoreske\r\nGooische matras! ! \r\n\r\nBen je op zoek naar het (on)mogelijke? Een uitdagend programma waarin iedereen zich kan vinden ?\r\n\r\nWaarom? Gewoon, omdat het kan! \r\n\r\nIn de avond lekker feesten met muziek of toch een kampvuur... jij kiest! \r\n\r\nTijdens dit weekend is niets te gek !" , "icoontjes": [ "hike" , "0pers" , "groepje" , "tent" , "friet" , "nacht" , "35km" , "stafkookt" , "k_ks" , "k_kv" , "mobieltje" , "vraagt" ] } , { "id" : 3177 , "naam": "Ouder kind hike Baarn" , "startDatumTijd": "2015-04-04 10:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 11 , "subgroep": "2 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Scout genoeg voor een pittige tweedaagse hike, maar nog niet oud genoeg om dit zelfstandig te doen?!\r\n\r\nDan is de ouder-kindhike Baarn iets voor jou!\r\nMet je vader, moeder of iemand anders van minimaal 18 jaar, loop je in twee dagen van Austerlitz naar Baarn. \r\n\r\nJullie koken je eigen eten en slapen in jullie eigen tent. Voor het vervoer van de bagage en het eten en drinken zorgen wij! Lopen doen jullie samen!\r\n" , "icoontjes": [ "geenrugz" , "groepje" , "tent" , "20km" , "gas" , "k_ks" , "mobieltje" ] } , { "id" : 3176 , "naam": "Rank (H)IT" , "startDatumTijd": "2015-04-04 11:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 16 , "maximumLeeftijd": 88 , "subgroep": "1 - 80 pers" , "deelnamekosten": "57" , "hitCourantTekst": "RANK (H)IT,wat houdt\r\ndit in? De overnachtingslocaties, het\r\ndagelijkse ontbijt- en dinerbuffet en het avondprogramma regelen wij. \r\nOverdag zijn jullie aan zet. \r\nWordt het jouw editie van Jack Ass in the Bush, Gooische meisjes in\r\nde Rimboe of toch........?? \r\nAan jullie de keus. Alles mag en alles kan. 's Avonds is de bar open en onze huis dj zorgt voor de muzikale ondersteuning. Ook een kampvuur zal niet ontbreken.\r\nHit 2014 ??? Check in and Chill out !" , "icoontjes": [ "hike" , "hikevr" , "0pers" , "groepje" , "tent" , "friet" , "nacht" , "35km" , "stafkookt" , "mobieltje" , "vraagt" ] } , { "id" : 3178 , "naam": "Welp - Ouder Avonturenkamp" , "startDatumTijd": "2015-04-04 10:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 10 , "subgroep": "2 pers" , "deelnamekosten": "52" , "hitCourantTekst": "In het geheime onderzoekslaboratorium in Baarn werkt Professor Doctor Franck met zijn hulpje Stein aan een grote uitvinding. Al jaren is de professor hieraan bezig en bijna is het hem gelukt. Tijdens het paasweekend moet hij echter naar een belangrijk congres in de Kaukasus. Daarom is hij op zoek naar stoere onderzoekers die het aandurven om Stein te helpen op de belangrijke uitvinding te passen!\r\n\r\nDurf jij het aan om Stein te helpen? \r\nVuur maken, tocht lopen, pionieren, spannende spelen, onderzoeken en nog veel meer? \r\n\r\nBen jij welp en niet ouder dan 10 jaar? Hou je van een avontuur en is je vader of moeder net zo stoer? Schrijf jullie dan in voor het Welp-Ouder Avonturenkamp in Baarn! \r\n" , "icoontjes": [ "staand" , "geenrugz" , "tent" , "15km" , "vuur" , "stafkookt" , "k_ks" , "zwem" , "vraagt" ] } ] } , { "id" : 21 , "naam" : "Dwingeloo" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3192 , "naam": "Adventure Rangers" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 11 , "subgroep": "1 - 3 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Het bos van Dwingeloo verandert in een\r\nspannend oerwoud. Slingeren aan de\r\nlianen, toffe junglespellen en slapen in een\r\ntent. Niet alleen, maar met alle nieuwe\r\nvrienden die je maakt! Tijdens de HIT in\r\nDwingeloo zal je bij de Adventure Rangers\r\nveel spannende avonturen beleven. Trek je\r\njunglekleren aan en kom naar de HIT in\r\nDwingeloo!" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "tent" , "5km" , "stafkookt" , "geenmobieltje" ] } , { "id" : 3190 , "naam": "Beginnershike" , "startDatumTijd": "2015-04-04 12:30" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 9 , "maximumLeeftijd": 12 , "subgroep": "2 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Een heel leuk kamp voor jonge kinderen\r\ndie willen kennismaken met scoutingtechnieken.\r\nKom leren hoe je kampeert en\r\nhoe je kunt hiken. Word samen beter dan\r\nde rest, op een gezellige manier!" , "icoontjes": [ "staand" , "geenrugz" , "groepje" , "tent" , "20km" , "gas" , "stafkookt" , "k_ks" ] } , { "id" : 3185 , "naam": "Brownsea Camp" , "startDatumTijd": "2015-04-04 10:30" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 13 , "maximumLeeftijd": 17 , "subgroep": "1 - 6 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Ruim honderd jaar geleden begon Scouting\r\nop het Brownsea Island. Als je alles al eens\r\nhebt meegemaakt wordt het tijd voor een\r\nnieuw avontuur op het eiland waar alles\r\nbegon... \"BROWNSEA ISLAND\". In de\r\nruwe natuur van het afgelegen eiland\r\nBROWNSEA verlaat je de beschaving en\r\nkeer je terug naar de traditie en de wortels\r\nvan SCOUTING. Hier word je pionier van\r\nde toekomst. Je bent aangewezen op je\r\neigen vindingrijkheid, handigheid en\r\ndoorzettingsvermogen." , "icoontjes": [ "staand" , "hikevr" , "0pers" , "groepje" , "friet" , "15km" , "vuur" , "k_kv" , "insigne" ] } , { "id" : 3195 , "naam": "Expeditie Dwingeloo" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 14 , "subgroep": "2 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Behendigheid, kaartlezen, doorzettingsvermogen,\r\nconditie, kennis, slimheid en\r\nsluwheid? Om de expeditie te overleven\r\nmoet je een beroep doen op al deze\r\nvaardigheden. Alleen en samen met\r\nanderen. Primitief of luxe slapen en koken,\r\nelke dag spannend wie wint! Lijkt dit je\r\nleuk? Doe dan mee met Expeditie\r\nDwingeloo!" , "icoontjes": [ "staand" , "geenrugz" , "groepje" , "tent" , "friet" , "15km" , "vuur" , "gas" , "k_kv" , "geenmobieltje" ] } , { "id" : 3184 , "naam": "Happyhike" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 18 , "subgroep": "2 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Welkom bij de Happyhike. Het allerleukste\r\nonderdeel van de HIT is ook dit jaar weer\r\nvan de partij! Wat je bij ons allemaal kunt\r\nverwachten? Hiken, vlotvaren, primitief\r\nkoken, slapen in een zelfgemaakt\r\nonderkomen, kampvuur, originele\r\nopdrachten en nog veel meer!\r\nDon't worry, be happy!" , "icoontjes": [ "hike" , "groepje" , "friet" , "35km" , "opvuur" , "gas" , "stafkookt" , "k_kv" , "zwem" , "mobieltje" ] } , { "id" : 3194 , "naam": "Jongerenhike" , "startDatumTijd": "2015-04-04 14:00" , "eindDatumTijd": "2015-04-06 18:00" , "minimumLeeftijd": 18 , "maximumLeeftijd": 50 , "subgroep": "2 - 15 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Ben je 18 jaar of ouder en heb je zin in een\r\ngezellig Paasweekend? Dan ben je bij de\r\nJongerenhike in Dwingeloo aan het goede\r\nadres. Een goede combinatie van\r\ninspanning en ontspanning zal je tijdens dit\r\nweekend gaan beleven. Overdag een\r\nludieke wandeling en 's avonds feest!" , "icoontjes": [ "hike" , "groepje" , "tent" , "50km" , "vuur" , "opvuur" , "k_kv" , "zwem" , "mobieltje" ] } , { "id" : 3186 , "naam": "Junior Zwerfhike" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 9 , "maximumLeeftijd": 13 , "subgroep": "2 - 3 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Dus jij denkt dat je zelf wel kan bepalen\r\nwaar je langsloopt, wat je eet en onder\r\nwelke boom je je tent opzet?\r\nOok als je dat nog nooit of niet vaak eerder\r\ngedaan hebt?\r\nMooi. Dat denken wij namelijk ook! Ben jij\r\ntussen de 9 t\/m 13 jaar en ben je nog niet\r\n(vaak) op hike geweest? Wil je leren kaart\r\nlezen, je eigen tocht uitzetten, zelf je tent\r\nop zetten, primitief koken en nog veel\r\nmeer? Maar wil je vooral een heel gaaf\r\npaasweekend hebben? Dan zit je hier\r\ngoed!" , "icoontjes": [ "hike" , "geenrugz" , "groepje" , "tent" , "20km" , "vuur" , "gas" , "zwem" ] } , { "id" : 3182 , "naam": "Kokkamp" , "startDatumTijd": "2015-04-04 12:00" , "eindDatumTijd": "2015-04-06 18:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 13 , "subgroep": "1 - 3 pers" , "deelnamekosten": "47" , "hitCourantTekst": "LEREN KOKEN MET PIT, KOM NAAR\r\nHET KOKKAMP VAN DE HIT !!!\r\nHet Kokkamp is er voor jongens en meisjes\r\nvan 10 t\/m 13 jaar, die zich het hele\r\nweekend bezig willen houden met koken.\r\nNiet alleen het koken zelf, maar ook alles\r\nwat er verder mee te maken heeft komt aan\r\nbod door middel van een theoriespel. Het\r\nvoorbereiden en het uitvoeren van een\r\ngoede, lekkere en vooral ook leuke maaltijd\r\nstaat voorop. Ook zul je na dit kamp zoete,\r\nhartige, warme en koude hapjes kunnen\r\nbereiden." , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "opvuur" , "insigne" , "geenmobieltje" ] } , { "id" : 3193 , "naam": "Ouder-Kind Hike Dwingeloo" , "startDatumTijd": "2015-04-04 12:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 55 , "subgroep": "2 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Ben jij welp en niet ouder dan 12 jaar?\r\nHou je van een avontuur en is je vader of moeder net zo stoer? Schrijf jullie dan in voor de Ouder Kind Hike in Dwingeloo! We gaan ereen geweldig gezellig, spannend en uitdagend weekend van maken voor jou en je vader of moeder.\r\nTijdens het weekend slapen jullie samen in je eigen tent en zijn we lekker buiten in het Drentse landschap. \r\n" , "icoontjes": [ "geenrugz" , "groepje" , "tent" , "25km" , "gas" , "k_ks" , "mobieltje" ] } , { "id" : 3183 , "naam": "Trapperskamp" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 18:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 15 , "subgroep": "2 - 3 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Ben jij de scout die kan overleven in de\r\nnatuur rondom Dwingeloo? Ben je niet\r\nbang om tijdens het HIT weekend je eigen\r\nmaaltijd op houtvuur te koken? Beheers je\r\nmeerdere routetechnieken en kun jij je eigen\r\nprimitieve overnachtingsplek bouwen? Ben\r\nje bovendien die stoere scout die met\r\ngemak over een trappersbaan gaat? Dan\r\nben jij de juiste scout voor het\r\nTrapperskamp! Heb je al deze vragen met\r\nJA beantwoord, dan is het Trapperskamp\r\njouw kamp!" , "icoontjes": [ "staand" , "hike" , "groepje" , "tent" , "friet" , "30km" , "vuur" , "opvuur" , "k_kv" , "zwem" ] } , { "id" : 3191 , "naam": "Triathike" , "startDatumTijd": "2015-04-04 12:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 18 , "subgroep": "2 - 4 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Wat wil je nog meer, lopen, fietsen én\r\nkanoën. Met je koppel- of troppelgenoot de\r\nbossen van Dwingeloo in. Ook dit jaar gaan\r\nwe weer met verschillende Scouts of\r\nExplorers met behulp van kaart, kompas en\r\nvele andere creatieve routetechnieken de\r\nDrentse wildernis ontdekken. De Triathike\r\nblijft niet beperkt tot het HIT-terrein! Als\r\nenige onderdeel in HIT-land zie je Drenthe\r\nte voet, op de fiets en vanuit de kano." , "icoontjes": [ "fiets" , "hike" , "kano" , "groepje" , "tent" , "15km" , "20km" , "65km" , "gas" , "k_kv" , "zwem" , "mobieltje" ] } , { "id" : 3187 , "naam": "Vrije Zwerfhike" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 15 , "maximumLeeftijd": 21 , "subgroep": "2 - 6 pers" , "deelnamekosten": "37" , "hitCourantTekst": "Lijkt het je wat om tijdens Pasen door het\r\nmooie Drenthe te zwerven op zoek naar\r\neen uitdagende slaapplaats? Als je kennis\r\nvan kaart, kompas en coördinaat hebt,\r\ntussen de 15 en 21 jaar bent en enige\r\nkampeerervaring hebt, dan is de Vrije\r\nZwerfhike zeker wat voor jou!" , "icoontjes": [ "hike" , "groepje" , "tent" , "20km" , "150km" , "gas" , "k_kv" , "mobieltje" ] } , { "id" : 3188 , "naam": "Woodcamp" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 14 , "subgroep": "1 - 4 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Bij bosbeheer komt er heel wat meer kijken\r\ndan je zou denken! Dus ben je niet bang\r\nvoor eelt op je handen en leg je het bijltje er\r\nniet snel bij neer dan verwachten wij jou\r\nmet de Pasen in Dwingeloo in het\r\nWoodcamp." , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "stafkookt" , "insigne" ] } , { "id" : 3189 , "naam": "Zwerfhike" , "startDatumTijd": "2015-04-04 13:00" , "eindDatumTijd": "2015-04-06 17:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 16 , "subgroep": "2 - 6 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Je bent tussen de 12 en 16 jaar oud en houdt ervan om zelf te bepalen waar je langsloopt. Laat maar zien of je met kaart, kompas en coördinaten kan werken. We helpen je hierbij op weg!\r\nRugzak en bagage? Neem je zelf mee! Samen met anderen loop je in een koppel of een troppel. De route naar het overnachtingsterrein stippelen jullie samen uit. \r\nAan het eind van de dag zien we elkaar hier weer en kunnen jullie andere zwerfhikers leren kennen! Zien we je bij de zwerfhike?" , "icoontjes": [ "hike" , "groepje" , "tent" , "35km" , "gas" , "k_kv" , "mobieltje" ] } ] } , { "id" : 22 , "naam" : "Harderwijk" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3205 , "naam": "Adventure Trail" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 14 , "subgroep": "2 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Bij het reisbureau Adventure Trail boek je nu voor weinig geld een compleet ongeorganiseerde reis door de chaos van de Seventies! Een actieve reis waarbij jij elk moment weer voor verrassingen komt te staan!" , "icoontjes": [ "hike" , "groepje" , "tent" , "30km" , "vuur" , "gas" , "k_ks" , "zwem" ] } , { "id" : 3201 , "naam": "AppTrail 4.0" , "startDatumTijd": "2015-04-03 11:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 17 , "maximumLeeftijd": 19 , "subgroep": "1 - 6 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Ben je al het primitieve gezeik zat? Hangen het kompas en de kaarthoekmeter je de keel uit? Heb je genoeg van die suffe scoutingtechnieken? Hier is de oplossing!!!!\r\nDe AppTrail 4.0!!!\r\n\r\nHet enige wat je echt nodig hebt is je smartphone. En nee! Hij wordt niet afgepakt.\r\n\r\nStel het je voor:\r\n- Gewoon slapen in je eigen comfortabele tent.\r\n- Vuur maken met een aansteker\r\n- Pling je eten!\r\n- Het enige koord dat je uit de knoop haalt is het laadsnoertje van je smartphone.\r\n- Geen routes met bolletje-pijltje, strippenkaart of wat dan ook voor vreemd verzonnen toestanden\r\n\r\nEen HIT naar je Sm(h)art!!!" , "icoontjes": [ "hike" , "0pers" , "groepje" , "tent" , "55km" , "mobieltje" , "vraagt" ] } , { "id" : 3196 , "naam": "Groepshike" , "startDatumTijd": "2015-04-03 10:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 17 , "subgroep": "2 - 8 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Ben je tussen de 12 en 17 jaar en heb jij ook zo?n zin in de gruwelijkste, gekste, hotste, vieste, vetste, vaagste, crimineelste, chillste, rete kickste posten, routes en avondspellen....? Dan wordt het tijd voor de Groepshike! Een hele lauwe hike, want bij ons mag je in een groepje met je eigen maatjes lopen! Dat is toch veel gezelliger dan met z`n tweetjes!?! Drie dagen hiken met je eigen groepje van 3 tot 6 personen. Zelf je bagage sjouwen en je eigen prakkie koken. Uitdagende posten, een heel cool avondprogramma (!!), gezellig kampvuur en vooral heel veel lol!!! Dat wordt lachen! Pak je boerenkoolstampers, hairspray, supersoakers, oorwarmers en je vieze onderbroeken uit de kast en tot Pasen 2014!!!" , "icoontjes": [ "hike" , "geenrugz" , "groepje" , "tent" , "35km" , "gas" , "k_kv" , "zwem" , "mobieltje" , "vraagt" ] } , { "id" : 3208 , "naam": "HIK (Hike Interesse Kamp)" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 14 , "subgroep": "1 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Hike Interesse Kamp Wil je graag meedoen met de HIT, maar weet je niet goed waar te beginnen? Wil je leren over routetechnieken? Ben je benieuwd hoe je prettig kunt leven zonder moderne snufjes en heb je met Pasen niks te doen? Dan ben jij degene die wij zoeken!" , "icoontjes": [ "hike" , "0pers" , "groepje" , "tent" , "20km" , "opvuur" ] } , { "id" : 3202 , "naam": "Kokkamp" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 15 , "subgroep": "1 - 6 pers" , "deelnamekosten": "47" , "hitCourantTekst": "je leert om met je groepje de maaltijden van de dag op aparte wijzen klaar te maken.de ene keer op houtvuur in een van de ovens of op een gas pitje.\r\nje leert recepten lezen en met je groepje samen te werken voor een heerlijke maaltijd.\r\nDaar naast doen we nog andere spannende en leuke activiteiten .\r\nschrijf je snel in, tot op Harderwijk\r\n\r\n" , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "vuur" , "opvuur" , "gas" ] } , { "id" : 3197 , "naam": "Koninklijke Survival Expeditie Harderwijk" , "startDatumTijd": "2015-04-03 11:00" , "eindDatumTijd": "2015-04-06 16:00" , "minimumLeeftijd": 16 , "maximumLeeftijd": 32 , "subgroep": "1 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "De Survivalexpeditie Harderwijk wordt wel eens het zwaarste kamp van de hele HIT genoemd (en terecht!).\r\n\r\nJe zal dus diverse uitdagingen het hoofd moeten bieden. 100 km hiken door diverse terreinsoorten, grensverleggende posten, eten uit de natuur, koken zonder potten of pannen en slapen zonder slaapzak zijn slechts een greep uit ons uitgebreide assortiment van activiteiten." , "icoontjes": [ "kano" , "zeilboot" , "geenrugz" , "0pers" , "groepje" , "nacht" , "120km" , "vuur" , "k_kv" , "zwem" , "geenmobieltje" ] } , { "id" : 3203 , "naam": "LAN HIT" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 17 , "subgroep": "1 - 20 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Geen gedoe tijdens de HIT Harderwijk, maar een LANparty! Met maximaal 20 deelnemers gezellig een weekendje gamen! LAN staat voor Local Area Network, oftewel een lokaal netwerk. Je kunt hier dezelfde dingen meedoen als het Internet, maar dan vele malen sneller!" , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "0km" , "stafkookt" , "mobieltje" , "rolstoel" ] } , { "id" : 3200 , "naam": "Op zoek naar..." , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 9 , "subgroep": "1 - 28 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Ook dit jaar kunnen de Welpen weer op zoek naar...? Waar we naar opzoek gaan blijft nog even een verrassing, maar een uitdaging wordt het zeker. Samen met ongeveer 25 andere kinderen gaan we zo veel mogelijk leuke, nieuwe, uitdagende en andere dingen doen dan je gewend bent." , "icoontjes": [ "staand" , "0pers" , "gebouw" , "stafkookt" ] } , { "id" : 3210 , "naam": "Ouder Kind Hike" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 60 , "subgroep": "2 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Hee ouder wil jij een keer met jouw kind Hiken?\r\n\r\nEn Welp lijkt het jou wat om een van je ouders te laten zien hoe jij kampeert bij scouting?\r\n\r\nDan is dit wat voor jullie.\r\nGa op Ouder-Kind-Hike in Harderwijk!\r\nGezellig samen overdag wandelen van kampterrein naar kampterrein met je eigen dagrugzakje.\r\nOnderweg zoeken jullie zelf de leuke plekjes op terwijl de staf jullie bagage vervoert.\r\nAls jullie je potje hebben gekookt is er tijd voor een gezamenlijke activiteit.\r\n\r\n\r\nLet op; inschrijven in een groepje kan alleen met 1 welp en zijn ouder." , "icoontjes": [ "geenrugz" , "groepje" , "tent" , "20km" , "gas" , "k_ks" , "mobieltje" ] } , { "id" : 3199 , "naam": "Pio-Extreme" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-06 16:00" , "minimumLeeftijd": 16 , "maximumLeeftijd": 20 , "subgroep": "1 - 4 pers" , "deelnamekosten": "57" , "hitCourantTekst": "Al menig pio-object gebouwd, knopen doe je uit verveling achter je rug? wat dan? Bij HIT Harderwijk is er voor jou Pio-Extreme! Samen met mede scouts een weekend lang kamperen boven de grond in de bomen. Bouw je onderkomen, eten op een tak, slapen in een hangmat. Dat maakt Pio-Extreme zo ultiem!" , "icoontjes": [ "staand" , "0pers" , "groepje" , "nacht" , "gas" , "vraagt" ] } , { "id" : 3198 , "naam": "Piokamp" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 15 , "subgroep": "1 - 4 pers" , "deelnamekosten": "42" , "hitCourantTekst": "Je wilt wat met de HIT beleven, maar geen eindeloze tochten lopen? Je wilt iets doen waar je zelf nog niet zo goed bent? Iets doen waar je eigen groep niet zoveel aandacht aan besteedt? Of waar je gewoon hopeloos verslaafd aan bent? Dan is \"Het Piokamp!\" de uitkomst." , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "gas" , "insigne" ] } , { "id" : 3206 , "naam": "Ruiterkamp" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 16 , "subgroep": "1 - 3 pers" , "deelnamekosten": "72" , "hitCourantTekst": "Ben je in het bezit van een grote mond? Of lijd je aan enige andere vorm van grootheidswaanzin? Dan is dit een uitdaging voor je. Kun je met vier benen op de grond blijven staan? Hou je van knuffelen? En lijkt het je leuk om een een keer paard te rijden? Ga dan mee met het ruiterkamp." , "icoontjes": [ "staand" , "fiets" , "0pers" , "groepje" , "tent" , "stafkookt" ] } , { "id" : 3207 , "naam": "Ruiterkamp Gevorderden" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 16 , "subgroep": "1 - 2 pers" , "deelnamekosten": "72" , "hitCourantTekst": "Ben je in het bezit van een verzorg pony of paard, heb je al een ruiterbewijs of ben je bezig met je ruiterpaspoort en minimaal proef F7 afgerond en wil je eens proeven hoe paardrijden binnen scouting werkt. Ga dan mee met de ruiterhit voor gevorderde." , "icoontjes": [ "staand" , "fiets" , "0pers" , "groepje" , "tent" , "stafkookt" ] } , { "id" : 3209 , "naam": "TecHIT" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 17:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 14 , "subgroep": "1 - 3 pers" , "deelnamekosten": "52" , "hitCourantTekst": "De TecHIT, een kamp waarbij elektronica, zenders, ontvangers en computers dagelijkse kost zijn. Het lijkt een beetje op de JOTA-JOTI, maar dit is nog veel beter, groter, gaver en radioactiever.\r\n\r\nDe TecHIT is speciaal voor Scouts (tussen de 10 en 14 jaar) die het leuk vinden om bijvoorbeeld de radio van hun broertje uit elkaar te halen (en soms niet meer weten hoe het in elkaar moet), of een compleet alarmsysteem op de deur van hun slaapkamer hebben, of via een bakkie met iedereen te praten, of gewoon niet genoeg kan krijgen van de JOTA-JOTI, of gewoon eens wat meer willen weten over computernetwerken, zenders, electronica, enzovoort." , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "tent" , "stafkookt" , "k_ks" , "insigne" , "geenmobieltje" ] } , { "id" : 3204 , "naam": "Woudlopershike" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-05 16:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 17 , "subgroep": "1 - 10 pers" , "deelnamekosten": "42" , "hitCourantTekst": "DURF JIJ DEZE UITDAGING AAN TE GAAN? Heb jij een beetje kennis van kaart en kompas beschik je over een portie doorzettingsvermogen? Dan hoor jij bij die bikkels M\/V die kunnen genieten van een zwerftocht door de Veluwse bossen en heidevelden. Tijdens je tocht kook je de maaltijden (zonder pannen) op houtvuur en slaap je in zelfgemaakte schuilhutten.Je vliegt over kabelbanen, buikschuifbanen en beleeft de leukste avonturen in het bos en op de heidevelden. Geef je op en geniet van dit avontuur." , "icoontjes": [ "hike" , "0pers" , "groepje" , "friet" , "40km" , "vuur" , "k_ks" , "insigne" ] } ] } , { "id" : 23 , "naam" : "Mook" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3164 , "naam": "BeverHIT-1" , "startDatumTijd": "2015-04-03 13:00" , "eindDatumTijd": "2015-04-04 17:30" , "minimumLeeftijd": 5 , "maximumLeeftijd": 7 , "subgroep": "1 - 3 pers" , "deelnamekosten": "27" , "hitCourantTekst": "Vind jij het ook zo jammer dat je nog geen zeven jaar bent? Maar dat geeft niks! Want dit jaar kun je als bever ook al op HIT! Met 15 andere bevers uit heel Nederland gaan we een nachtje logeren in het huis van Professor Plof. We doen leuke spelletjes en gaan ook lekker knutselen. Als we voorzichtig zijn mogen we misschien zelfs een kijkje nemen in het laboratorium van de professor. Ben jij erbij?" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "gebouw" , "stafkookt" ] } , { "id" : 3165 , "naam": "BeverHIT-2" , "startDatumTijd": "2015-04-05 10:00" , "eindDatumTijd": "2015-04-06 14:30" , "minimumLeeftijd": 5 , "maximumLeeftijd": 7 , "subgroep": "1 - 3 pers" , "deelnamekosten": "27" , "hitCourantTekst": "Vind jij het ook zo jammer dat je nog geen zeven jaar bent? Maar dat geeft niks! Want dit jaar kun je als bever ook al op HIT! Met 15 andere bevers uit heel Nederland gaan we een nachtje logeren in het huis van Professor Plof. We doen leuke spelletjes en gaan ook lekker knutselen. Als we voorzichtig zijn mogen we misschien zelfs een kijkje nemen in het laboratorium van de professor. Ben jij erbij?" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "gebouw" , "stafkookt" ] } , { "id" : 3157 , "naam": "De Aller-slechtste HIT van NL" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 17 , "subgroep": "2 - 4 pers" , "deelnamekosten": "62" , "hitCourantTekst": "Zin in een weekend vol slechte grappen, slechte dansjes, slechte teksten, slechte muziek en eigenlijk alles wat goed slecht is?! Dan ben je bij deze HIT op de juiste plaats! Het wordt zo slecht, dat het vanzelf goed komt! Een gezellige hike met gave posten en verschillende manieren van verplaatsen maken jouw paasweekend om nooit te vergeten. Wat is jouw slechte excuus om wel mee te gaan?" , "icoontjes": [ "fiets" , "hike" , "kano" , "groepje" , "tent" , "45km" , "opvuur" , "gas" , "k_kv" , "zwem" , "mobieltje" , "vraagt" ] } , { "id" : 3155 , "naam": "Deutschland Dropping Race" , "startDatumTijd": "2015-04-03 10:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 14 , "maximumLeeftijd": 17 , "subgroep": "2 - 6 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Altijd al willen weten hoe Ostern (Pasen) in Duitsland bevalt? Hier is je kans! De Deutschland Dropping Race! Geef je op voor deze belevenis met je groep van 2 tot 6 personen! Bij ons ben je verzekerd van Spass (lol), avontuur, spionagepraktijken, ein unglaubliches hudo project en eieren. Wij bieden je elke dag een spannende trip. Dus: pak je ID-kaart en je blinddoek maar vast in..., als je durft! Tot ziens met Pasen!" , "icoontjes": [ "hike" , "0pers" , "groepje" , "tent" , "friet" , "50km" , "k_kv" , "buitenland" ] } , { "id" : 3161 , "naam": "Eifel 50° Noord - Worst Case Scenario" , "startDatumTijd": "2015-04-03 09:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 15 , "maximumLeeftijd": 18 , "subgroep": "2 - 4 pers" , "deelnamekosten": "82" , "hitCourantTekst": "In de Duitse Eifel draait het dit jaar om de keiharde handel en ijskoude criminelen. Met je tent op je rug, dwars door het ruige terrein van de Eifel, moeten beslissingen over leven en dood genomen worden. Ben jij in staat je hoofd koel te houden ook als het er heet aan toe gaat? Droom jij er al jaren van om je krantenwijk in te ruilen voor de absolute macht? En ga jij door, ook bij een beetje tegenwind en horizontale sneeuw? Meld je dan aan voor dé HIT van 2014: Eifel 50° Noord, Worst Case scenario!" , "icoontjes": [ "hike" , "groepje" , "tent" , "45km" , "vuur" , "gas" , "k_kv" , "zwem" , "vraagt" , "buitenland" ] } , { "id" : 3163 , "naam": "En da's állemaal in de Eifel gebeurd?!" , "startDatumTijd": "2015-04-03 10:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 13 , "maximumLeeftijd": 16 , "subgroep": "2 - 4 pers" , "deelnamekosten": "82" , "hitCourantTekst": "De Eifel 50º Noord heeft een nieuw kamp! Ken jij ook van die mensen die de hele dag sterke verhalen vertellen? Over touwbaanconstructies met een eenwieler, breien op hoogte, achteruit mountainbiken en op een vlot slapen (dat in een boom hangt)? Je kunt sterke verhalen vertellen en je kunt sterke verhalen meemaken! Ga met ons mee, zodat mensen straks zeggen: \"en da's állemaal in de Eifel gebeurd?!\"" , "icoontjes": [ "staand" , "geenrugz" , "groepje" , "tent" , "20km" , "vuur" , "gas" , "k_ks" , "zwem" , "vraagt" , "buitenland" ] } , { "id" : 3159 , "naam": "HITernational" , "startDatumTijd": "2015-04-03 19:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 16 , "subgroep": "2 - 4 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Wil jij Pasen op z'n Afrikaans meemaken? Dit is je kans, meld je aan voor Ghana Express! Tijdens deze HIT reis je via Tamale, Kumasi en Kakum National Park naar Accra. In elke stad beleven we een nieuw Ghanees avontuur. En... we reizen niet alleen te voet! De spanning van de dag spoelen we weg met een tropische cocktail en een jamsessie op de djembe of een potje oware bij het kampvuur. Wie komt als eerste aan in Accra en wint de race? " , "icoontjes": [ "staand" , "geenrugz" , "groepje" , "tent" , "20km" , "gas" , "mobieltje" , "vraagt" ] } , { "id" : 3160 , "naam": "InterHITy" , "startDatumTijd": "2015-04-03 11:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 18 , "maximumLeeftijd": 30 , "subgroep": "2 - 4 pers" , "deelnamekosten": "57" , "hitCourantTekst": "Vind jij ook dat je met een traditionele hike te weinig ziet van Nederland? Dan is de InterHITy iets voor jou! Met deze HIT zie je de verrassendste plekjes en overnacht je ook nog eens op verschillende HITterreinen! Elke dag rij je met de auto een mooie route waarbij je natuurlijk gebruik maakt van uitdagende routetechnieken, maar je komt onderweg ook verrassende posten tegen. Win jij dit jaar de gouden nummerplaat? Schrijf je nu in voor de 6e editie van de InterHITy!!" , "icoontjes": [ "auto" , "groepje" , "tent" , "gas" , "stafkookt" , "k_kv" , "mobieltje" , "vraagt" , "buitenland" ] } , { "id" : 3158 , "naam": "Make Your Choice" , "startDatumTijd": "2015-04-03 19:15" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 13 , "maximumLeeftijd": 17 , "subgroep": "2 - 4 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Ben jij in staat om uit een serie van onlogische keuzes de beste optie te kiezen, dan zoeken we jou niet. Dit is een HIT met de karaktereigenschappen van een spelshow, waarin je voortdurend de strijd aangaat met de andere groepjes en het scorebord. Het zit vol met absurde en extravagante keuzes en opdrachten, waarvan je de consequentie niet kan overzien, maar ze wel zo goed mogelijk kan uitvoeren. Lever jezelf over aan de consequenties en je zult zien dat er geen foute keuze is." , "icoontjes": [ "staand" , "hike" , "geenrugz" , "groepje" , "tent" , "opvuur" , "gas" , "stafkookt" , "k_ks" , "k_kv" , "mobieltje" , "vraagt" ] } , { "id" : 3162 , "naam": "Powerkids HIT-it" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 7 , "maximumLeeftijd": 11 , "subgroep": "1 - 6 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Al meer dan 10 jaar is het Powerkids HIT-it-kamp in Mook een groot succes. Het is supergezellig, we hebben een hoop plezier en na afloop heb je er weer een heleboel nieuwe scoutingvrienden bij uit heel Nederland. Dit jaar wemelt het van de piraten in Mook! Ben jij superstoer, nieuwsgierig en hou je van avontuur? Kom dan naar ons piratenhol in Mook en beleef het avontuur met ons!" , "icoontjes": [ "staand" , "0pers" , "groepje" , "gebouw" , "5km" , "stafkookt" , "geenmobieltje" ] } , { "id" : 3156 , "naam": "Stookkamp" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 14 , "subgroep": "1 - 3 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Ben jij in de regen als eerste uit de tent om het vuur aan te steken? Vind je het niet erg als je kleren naar rook stinken en heb je vuurvaste handen? Ben je bovendien niet bang voor scouts van andere groepen en wil je hier zelfs graag intensief mee kennis maken? Dan ben jij de scout voor het Stookkamp!\r\nGa mee en leer op verschillende manieren veilig vuur maken en alles wat daarbij komt kijken. Kijk snel op www.stookkamp.nl voor foto's en meer info." , "icoontjes": [ "staand" , "0pers" , "groepje" , "tent" , "opvuur" , "geenmobieltje" ] } , { "id" : 3166 , "naam": "Zeilhit" , "startDatumTijd": "2015-04-03 12:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 11 , "maximumLeeftijd": 15 , "subgroep": "1 - 4 pers" , "deelnamekosten": "52" , "hitCourantTekst": "TODO" , "icoontjes": [ "zeilboot" ] } ] } , { "id" : 24 , "naam" : "Zeeland" , "hitCourantTekst" : "TODO" , "kampen" : [ { "id" : 3212 , "naam": "Bourgondische Autopuzzeltocht" , "startDatumTijd": "2015-04-04 10:30" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 23 , "maximumLeeftijd": 65 , "subgroep": "2 - 5 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Bij de Bourgondische Autopuzzeltocht draait het om: Jawel, bourgondisch leven met lekker eten en beetje relaxte sight-seeing, en aan de hand van verschillende uitdagende puzzels kris-kras het Zeeuwse landschap verkennen met de auto. Bijzondere biertjes bij het kampvuur, een hit die vooral om gezelligheid draait! " , "icoontjes": [ "auto" , "groepje" , "tent" , "opvuur" , "stafkookt" , "mobieltje" ] } , { "id" : 3213 , "naam": "Game Time" , "startDatumTijd": "2015-04-04 10:00" , "eindDatumTijd": "2015-04-06 16:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 13 , "subgroep": "1 - 6 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Jullie kennen James Bond allemaal als de superstoere super spion die zich op allerlei spectaculaire manieren uit de meest benarde posities weet te werken. Helaas kan het niet altijd goed gaan als je jezelf met zulk gevaarlijk werk bezighoudt, James wil dan ook dat jullie hem helpen de volgende missie tot een goed einde te brengen. Dus ben jij een spion of een stoere bond-girl die goed is in spioneren, puzzels en niet bang voor een gezonde dosis spanning; dan is dit de HIT die je moet hebben! " , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "tent" , "15km" , "opvuur" , "k_ks" , "zwem" , "mobieltje" ] } , { "id" : 3214 , "naam": "TeCoHit" , "startDatumTijd": "2015-04-04 12:00" , "eindDatumTijd": "2015-04-06 14:00" , "minimumLeeftijd": 10 , "maximumLeeftijd": 14 , "subgroep": "1 - 3 pers" , "deelnamekosten": "52" , "hitCourantTekst": "Don't try this at home! Hou jij van een beetje (elektro)spanning? Dan zit je bij deze HIT goed! Wij gaan allerlei proeven, opdrachten en workshops doen met techniek en communicatie. We gaan vooral dingen doen die je thuis niet mag. Wat dacht je van de rookmelders testen, telefooncentrales opbouwen, stekkers aan UTP-kabels zetten, frikadellen elektrocuteren, microchips programmeren, signalen zoeken en nog veel meer. Dit doe je allemaal met hulp van mensen die er echt verstand van hebben, omdat ze er voor gestudeerd hebben of dit voor hun werk dagelijks doen. We gaan er echt een keigaaf weekend van maken en we hopen dat jij ook komt!" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "tent" , "5km" , "stafkookt" , "k_ks" , "mobieltje" ] } , { "id" : 3215 , "naam": "Treasure Hunt 3.0" , "startDatumTijd": "2015-04-04 10:30" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 13 , "maximumLeeftijd": 15 , "subgroep": "2 - 3 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Geld, schatten, glorie en eeuwige roem? Dat is wat deze hit jouw kan brengen? Mits je het spel goed speelt natuurlijk!!! Games, (foto-)opdrachten en veel whatsApp'jes terwijl je zelf je route naar de volgende post bepaald. Wie krijgt de meest waardevolste schatten in zijn of haar bezit??? \r\nDenk jij dat je kans maakt op de Treasure Hunt 3.0 Trofee?? En wil je een leuk en gezellig weekend?? Dan is dit jouw HIT!!!!!!" , "icoontjes": [ "hike" , "tent" , "30km" , "stafkookt" , "k_ks" , "mobieltje" ] } , { "id" : 3211 , "naam": "Waar rook is ... is vuur" , "startDatumTijd": "2015-04-04 09:00" , "eindDatumTijd": "2015-04-06 15:00" , "minimumLeeftijd": 12 , "maximumLeeftijd": 14 , "subgroep": "1 - 3 pers" , "deelnamekosten": "47" , "hitCourantTekst": "Waar rook is, is vuur! Kampvuur, kuilvuur, kookvuur. Weet jij het verschil? Wat heb je eigenlijk allemaal nodig voor het ideale kookvuur en hoe verzorg je knapperend kampvuur voor de hele groep? Je leert het allemaal tijdens deze HIT. Vuur gaat niet alleen over warmte of gezelligheid, maar ook over veiligheid. Wat moet je doen als het per ongeluk toch een keer mis gaat? Na dit paasweekend ben jij vuurmeester!" , "icoontjes": [ "staand" , "geenrugz" , "0pers" , "groepje" , "tent" , "5km" , "vuur" , "insigne" , "geenmobieltje" ] } ] } ] } }
+
+{	"project": {
+		  "id" : 4
+		, "jaar": 2015
+		, "vrijdag": "2015-04-03"
+		, "maandag": "2015-04-06"
+		, "inschrijvingStartdatum": "2014-12-15"
+		, "inschrijvingEinddatum": "2015-03-08"
+		, "shantiUrl": "https://sol.scouting.nl/frontend/sol/index.php?task=as_registration&action=add&frm_id="
+		, "gebruikteIconen" : [
+			  { "naam": "staand", "tekst": "Staand kamp"}
+			, { "naam": "fiets", "tekst": "Trekken per fiets"}
+			, { "naam": "hike", "tekst": "Trekken met rugzak"}
+			, { "naam": "kano", "tekst": "Trekken per kano"}
+			, { "naam": "zeilboot", "tekst": "Trekkend per boot"}
+			, { "naam": "geenrugz", "tekst": "Lopen zonder rugzak"}
+			, { "naam": "hikevr", "tekst": "Lopen met een ander voorwerp"}
+			, { "naam": "auto", "tekst": "Trekkend per auto"}
+			, { "naam": "0pers", "tekst": "Inschrijven per persoon"}
+			, { "naam": "groepje", "tekst": "Inschrijven per groep"}
+			, { "naam": "tent", "tekst": "Overnachten in een zelfmeegenomen tent"}
+			, { "naam": "friet", "tekst": "Overnachten in een frietbuil"}
+			, { "naam": "nacht", "tekst": "Overnachten zonder tent"}
+			, { "naam": "gebouw", "tekst": "Overnachten in gebouw"}
+			, { "naam": "0km", "tekst": "Totale afstand is 0 km"}
+			, { "naam": "5km", "tekst": "Totale afstand is 5 km"}
+			, { "naam": "15km", "tekst": "Totale afstand is 15 km"}
+			, { "naam": "20km", "tekst": "Totale afstand is 20 km"}
+			, { "naam": "25km", "tekst": "Totale afstand is 25 km"}
+			, { "naam": "30km", "tekst": "Totale afstand is 30 km"}
+			, { "naam": "35km", "tekst": "Totale afstand is 35 km"}
+			, { "naam": "40km", "tekst": "Totale afstand is 40 km"}
+			, { "naam": "45km", "tekst": "Totale afstand is 45 km"}
+			, { "naam": "50km", "tekst": "Totale afstand is 50 km"}
+			, { "naam": "60km", "tekst": "Totale afstand is 60 km"}
+			, { "naam": "120km", "tekst": "Totale afstand is 120 km"}
+			, { "naam": "150km", "tekst": "Totale afstand is 150 km"}
+			, { "naam": "kano10", "tekst": "Afstand per kano is 10 km"}
+			, { "naam": "fiets60", "tekst": "Afstand per fiets is 60 km"}
+			, { "naam": "vuur", "tekst": "Koken op houtvuur zonder pannen"}
+			, { "naam": "opvuur", "tekst": "Koken op houtvuur met pannen"}
+			, { "naam": "gas", "tekst": "Koken op gas met pannen"}
+			, { "naam": "stafkookt", "tekst": "Gekookt door de staf"}
+			, { "naam": "k_ks", "tekst": "Kennis van kaart en kompas op eenvoudig niveau"}
+			, { "naam": "k_kv", "tekst": "Kennis van kaart en kompas op gevorderd niveau"}
+			, { "naam": "k_kgv", "tekst": "Kennis van kaart en kompas op specialistisch niveau"}
+			, { "naam": "insigne", "tekst": "Activiteit waarmee een insigne kan worden behaald"}
+			, { "naam": "zwem", "tekst": "Zwemdiploma verplicht"}
+			, { "naam": "mobieltje", "tekst": "Mobieltje meenemen"}
+			, { "naam": "geenmobieltje", "tekst": "Mobieltjes zijn verboden"}
+			, { "naam": "rolstoel", "tekst": "Geschikt voor minder validen (rolstoel)"}
+			, { "naam": "vraagt", "tekst": "Vraagteken Mysterie elementen"}
+			, { "naam": "buitenland", "tekst": "Buitenland - ID kaart of paspoort verplicht"}
+		]
+		, "plaatsen": [	   {
+		  "id" : 19 
+		, "naam" : "Alphen"
+		, "hitCourantTekst" : "In Alphen is er tijdens de HIT van alles mogelijk! Je kunt kiezen uit gave hikes en supergezellige kampen, en met de in totaal negen onderdelen is er voor elk wat wils. Aan de oude vertrouwde HIT-onderdelen zijn er dit jaar drie nieuwe onderdelen toegevoegd: The Junior Challenge voor Scouts, H(IT)NK voor Explorers en HIT Leren Organiseren voor aankomende stafleden. Alphen ligt in Noord-Brabant dus dat betekent lekker veel hei, bos, water en misschien doe je België ook aan."
+		, "kampen" : [
+		   {
+			  "id" : 3174
+			, "shantiId": 12749
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/alphen-team-x-perience"
+			, "naam": "Alphen Team X-perience"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 13
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 90
+			, "subgroep": "3 - 6 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Heb je zin om met Pasen een lekker weekend weg te gaan, maar heb je geen zin om een saaie hike te lopen? Dan ben je bij de ATX aan het juiste adres. Deze hike is namelijk de meest bijzondere hike van Nederland! Dit jaar bestaan we alweer 10 jaar en maken we er een grote beestenbende van.\r\n\r\nDus wil jij met je vrienden een weekendje weg? En vind je het leuk om deel te nemen aan een hike met leuke, grappige en de meest rare tochttechnieken? Pak dan je rugzak maar in! Je loopt van post naar post en op iedere plek is het altijd weer lachen, gieren en brullen.\r\n\r\nDus pak je tent en tandenborstel maar in. Dit weekend staat in het teken van lol, gezelligheid, spanning en veel humor. Kortom, een beregezellig weekend!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 60
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 3
+			, "icoontjes": [
+				  "hike"
+				, "hikevr"
+				, "groepje"
+				, "tent"
+				, "30km"
+				, "gas"
+				, "k_ks"
+				, "zwem"			]
+			}
+				,  {
+			  "id" : 3167
+			, "shantiId": 12750
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/gps-hike-grote-paas-speurtocht"
+			, "naam": "GPS-hike (Grote Paas Speurtocht)"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 18
+			, "maximumLeeftijd": 88
+			, "margeTeOud": 90
+			, "subgroep": "2 - 5 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Gezellig: je loopt van post naar post door de bossen en over de heide rond Alphen. Soms is het een beetje afzien: je loopt op vrijdag en maandag ongeveer 7 km en zaterdag en zondag ongeveer 18 km.\r\n\r\nPrimitief: gebakken eitje bij het ontbijt, koffie met iets lekkers op de posten, vier-uur-cup-a-soup, openluchtrestaurant in het bos en bij het kampvuur bittergarnituur. Want primitief is leuk, maar je moet het niet overdrijven.\r\n\r\nSpeurwerk: met je gps lopen vergt soms wel speurwerk; de coördinaten liggen niet altijd voor het oprapen maar we zijn wel zo sociaal om eerst uit te leggen hoe je gps nou echt werkt."
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "60km"
+				, "opvuur"
+				, "gas"
+				, "k_ks"			]
+			}
+				,  {
+			  "id" : 3171
+			, "shantiId": 12751
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/het-eejeh-kamp"
+			, "naam": "Het E.E.J.E.H Kamp"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 0
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Houd je je hoofd nou bij een bloedneus voor- of achterover? En mag je nu een pleister plakken op een schaafwond of niet?\r\n\r\nOp Het E.E.J.E.H. Kamp leren we je alles over EHBO, en geven we je les in samenwerking met een echte L.O.T.U.S. (slachtoffer). We proberen dit af te wisselen met spelletjes, maar hebben de tijd ook nodig om je alles te leren wat je moet kennen om op maandag het examen Jeugd Eerste Hulp te kunnen doen. Mocht je slagen, dan krijg je ook nog het specialisatie-insigne EHBO. Bij het kamp krijg je een werkboek en een leerboek waaruit gewerkt gaat worden."
+			, "minAantalDeelnemers": 6
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "stafkookt"
+				, "insigne"			]
+			}
+				,  {
+			  "id" : 3222
+			, "shantiId": 12752
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/hit-leren-organiseren"
+			, "naam": "HIT leren organiseren"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 18
+			, "maximumLeeftijd": 30
+			, "margeTeOud": 99
+			, "subgroep": "1 - 2 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Bij deze unieke HIT bieden we je kennis, inzichten en nieuwe ideeën, we prikkelen je na te denken en laten jouw handen wapperen. Zo leiden we je op tot organisator van een nieuw, primitief onderdeel voor HIT Alphen, waar Scouts en Explorers tot 16 jaar in 2016 aan kunnen deelnemen. \r\n\r\nJe maakt kennis met het coördinatieteam, verkent de omgeving en bezoekt alle subkampen. We gebruiken een warme maaltijd die voor stafleden worden gekookt, maar je gaat ook voor jezelf op houtvuur een primitieve warme maaltijd koken zonder pannen. Dit is een staand kamp, maar we gebruiken verschillende bivaklocaties. Daar overnacht je in jouw eigen tentje. Je verwerft een aantal competenties voor de kwalificatie Regio-organisator (Projectmanagement 2) Je neemt tools van deze leiderstraining mee naar huis. \r\n"
+			, "minAantalDeelnemers": 6
+			, "maxAantalDeelnemers": 15
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "vuur"
+				, "stafkookt"
+				, "k_kv"
+				, "insigne"			]
+			}
+				,  {
+			  "id" : 3221
+			, "shantiId": 12753
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/houthak-natuurbeheerderskamp"
+			, "naam": "Houthak- & Natuurbeheerderskamp"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 30
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Heb je altijd al eens een boom om willen hakken, of alleen al met een bijl willen lopen? Of denk je misschien dat je al heel goed kan hakken en je wil dit eens bewijzen? Dan is de HNK iets voor jou!\r\n\r\nTijdens het HIT weekend leer je hak- en zaagtechnieken beheersen en hoe je veilig en verantwoord een boom velt en verwerkt. Ook het onderhouden van bijlen en zagen komt aan bod tijdens dit weekend.\r\n\r\nBen je niet vies van zand, hars, ongedierte, hele bergen onzin en houthakkende mafkezen als leiding? Heb je daarnaast doorzettingsvermogen en ben je graag in de natuur bezig? Kom naar de HNK! "
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 15
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "hikevr"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "stafkookt"
+				, "mobieltje"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3172
+			, "shantiId": 12754
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/ouder-kind-hike"
+			, "naam": "Ouder-Kind-Hike"
+			, "startDatumTijd": "2015-04-03 17:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 11
+			, "margeTeOud": 90
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Wil je dit feestje meemaken? Schrijf je dan meteen in, want we zitten altijd snel vol. Ben je nog geen 12 maar ben je wel gek op avontuur? Neem dan je vader of moeder mee naar de Ouder-Kind Hike. Je loopt samen leuke tochten, koken doe je\r\nnatuurlijk samen en ?s avonds luister je gezellig naar de verhalen van anderen bij het kampvuur. Dit wordt vast je gezelligste Pasen ooit?.."
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "gas"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3175
+			, "shantiId": 12755
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/the-challenge"
+			, "naam": "The Challenge"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "37"
+			, "hitCourantTekst": "Ben jij klaar voor een HIT vol spanning?\r\nEen HIT die je leven een weekend lang\r\nachterstevoren en op z?n kop zet? Wil jij\r\neen HIT die anders is dan alle andere\r\nkampen en een programma vol uitdagingen\r\nbevat? De vier dagen staan in het teken\r\nvan sportieve uitdagingen, hiken, koken,\r\nslapen in frietbuiltjes, chillen en nog veel\r\nmeer! Spreekt bovenstaande je aan? Dan\r\nis The Challenge iets voor jou! Kom naar Alphen en strijd om de Challengetrofee!"
+			, "minAantalDeelnemers": 25
+			, "maxAantalDeelnemers": 60
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "hike"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "30km"
+				, "vuur"
+				, "opvuur"
+				, "gas"
+				, "k_ks"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3223
+			, "shantiId": 12756
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/the-junior-challenge"
+			, "naam": "The Junior Challenge"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 30
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 30
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Denk jij bij een challenge (=uitdaging) aan een eigen onderkomen bouwen voor de nacht? Of 's avonds lekker bij het kampvuur zitten in onze eigen overdekte kampvuurplek? Of samen met andere scouts een spel spelen in onze loungetent? Spreekt een korte tocht zonder rugzak naar een subkamp jou aan voor 1 overnachting buiten het hoofdterrein? Kortom actief bezig zijn, maar ook ?eigen? tijd? Dan hebben wij voor jou de perfecte HIT!\r\n\r\nOns onderdeel begint al voor Pasen, maar na Pasen denk jij er nog weken aan terug. Natuurlijk is het de bedoeling dat jij samen met jouw subgroepje de meeste punten scoort om deze eerste editie van The Junior Challenge te winnen. Ben jij benieuwd of jij deze challenge speciaal voor Scouts aankunt, kom dan naar Alphen en beleef het zelf! "
+			, "minAantalDeelnemers": 16
+			, "maxAantalDeelnemers": 24
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "15km"
+				, "vuur"
+				, "opvuur"
+				, "k_ks"
+				, "zwem"
+				, "mobieltje"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3168
+			, "shantiId": 12757
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-alphen-2015/themahit"
+			, "naam": "ThemaHIT"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 10
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "De ThemaHIT is de ultieme HIT voor nieuwsgierige scouts die zin hebben in een\r\nweekend vol avontuur en bijzondere gebeurtenissen. Elk jaar weer worden de\r\nscouts verrast met een programma vol\r\nspanning en sensatie. Een kamp voor een\r\n100% scout dus! Kom naar Alphen en\r\nbeleef een mysterieus kamp, dat je je nog lang zult herinneren!"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 25
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "hikevr"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "15km"
+				, "stafkookt"
+				, "k_ks"
+				, "vraagt"			]
+			}
+				]
+	}	,  {
+		  "id" : 20 
+		, "naam" : "Baarn"
+		, "hitCourantTekst" : "Hit Baarn is misschien wel niet de grootste HIT plaats, maar heeft wel de vetste onderdelen! Ons stafteam gaat je uitdagen met verschillende toffe onderdelen, waarbij een weekend gezelligheid voorop staat. Onze HIT-onderdelen zijn uniek, zitten vol met uitdagende details die je nergens anders vindt, en alles wat bij ons kan, daar kan je bij een andere HIT-plaats alleen maar van dromen! Onze centrale locatie, Scoutcentrum Buitenzorg, ligt lekker centraal in Nederland, is goed met OV, helikopter, auto, fiets of te voet te bereiken en de omgeving is erg gevarieerd, van dure kastelen tot heide, en van de Loosdrechtse plassen tot de Gooische bossen! Tot ziens op de HIT in Baarn !"
+		, "kampen" : [
+		   {
+			  "id" : 3181
+			, "shantiId": 12758
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/de-gulden-hike"
+			, "naam": "\"De Gulden Hike\""
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 30
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "2 - 6 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "De crisis duurt voort. Op ons kampterrein is het een trieste boel, en van een luxe explorerkamp is geen sprake. Waren er maar wat scouts met een goed stel hersens en een berg economisch inzicht... De \r\nouderwetse gulden speelt dit weekend de hoofdrol.\r\nMet opdrachten en uitdagingen, of door slim te sparen, onderhandelen en investeren verdien je geld, wat je kan gebruiken om het Scoutingleven aangenamer te maken."
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 36
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "25km"
+				, "gas"
+				, "k_kgv"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3216
+			, "shantiId": 12759
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/csi-crime-scout-investigation"
+			, "naam": "CSI: Crime Scout Investigation"
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 7
+			, "minimumLeeftijd": 15
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "1 - 5 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Gezocht: talentvolle rechercheurs met scoutingervaring voor afdeling moordzaken. \r\n\r\nKijk je vaak misdaadseries? Of zou je graag een keer zelf, met je eigen rechercheteam, een moordzaak willen oplossen? Dan is deze HIT echt iets voor jou! \r\n\r\n1 slachtoffer, 6 verdachten. Er leeft een moordenaar in ons midden en hij is niet van plan zich snel bekend te maken. Wie spreekt de waarheid en wie liegt er, of hebben alle verdachten misschien wel iets te verbergen? \r\n"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 30
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "stafkookt"
+				, "k_kv"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3179
+			, "shantiId": 12760
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/do-dare-deal-with-it-meets-scouts"
+			, "naam": "Do, Dare & Deal with it! meets Scouts"
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "2 - 5 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Do, Dare&Deal with it! We gaan het nu helemaal anders aanpakken, namelijk dit jaar voor het eerst voor scouts! Wat kunnen jullie verwachten? Een super tof weekend met hiken en stoere programma's. Verzamel tijdens het weekend credits, door het doen van uitdagende opdrachten waar je doorzettingsvermogen, creativiteit en veel lef voor nodig hebt. We pakken flink uit met energieke spellen, toffe hiketochten, verrassende  programma's, lekker eten en originele overnachtingslocaties. Denk aan Expeditie Robinson, Wie is de mol en Peking Express, maar dan net met een andere twist.\r\nEnthousiast geworden en durf je de competitie aan? Kom dan met Pasen naar Baarn!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "geenrugz"
+				, "hikevr"
+				, "groepje"
+				, "tent"
+				, "30km"
+				, "vuur"
+				, "gas"
+				, "k_kv"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3176
+			, "shantiId": 12761
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/go-for-hit"
+			, "naam": "Go for  (H)IT!!"
+			, "startDatumTijd": "2015-04-04 11:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 16
+			, "maximumLeeftijd": 88
+			, "margeTeOud": 90
+			, "subgroep": "1 - 80 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Go for(H)IT!! Wat houdt\r\ndit in? De overnachtingslocaties, het\r\ndagelijkse ontbijt- en dinerbuffet en het avondprogramma regelen wij. \r\nOverdag zijn jullie aan zet. \r\nWordt het jouw editie van Jack Ass in the Bush, Gooische meisjes in\r\nde Rimboe of toch........?? \r\nAan jullie de keus. Alles mag en alles kan. 's Avonds is de bar open en onze huis dj zorgt voor de muzikale ondersteuning. Ook een kampvuur zal niet ontbreken.\r\nHIT 2015 ??? Check in and Chill out !"
+			, "minAantalDeelnemers": 30
+			, "maxAantalDeelnemers": 80
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "hike"
+				, "hikevr"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "nacht"
+				, "35km"
+				, "stafkookt"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3180
+			, "shantiId": 12762
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/niet-zomaar-een-hit"
+			, "naam": "Niet Zomaar Een HIT"
+			, "startDatumTijd": "2015-04-04 11:00"
+			, "eindDatumTijd": "2015-04-06 16:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 16
+			, "maximumLeeftijd": 88
+			, "margeTeOud": 90
+			, "subgroep": "1 - 80 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Niet Zomaar een Hit wordt georganiseerd\r\ndoor een prettig gestoord stafteam in een erg gevarieerde omgeving: Van Gotische kastelen tot het Pittoreske\r\nGooische matras! \r\n\r\nBen je op zoek naar het (on)mogelijke? Een uitdagend programma waarin iedereen zich kan vinden ?\r\n\r\nWaarom? Gewoon, omdat het kan! \r\n\r\nIn de avond lekker feesten met muziek of toch een kampvuur... jij kiest! \r\n\r\nTijdens dit weekend is niets te gek !"
+			, "minAantalDeelnemers": 30
+			, "maxAantalDeelnemers": 80
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "hike"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "nacht"
+				, "35km"
+				, "stafkookt"
+				, "k_ks"
+				, "k_kv"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3177
+			, "shantiId": 12763
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/ouder-kind-hike-baarn"
+			, "naam": "Ouder-Kind-Hike Baarn"
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 11
+			, "margeTeOud": 90
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Scout genoeg voor een pittige tweedaagse hike, maar nog niet oud genoeg om dit zelfstandig te doen?!\r\n\r\nDan is de Ouder-Kind-Hike Baarn iets voor jou!\r\nMet je vader, moeder of iemand anders van minimaal 18 jaar, loop je in twee dagen van Austerlitz naar Baarn. De overnachtingsplekken regelen wij, de route bepalen jullie zelf.\r\n\r\nJullie koken je eigen eten en slapen in jullie eigen tent. Voor het vervoer van de bagage en het eten en drinken zorgen wij! Lopen doen jullie samen!\r\n"
+			, "minAantalDeelnemers": 30
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "gas"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3178
+			, "shantiId": 12764
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/welp-ouder-avonturenkamp"
+			, "naam": "Welp-Ouder-Avonturenkamp"
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 10
+			, "margeTeOud": 90
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Met Pasen wordt kapitein Bastiaen de Bouff verwacht in de haven van Buijtensorgh met zijn schip \"de Mooie Marietje\".\r\n\r\nHij is op zoek naar dappere bemanning om mee te gaan op een avontuurlijke zeereis. Zijn doel is natuurlijk geheim, maar er gaan geruchten dat hij een deel van de schatkaart van .... in zijn bezit heeft. Kapers op de kust .....?\r\n\r\nDurf jij het aan om met kapitein De Bouff mee te gaan? Vuur te maken op een onbewoond eiland, te voet op zoek naar je proviand, pionieren om een goede uitkijkpost te maken, spannende spelen en nog veel meer? Ben jij welp en niet ouder dan 10 jaar? Hou je van een avontuur en is je vader of moeder net zo stoer? Schrijf jullie dan in voor het Welp-Ouder-Avonturenkamp in Baarn!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "tent"
+				, "15km"
+				, "vuur"
+				, "stafkookt"
+				, "k_ks"
+				, "zwem"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3225
+			, "shantiId": 12765
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-baarn-2015/wie-is-de-mol"
+			, "naam": "Wie is De Mol?"
+			, "startDatumTijd": "2015-04-04 11:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 0
+			, "subgroep": "1 - 2 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "In 2015 spelen we een hele HIT lang dit gave spel met jou! Wie is de Mol? Een spel vol intriges, verbondjes, tactiek en natuurlijk heel veel lol.\r\nLeuke activiteiten die je niet zo snel met je eigen scoutinggroep zal doen én waar je geld mee kan verdienen! Maar... iemand is de Mol, en die gaat er alles aan doen om te zorgen dat er niet te veel geld in de pot komt. \r\n\r\nAan jou de taak om de Mol te ontmaskeren en met de pot naar huis te gaan. "
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 20
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "tent"
+				, "5km"
+				, "gas"
+				, "k_ks"
+				, "geenmobieltje"			]
+			}
+				]
+	}	,  {
+		  "id" : 21 
+		, "naam" : "Dwingeloo"
+		, "hitCourantTekst" : "HIT Dwingeloo is al jaren de grootste en meest populaire HIT-plaats van Nederland. In 2015 zijn er 14 verschillende hikes en kampen om uit te kiezen. Hakken, hiken, kanoën, koken, (primitief) kamperen; alles kan op jouw niveau of om wat extra?s bij te leren! Centrale plek is het Scouting Labelterrein iets ten zuiden van het dorp Dwingeloo. De omgeving van Dwingeloo is prachtig, waaronder het Nationaal Park Dwingelderveld. Kom dus voor geweldige \r\nPaasdagen naar één van onze onderdelen! "
+		, "kampen" : [
+		   {
+			  "id" : 3192
+			, "shantiId": 12766
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/adventure-rangers"
+			, "naam": "Adventure Rangers"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 11
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Heb jij zin een avontuur? Lekker op kamp, slapen in een tent en overdag toffe spellen doen. Niet alleen, maar met alle nieuwe vrienden die je maakt! Tijdens de HIT in Dwingeloo zal je bij de Adventure Rangers veel spannende avonturen beleven. Wil je gezellig zingen bij het vuur, marshmallows roosteren en chocomel drinken om de volgende dag samen uitdagende opdrachten te doen? Kom dan naar de HIT in Dwingeloo en je zult daarna een echte Adventure Ranger zijn!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 32
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "5km"
+				, "stafkookt"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3190
+			, "shantiId": 12767
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/beginnershike"
+			, "naam": "Beginnershike"
+			, "startDatumTijd": "2015-04-04 12:30"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 9
+			, "maximumLeeftijd": 12
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "De beginnershike is een heel leuk kamp voor jonge kinderen\r\ndie willen kennismaken met scoutingtechnieken.\r\nKom leren hoe je kampeert en\r\nhoe je kunt hiken. Word samen beter dan\r\nde rest, op een gezellige manier!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 30
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "gas"
+				, "stafkookt"
+				, "k_ks"			]
+			}
+				,  {
+			  "id" : 3185
+			, "shantiId": 12768
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/brownsea-camp"
+			, "naam": "Brownsea Camp"
+			, "startDatumTijd": "2015-04-04 10:30"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 13
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Ruim honderd jaar geleden begon Scouting\r\nop het Brownsea Island. Als je alles al eens\r\nhebt meegemaakt wordt het tijd voor een\r\nnieuw avontuur op het eiland waar alles\r\nbegon... \"Brownsea Island\". In de\r\nruwe natuur van het afgelegen eiland\r\nBrownsea verlaat je de beschaving en\r\nkeer je terug naar de traditie en de wortels van Scouting. Hier word je pionier van de toekomst. Je bent aangewezen op je eigen vindingrijkheid, handigheid en doorzettingsvermogen."
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 25
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "hikevr"
+				, "0pers"
+				, "groepje"
+				, "friet"
+				, "15km"
+				, "vuur"
+				, "k_kv"
+				, "insigne"			]
+			}
+				,  {
+			  "id" : 3195
+			, "shantiId": 12769
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/expeditie-dwingeloo"
+			, "naam": "Expeditie Dwingeloo"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Behendigheid, kaartlezen, doorzettingsvermogen,\r\nconditie, kennis, slimheid en\r\nsluwheid? Om de expeditie te overleven\r\nmoet je een beroep doen op al deze\r\nvaardigheden. Alleen en samen met\r\nanderen. Primitief of luxe slapen en koken,\r\nelke dag spannend wie wint! Lijkt dit je\r\nleuk? Doe dan mee met Expeditie\r\nDwingeloo!"
+			, "minAantalDeelnemers": 12
+			, "maxAantalDeelnemers": 32
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "15km"
+				, "vuur"
+				, "gas"
+				, "k_kv"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3184
+			, "shantiId": 12770
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/happyhike"
+			, "naam": "Happyhike"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Welkom bij de Happyhike. Het allerleukste\r\nonderdeel van de HIT is ook dit jaar weer\r\nvan de partij! Wat je bij ons allemaal kunt\r\nverwachten? Hiken, vlotvaren, primitief\r\nkoken, slapen in een zelfgemaakt\r\nonderkomen, kampvuur, originele\r\nopdrachten en nog veel meer!\r\nDon't worry, be happy!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "friet"
+				, "35km"
+				, "opvuur"
+				, "gas"
+				, "stafkookt"
+				, "k_kv"
+				, "zwem"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3194
+			, "shantiId": 12771
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/jongerenhike"
+			, "naam": "Jongerenhike"
+			, "startDatumTijd": "2015-04-04 14:00"
+			, "eindDatumTijd": "2015-04-06 18:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 18
+			, "maximumLeeftijd": 50
+			, "margeTeOud": 90
+			, "subgroep": "2 - 15 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Ben je 18 jaar of ouder en heb je zin in een\r\ngezellig Paasweekend? Dan ben je bij de\r\nJongerenhike in Dwingeloo aan het goede\r\nadres. Tijdens dit weekend zul je een goede combinatie gaan beleven van\r\ninspanning en ontspanning: Overdag een\r\nludieke wandeling en 's avonds feest!"
+			, "minAantalDeelnemers": 40
+			, "maxAantalDeelnemers": 100
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "50km"
+				, "vuur"
+				, "opvuur"
+				, "k_kv"
+				, "zwem"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3186
+			, "shantiId": 12772
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/junior-zwerfhike"
+			, "naam": "Junior Zwerfhike"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 9
+			, "maximumLeeftijd": 13
+			, "margeTeOud": 90
+			, "subgroep": "2 - 3 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Dus jij denkt dat je zelf wel kan bepalen\r\nwaar je langsloopt, wat je eet en onder\r\nwelke boom je je tent opzet?\r\nOok als je dat nog nooit of niet vaak eerder\r\ngedaan hebt?\r\nMooi. Dat denken wij namelijk ook! Ben jij\r\ntussen de 9 en 13 jaar en ben je nog niet\r\n(vaak) op hike geweest? Wil je leren kaart\r\nlezen, je eigen tocht uitzetten, zelf je tent\r\nop zetten, primitief koken en nog veel\r\nmeer? Maar wil je vooral een heel gaaf\r\nPaasweekend hebben? Dan zit je hier\r\ngoed!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 32
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "vuur"
+				, "gas"
+				, "zwem"			]
+			}
+				,  {
+			  "id" : 3182
+			, "shantiId": 12773
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/kokkamp"
+			, "naam": "Kokkamp"
+			, "startDatumTijd": "2015-04-04 12:00"
+			, "eindDatumTijd": "2015-04-06 18:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 13
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Leren koken met pit, kom naar het kokkamp van de HIT! Het Kokkamp is er voor jongens en meisjes\r\ntussen de 10 en 13 jaar, die zich het hele\r\nweekend bezig willen houden met koken.\r\nNiet alleen het koken zelf, maar ook alles\r\nwat er verder mee te maken heeft komt aan\r\nbod door middel van een theoriespel. Het\r\nvoorbereiden en het uitvoeren van een\r\ngoede, lekkere en vooral ook leuke maaltijd\r\nstaat voorop. Ook zul je na dit kamp zoete,\r\nhartige, warme en koude hapjes kunnen\r\nbereiden."
+			, "minAantalDeelnemers": 25
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "opvuur"
+				, "insigne"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3193
+			, "shantiId": 12774
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/ouder-kind-hike-dwingeloo"
+			, "naam": "Ouder-Kind-Hike Dwingeloo"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 18:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 55
+			, "margeTeOud": 90
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Ben jij welp en niet ouder dan 12 jaar?\r\nHou je van een avontuur en is je vader of moeder net zo stoer? Schrijf jullie dan in voor de Ouder-Kind-Hike in Dwingeloo! We gaan er een geweldig gezellig, spannend en uitdagend weekend van maken voor jou en je vader of moeder.\r\nTijdens het weekend slapen jullie samen in je eigen tent en zijn we lekker buiten in het Drentse landschap. \r\n"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "geenrugz"
+				, "groepje"
+				, "tent"
+				, "25km"
+				, "gas"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3183
+			, "shantiId": 12775
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/trapperskamp"
+			, "naam": "Trapperskamp"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 18:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "2 - 3 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Ben jij de scout die kan overleven in de\r\nnatuur rondom Dwingeloo? Ben je niet\r\nbang om tijdens het HIT weekend je eigen\r\nmaaltijd op houtvuur te koken? Beheers je\r\nmeerdere routetechnieken en kun jij je eigen\r\nprimitieve overnachtingsplek bouwen? Ben\r\nje bovendien die stoere scout die met\r\ngemak over een trappersbaan gaat? Heb je al deze vragen met\r\nJA beantwoord, dan ben jij de juiste scout voor het Trapperskamp!"
+			, "minAantalDeelnemers": 16
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "hike"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "30km"
+				, "vuur"
+				, "opvuur"
+				, "k_kv"
+				, "zwem"			]
+			}
+				,  {
+			  "id" : 3191
+			, "shantiId": 12776
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/triathike"
+			, "naam": "Triathike"
+			, "startDatumTijd": "2015-04-04 12:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Lopen, fietsen én\r\nkanoën, en met je koppel- of troppelgenoot de\r\nbossen van Dwingeloo in. Wat wil je nog meer? Samen met andere Scouts en\r\nExplorers gaan we met behulp van kaart, kompas en\r\nvele creatieve routetechnieken de\r\nDrentse wildernis ontdekken. De Triathike\r\nblijft niet beperkt tot het HIT-terrein! Als\r\nenige onderdeel in HIT-land zie je Drenthe\r\nte voet, op de fiets en vanuit de kano."
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 36
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "kano10"
+				, "fiets60"
+				, "gas"
+				, "k_kv"
+				, "zwem"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3187
+			, "shantiId": 12777
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/vrije-zwerfhike"
+			, "naam": "Vrije Zwerfhike"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 15
+			, "maximumLeeftijd": 21
+			, "margeTeOud": 90
+			, "subgroep": "2 - 6 pers"
+			, "deelnamekosten": "37"
+			, "hitCourantTekst": "Lijkt het je wat om tijdens Pasen door het\r\nmooie Drenthe te zwerven op zoek naar\r\neen uitdagende slaapplaats? Als je kennis\r\nvan kaart, kompas en coördinaat hebt,\r\ntussen de 15 en 21 jaar bent en enige\r\nkampeerervaring hebt, dan is de Vrije\r\nZwerfhike zeker wat voor jou!"
+			, "minAantalDeelnemers": 25
+			, "maxAantalDeelnemers": 120
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "150km"
+				, "gas"
+				, "k_kv"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3188
+			, "shantiId": 12778
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/woodcamp"
+			, "naam": "Woodcamp"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Bij bosbeheer komt er heel wat meer kijken\r\ndan je zou denken! Dus ben je niet bang\r\nvoor eelt op je handen en leg je het bijltje er\r\nniet snel bij neer dan verwachten wij jou\r\nmet de Pasen in Dwingeloo bij het\r\nWoodcamp."
+			, "minAantalDeelnemers": 12
+			, "maxAantalDeelnemers": 25
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "stafkookt"
+				, "insigne"			]
+			}
+				,  {
+			  "id" : 3189
+			, "shantiId": 12779
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-dwingeloo-2015/zwerfhike"
+			, "naam": "Zwerfhike"
+			, "startDatumTijd": "2015-04-04 13:00"
+			, "eindDatumTijd": "2015-04-06 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 16
+			, "margeTeOud": 90
+			, "subgroep": "2 - 6 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Je bent tussen de 12 en 16 jaar oud en houdt ervan om zelf te bepalen waar je langsloopt. Laat maar zien of je met kaart, kompas en coördinaten kan werken. We helpen je hierbij op weg!\r\nRugzak en bagage? Neem je zelf mee! Samen met anderen loop je in een koppel of een troppel. De route naar het overnachtingsterrein stippelen jullie samen uit. \r\nAan het eind van de dag zien we elkaar hier weer en kunnen jullie andere zwerfhikers leren kennen! Zien we je bij de zwerfhike?"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 86
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "35km"
+				, "gas"
+				, "k_kv"
+				, "mobieltje"			]
+			}
+				]
+	}	,  {
+		  "id" : 22 
+		, "naam" : "Harderwijk"
+		, "hitCourantTekst" : "Harderwijk heeft het.\r\nGa jij grensverleggend op survival? Of zit je liever knus bij het kampvuur? Lekker hiken over de prachtige Veluwe? Of voel je meer voor een van de Interesse kampen op ons schitterende terrein in Harderwijk? Wat je ook zoekt; pionieren of koken, paardrijden of gamen, hiken en survival, HIT Harderwijk heeft het. \r\n\r\nDus laat je uitdagen en ga bij ons op avontuur.\r\nEn meld je aan bij een van de veelzijdige kampen van HIT Harderwijk! "
+		, "kampen" : [
+		   {
+			  "id" : 3205
+			, "shantiId": 12780
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/adventure-trail"
+			, "naam": "Adventure Trail"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Bij het reisbureau Adventure Trail boek je nu voor weinig geld een compleet ongeorganiseerde reis door de chaos van de Seventies! Een actieve reis waarbij jij elk moment weer voor verrassingen komt te staan!"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 41
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "30km"
+				, "vuur"
+				, "gas"
+				, "k_ks"
+				, "zwem"			]
+			}
+				,  {
+			  "id" : 3201
+			, "shantiId": 12781
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/apptrail-40"
+			, "naam": "AppTrail 4.0"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 17
+			, "maximumLeeftijd": 21
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Ben je al het primitieve gedoe zat? Hangen het kompas en de kaarthoekmeter je de keel uit? Heb je genoeg van die suffe scoutingtechnieken? Hier is de oplossing: \r\nDe AppTrail 4.0!!!\r\n\r\nHet enige wat je echt nodig hebt is je smartphone (een dataverbinding mag, maar hoeft niet). En nee! Hij wordt niet afgepakt.\r\n\r\nStel het je voor: Gewoon slapen in je eigen comfortabele tent, vuur maken met een aansteker, en pling je eten! Geen routes met bolletje-pijltje, strippenkaart of wat dan ook voor vreemd verzonnen toestanden, en het enige koord dat je uit de knoop haalt is het laadsnoertje van je smartphone.\r\n\r\nEen HIT naar je Sm(h)art!!!"
+			, "minAantalDeelnemers": 6
+			, "maxAantalDeelnemers": 35
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "hike"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "30km"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3196
+			, "shantiId": 12782
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/groepshike"
+			, "naam": "Groepshike"
+			, "startDatumTijd": "2015-04-03 10:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 1
+			, "subgroep": "3 - 6 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Ben je tussen de 12 en 17 jaar en heb jij zin in de gruwelijkste, gekste, hotste, vieste, vetste, vaagste, crimineelste, chillste, rete-kickste posten, routes en avondspellen....? Dan wordt het tijd voor de Groepshike! Een hele lauwe hike, want bij ons mag je in een groepje met je eigen maatjes lopen! Dat is toch veel gezelliger dan met z`n tweetjes!?! Drie dagen hiken met je eigen groepje van 3 tot 6 personen, zelf je bagage sjouwen en je eigen prakkie koken, uitdagende posten, een heel cool avondprogramma (!!!), gezellig kampvuur en vooral heel veel lol: Dat wordt lachen! Pak je boerenkoolstampers, hairspray, supersoakers, oorwarmers en je vieze onderbroeken uit de kast en tot Pasen 2015!!!"
+			, "minAantalDeelnemers": 30
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 3
+			, "icoontjes": [
+				  "hike"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "35km"
+				, "gas"
+				, "k_kv"
+				, "zwem"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3208
+			, "shantiId": 12783
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/hik-hike-interesse-kamp"
+			, "naam": "HIK (Hike Interesse Kamp)"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Wil je graag meedoen met de HIT, maar weet je niet goed waar te beginnen? Wil je leren over routetechnieken? Ben je benieuwd hoe je prettig kunt leven zonder moderne snufjes en heb je met Pasen niks te doen? Dan ben jij degene die wij zoeken!"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 26
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "hike"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "vuur"
+				, "gas"			]
+			}
+				,  {
+			  "id" : 3220
+			, "shantiId": 12784
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/hoe-overleef-ik"
+			, "naam": "Hoe Overleef Ik?!"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 9
+			, "maximumLeeftijd": 12
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Ben jij tussen de 9 en 12 jaar oud en wil je graag meedoen aan de HIT, maar kun je niet kiezen tussen alle leuke kampen? Wil je graag je eigen eten maken boven een kampvuur, maar ook hiken en je eigen slaapplek maken? Ben je stiekem wel eens bang dat je niet weet wat je moet doen als je op een onbewoond eiland terecht zou komen? Twijfel dan niet en schrijf je in bij dit nieuwe survivalkamp van HIT Harderwijk!\r\n\r\nGa samen met ons en 30 anderen op avontuur in de natuur! We hebben een afwisselend programma met allemaal leuke activiteiten zoals hiken, een kokosnootbeker maken en leren seinen met vlaggen. Kortom, we gaan van alles doen om te leren survivallen en daarnaast zullen we ook nog allemaal leuke spellen doen.\r\n\r\nWij hebben er heel veel zin in en zien jullie met Pasen!"
+			, "minAantalDeelnemers": 18
+			, "maxAantalDeelnemers": 35
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "15km"
+				, "vuur"
+				, "stafkookt"
+				, "k_ks"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3197
+			, "shantiId": 12785
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/koninklijke-survival-expeditie-harderwijk"
+			, "naam": "Koninklijke Survival Expeditie Harderwijk"
+			, "startDatumTijd": "2015-04-03 11:00"
+			, "eindDatumTijd": "2015-04-06 16:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 16
+			, "maximumLeeftijd": 36
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "De Survivalexpeditie Harderwijk wordt wel eens het zwaarste kamp van de hele HIT genoemd (en terecht!).\r\n\r\nJe zal dus diverse uitdagingen het hoofd moeten bieden: 100 km hiken door diverse terreinsoorten, grensverleggende posten, eten uit de natuur, koken zonder potten of pannen en slapen zonder slaapzak zijn slechts een greep uit ons uitgebreide assortiment van activiteiten."
+			, "minAantalDeelnemers": 12
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "kano"
+				, "zeilboot"
+				, "geenrugz"
+				, "hikevr"
+				, "0pers"
+				, "groepje"
+				, "nacht"
+				, "120km"
+				, "vuur"
+				, "k_kv"
+				, "insigne"
+				, "zwem"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3202
+			, "shantiId": 12786
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/kookkamp"
+			, "naam": "Kookkamp"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Ben jij tussen de 11 en de 15 jaar en al aardig thuis in de keuken? Of kun je nog geen ei bakken, maar zit je vol culinaire ambitie?\r\nWordt het gewoon eens tijd om zelf kunnen bepalen wat de pot schaft?\r\n\r\nKom dan naar KookKamp!\r\n\r\nJe leert in groepsverband smakelijke en simpele gerechten koken, maar ook hapjes en drankjes waarmee je indruk kunt maken op je (scouting)vrienden en je familie.\r\n\r\nDus grijp je pannen en pollepels en meld je aan!\r\n \r\nSchrijf je in met een groepje of kom gewoon lekker alleen en maak nieuwe vrienden tijdens een supertof scoutingevenement!\r\n\r\nLaat even weten bij je inschrijving of je wel of niet over een tent en voldoende kookspullen beschikt.\r\n\r\nEn dan zien wij, Team KookKamp, je graag tijdens de HIT!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 24
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "vuur"
+				, "opvuur"
+				, "gas"			]
+			}
+				,  {
+			  "id" : 3203
+			, "shantiId": 12787
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/lan-hit"
+			, "naam": "LAN HIT"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 19
+			, "margeTeOud": 90
+			, "subgroep": "1 - 20 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Geen gedoe tijdens de HIT Harderwijk, maar een LAN-party! Met 20 deelnemers gezellig een weekendje gamen! LAN staat voor Local Area Network, oftewel een lokaal netwerk. Je kunt hier geweldig  spellen spelen, op het netwerk en ook online. Je kan natuurlijk ook een console meenemen of gezellig een filmpje kijken. "
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 20
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "0km"
+				, "stafkookt"
+				, "mobieltje"
+				, "rolstoel"			]
+			}
+				,  {
+			  "id" : 3200
+			, "shantiId": 12788
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/op-zoek-naar"
+			, "naam": "Op zoek naar..."
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 9
+			, "margeTeOud": 90
+			, "subgroep": "1 - 28 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Bij HIT Harderwijk kunnen de Welpen op zoek naar...? Waar we naar op zoek gaan blijft nog even een verrassing, maar een uitdaging wordt het zeker. Samen met ongeveer 25 andere kinderen gaan we zo veel mogelijk leuke, nieuwe en uitdagende dingen doen, en een ding is zeker: het wordt heel anders dan je gewend bent!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 28
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "gebouw"
+				, "stafkookt"
+				, "geenmobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3210
+			, "shantiId": 12789
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/ouder-kind-hike"
+			, "naam": "Ouder-Kind-Hike"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 60
+			, "margeTeOud": 0
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Hee ouder, wil je een keer met je kind hiken?\r\n\r\nEn welp, lijkt het jou wat om een van je ouders te laten zien hoe jij kampeert bij scouting?\r\n\r\nDan is dit wat voor jullie:\r\nGa op Ouder-Kind-Hike in Harderwijk!\r\nGezellig samen overdag wandelen van kampterrein naar kampterrein met je eigen dagrugzakje.\r\nPer dag is de afstand minimaal 10 kilometer.\r\nJe bepaalt zelf de route aan de hand van de stafkaart die je van ons krijgt en zoekt zo je eigen leuke plekjes uit, terwijl de staf jullie bagage vervoert.\r\nAls jullie je potje hebben gekookt is er tijd voor een kampvuur en een gaaf spel.\r\n\r\n\r\nLet op: inschrijven in een groepje kan alleen met 1 welp (tussen de 7 en 11 jaar) en zijn of haar ouder."
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "gas"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3199
+			, "shantiId": 12790
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/pio-extreme"
+			, "naam": "Pio-Extreme"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-06 16:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 15
+			, "maximumLeeftijd": 20
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Laat je uitdagen! Het motto van Scouting Nederland. Bij deze HIT nemen we dat wel heel letterlijk. Jij bepaalt namelijk samen met 29 andere deelnemers wat, hoe en waar je je onderkomen gaat bouwen. Dit alles natuurlijk door middel van een paar goede knopen.\r\n\r\nKan je niet zo goed pionieren? Geen nood! Ook hier kan je jezelf in uitdagen! De staf helpt je hier natuurlijk wel bij. Aan het einde van de HIT kan je goed en veilig knopen en heb je ook nog eens een geweldig weekend achter de rug. \r\n\r\nDus, heb je zin in een gave HIT met mensen tussen de 15 en 20 jaar? Om objecten te bouwen en eventueel zelfs op hoogte te slapen? Gezamelijk voor een maaltijd te zorgen (of met een paar mensen voor de hele groep koken kan ook)? Geef je dan nu op voor Pio Extreme 2015!"
+			, "minAantalDeelnemers": 10
+			, "maxAantalDeelnemers": 30
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "nacht"
+				, "vuur"
+				, "opvuur"
+				, "gas"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3198
+			, "shantiId": 12791
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/piokamp"
+			, "naam": "Piokamp"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Je wilt wat met de HIT beleven, maar geen eindeloze tochten lopen? Je wilt iets doen waar je zelf nog niet zo goed bent? Iets doen waar je eigen groep niet zoveel aandacht aan besteedt? Of waar je gewoon hopeloos verslaafd aan bent? Dan is het Piokamp de uitkomst."
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 35
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "gas"
+				, "insigne"			]
+			}
+				,  {
+			  "id" : 3206
+			, "shantiId": 12792
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/ruiterkamp"
+			, "naam": "Ruiterkamp"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 16
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "82"
+			, "hitCourantTekst": "Sta jij stevig in je laarzen?\r\nMaar denk jij ook met 4 benen op de grond te kunnen staan?\r\nDan is dit de uitdaging voor je.\r\n\r\nHou je van paarden knuffelen?\r\nEn lijkt het je leuk om een keer paard te rijden?\r\nGa dan mee met het ruiterkamp."
+			, "minAantalDeelnemers": 12
+			, "maxAantalDeelnemers": 16
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "fiets"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "stafkookt"			]
+			}
+				,  {
+			  "id" : 3207
+			, "shantiId": 12793
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/ruiterkamp-gevorderden"
+			, "naam": "Ruiterkamp Gevorderden"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 17:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 16
+			, "margeTeOud": 90
+			, "subgroep": "1 - 2 pers"
+			, "deelnamekosten": "82"
+			, "hitCourantTekst": "Ben je in het bezit van een verzorgpony of -paard, heb je al een ruiterbewijs of ben je bezig met je ruiterpaspoort en heb je minimaal proef F7 afgerond? En wil je wel eens zien hoe je paardrijden met scouting kunt combineren? Ga dan mee met de ruiterhit voor gevorderden."
+			, "minAantalDeelnemers": 8
+			, "maxAantalDeelnemers": 8
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "fiets"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "stafkookt"			]
+			}
+				,  {
+			  "id" : 3204
+			, "shantiId": 12794
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-harderwijk-2015/woudlopershike"
+			, "naam": "Woudlopershike"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-05 16:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 90
+			, "subgroep": "1 - 10 pers"
+			, "deelnamekosten": "42"
+			, "hitCourantTekst": "Durf jij deze uitdaging aan te gaan? Heb jij een beetje kennis van kaart en kompas en beschik je over een flink portie doorzettingsvermogen? Dan hoor jij bij die bikkels (M\/V) die kunnen genieten van een zwerftocht door de Veluwse bossen en heidevelden. Tijdens je tocht kook je de maaltijden (zonder pannen) op houtvuur en slaap je in zelfgemaakte schuilhutten. Je vliegt over kabelbanen, buikschuifbanen en beleeft de leukste avonturen in het bos en op de heidevelden. Geef je op en geniet van dit avontuur."
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "hike"
+				, "0pers"
+				, "groepje"
+				, "friet"
+				, "40km"
+				, "vuur"
+				, "k_ks"
+				, "insigne"
+				, "geenmobieltje"			]
+			}
+				]
+	}	,  {
+		  "id" : 23 
+		, "naam" : "Mook"
+		, "hitCourantTekst" : "De leukste HIT-plaats van Nederland is natuurlijk Mook, een dorp even ten zuiden\r\nvan Nijmegen. Het ligt in een prachtig gebied omringd door bos en heide, rivieren en meren, polders en heuvels. Bovendien ligt Mook op een steenworp afstand van de Duitse grens. Een uitstekende plek dus om een aantal heel verschillende HIT-activiteiten op te zetten. Dit jaar hebben we een nieuw onderdeel, speciaal voor de allerkleinsten: de BeverHIT. Ook nieuw is de ZeilHIT, en Make Your Choice is terug van weggeweest. Maar ook alle vertrouwde onderdelen zijn weer van de partij. Kijk gauw hieronder of er iets voor je bij zit en tot ziens in Mook!"
+		, "kampen" : [
+		   {
+			  "id" : 3164
+			, "shantiId": 12795
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/beverhit"
+			, "naam": "BeverHIT"
+			, "startDatumTijd": "2015-04-03 13:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 5
+			, "maximumLeeftijd": 7
+			, "margeTeOud": 90
+			, "subgroep": "1 - 5 pers"
+			, "deelnamekosten": "32"
+			, "hitCourantTekst": "Vind jij het ook zo jammer dat je nog geen zeven jaar bent en daarom niet naar de HIT kan? Dat geeft niks! Want dit jaar kun je als bever ook al op HIT! Met 15 andere bevers uit heel Nederland gaan we één nachtje logeren in het huis van Professor Plof. We doen leuke spelletjes en gaan ook lekker knutselen. Als we voorzichtig zijn mogen we misschien zelfs een kijkje nemen in het laboratorium van de professor. Ben jij erbij?"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 36
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "gebouw"
+				, "stafkookt"			]
+			}
+				,  {
+			  "id" : 3155
+			, "shantiId": 12796
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/deutschland-dropping-race"
+			, "naam": "Deutschland Dropping Race"
+			, "startDatumTijd": "2015-04-03 10:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 90
+			, "subgroep": "2 - 6 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Altijd al willen weten hoe Ostern (Pasen) in Duitsland bevalt? Hier is je kans! De Deutschland Dropping Race! Geef je op voor deze belevenis met je groep van 2 tot 6 personen! Bij ons ben je verzekerd van Spass (lol), avontuur, spionagepraktijken, ein unglaubliches hudo project en eieren. Wij bieden je elke dag een spannende trip. Dus: pak je ID-kaart en je blinddoek maar vast in... als je durft! Tot ziens met Pasen!"
+			, "minAantalDeelnemers": 18
+			, "maxAantalDeelnemers": 42
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "friet"
+				, "50km"
+				, "k_ks"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3161
+			, "shantiId": 12797
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/eifel-50-noord-hunger-games"
+			, "naam": "Eifel 50° Noord - Hunger Games"
+			, "startDatumTijd": "2015-04-03 09:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 15
+			, "maximumLeeftijd": 18
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "82"
+			, "hitCourantTekst": "Dit jaar gaat het allemaal iets anders in de Duitse Eifel..! Hoe doorsta jij het moment dat je aan het begin van deze HIT te horen krijgt dat je leven maar één doel heeft, namelijk overleven in de wereld van de Hunger Games? Als jij niet bang bent om je eten bij elkaar te moeten \"jagen\", te moeten strijden voor je district, met bijlen te gooien of een vuurtje te bouwen; dan is deze HIT iets voor jou! En ga jij door, ook bij een beetje tegenwind en horizontale sneeuw? Meld je dan aan voor dé HIT van 2015: Eifel 50° Noord, Hunger Games!"
+			, "minAantalDeelnemers": 25
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "hike"
+				, "groepje"
+				, "tent"
+				, "45km"
+				, "vuur"
+				, "gas"
+				, "k_kv"
+				, "zwem"
+				, "vraagt"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3163
+			, "shantiId": 12798
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/en-das-lleml-in-de-eifl-gebrd"
+			, "naam": "En da's állemæl in de Eifål gebørd?!"
+			, "startDatumTijd": "2015-04-03 10:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 13
+			, "maximumLeeftijd": 16
+			, "margeTeOud": 90
+			, "subgroep": "2 - 4 pers"
+			, "deelnamekosten": "82"
+			, "hitCourantTekst": "Er is opnieuw een alternatief in de Eifel. Het wordt een avontuur met een Zweeds complottintje. Je vraagt je straks af waarom er zoveel mensen IKEA-meubels hebben. En waar al die schroefjes heen gaan. Niet \"waar is Wally?\", maar \"waar is Billy?!\" Je vraagt je straks af of Gnedby een meubel is of een geheime spionagedienst. En je vraagt je straks af of de \"echte\" Klippan ooit nog boven Bjursta zal komen. En ben je niet zo'n complotdenker? Dan ga je gewoon mee voor de vette dingen die we gaan doen, want wat wij allemaal gaan doen, is weer allemaal helemaal niet te geloven. Dus: ga met ons mee, zodat mensen straks zeggen: \"En da's állemæl in de Eifål gebørd?!\""
+			, "minAantalDeelnemers": 37
+			, "maxAantalDeelnemers": 45
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "25km"
+				, "vuur"
+				, "gas"
+				, "k_ks"
+				, "zwem"
+				, "vraagt"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3159
+			, "shantiId": 12799
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/hiternational"
+			, "naam": "HITernational"
+			, "startDatumTijd": "2015-04-03 19:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 0
+			, "subgroep": "2 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Akwaaba! Wil jij Pasen op z'n Afrikaans meemaken? Dit is je kans, meld je aan voor HITernational! Tijdens deze HIT doorkruisen we samen met de spin Anansi Ghana, van de goudkust tot de verre binnenlanden. In elke stad beleven we een nieuw Ghanees avontuur en kun je ?bagage? verdienen die weer handig kan zijn voor de volgende opdracht. Op maandag zullen we zien welk team zijn bagage het slimst heeft ingezet om de finale te kunnen winnen! Al deze spanning spoelen we weg met een tropische cocktail en een jamsessie op de djembe, of een potje oware bij het kampvuur. Makrow!"
+			, "minAantalDeelnemers": 30
+			, "maxAantalDeelnemers": 42
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "20km"
+				, "gas"
+				, "k_ks"
+				, "mobieltje"
+				, "vraagt"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3160
+			, "shantiId": 12800
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/interhity"
+			, "naam": "InterHITy"
+			, "startDatumTijd": "2015-04-03 11:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 18
+			, "maximumLeeftijd": 30
+			, "margeTeOud": 90
+			, "subgroep": "3 - 4 pers"
+			, "deelnamekosten": "57"
+			, "hitCourantTekst": "Vind jij ook dat je met een traditionele hike te weinig ziet van Nederland? Dan is de InterHITy iets voor jou! Met deze HIT zie je de verrassendste plekjes en overnacht je ook nog eens op verschillende HIT-terreinen! Elke dag rij je met de auto een mooie route waarbij je gebruik maakt van uitdagende routetechnieken, maar je komt onderweg ook verrassende posten tegen. Wil jij dit jaar de gouden nummerplaat winnen? Doe dan mee aan de 7e editie van de InterHITy!"
+			, "minAantalDeelnemers": 16
+			, "maxAantalDeelnemers": 44
+			, "vol": true
+			, "volTekst": "Vol: alleen nog inschrijven op 4 gereserveerde plaatsen."
+			, "minSubgroep": 3
+			, "icoontjes": [
+				  "auto"
+				, "groepje"
+				, "tent"
+				, "gas"
+				, "stafkookt"
+				, "k_kgv"
+				, "mobieltje"
+				, "vraagt"
+				, "buitenland"			]
+			}
+				,  {
+			  "id" : 3158
+			, "shantiId": 12801
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/make-your-choice"
+			, "naam": "Make Your Choice"
+			, "startDatumTijd": "2015-04-03 19:15"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 99
+			, "minimumLeeftijd": 14
+			, "maximumLeeftijd": 17
+			, "margeTeOud": 99
+			, "subgroep": "3 - 6 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Ben jij in staat om ook in de onderwereld van Mook de juiste keuzes te maken en met je 'familie' op zoek te gaan naar de 'echte' Don Cosa Tienda? Wie blijkt er een echte maffia-godfather te zijn en wie slechts een capo? En welk groepje heeft of ronselt de gevaarlijkste maffia-dame? Is een weekend vol absurde en vreemde opdrachten iets waarvan je niet bang wordt? Altijd al een weekend lang aan 'Real-life-gaming' willen doen? Dan is de HIT Make Your Choice dé HIT voor jou! Geen (verre) tochten, geen extreme kookkunsten, maar wel een weekend vol actie, spanning en sensatie! Tot Pasen!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 3
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "groepje"
+				, "tent"
+				, "opvuur"
+				, "gas"
+				, "stafkookt"
+				, "k_ks"
+				, "k_kv"
+				, "mobieltje"
+				, "vraagt"			]
+			}
+				,  {
+			  "id" : 3162
+			, "shantiId": 12802
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/powerkids-hit-it"
+			, "naam": "Powerkids HIT-it"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 0
+			, "minimumLeeftijd": 7
+			, "maximumLeeftijd": 11
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Dit jaar belanden de Powerkids in het stadje \"Mookerklepel\". Wat is er aan de hand in Mookerklepel? Alle feestdagen van het jaar lopen door elkaar heen. Zo is het 's morgens nog dierendag, 's middags ineens Koningsdag en 's avonds Kerstfeest. Zal alles weer op tijd in orde zijn, zodat Pasen gewoon door kan gaan? \r\n\r\nMoeder Natuur vraagt jullie je haastig op te geven voor deze gave welpen-HIT, want Mookerklepel zit in de problemen. De Mookerklok is namelijk kapot! Ben jij ook nieuwsgierig naar wat er allemaal aan de hand is? Barst je van de goede ideeën? Vadertje Tijd kan wel wat hulp gebruiken van stoere jongens en coole meiden tussen de 7 en 11 jaar. In één lang weekend moeten we bovendien een heel jaar inhalen. Dus kom je ons dan helpen dit mysterie op te lossen... Feest mee met de Powerkids Hit-it! Schiet wel op met inschrijven (voor 1 maart), want de tijd tikt door... "
+			, "minAantalDeelnemers": 24
+			, "maxAantalDeelnemers": 32
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "gebouw"
+				, "5km"
+				, "stafkookt"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3156
+			, "shantiId": 12803
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/stookkamp"
+			, "naam": "Stookkamp"
+			, "startDatumTijd": "2015-04-03 12:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Ben jij in de regen als eerste uit de tent om het vuur aan te steken? Vind je het niet erg als je kleren naar rook stinken en heb je vuurvaste handen? Ben je bovendien niet bang voor scouts van andere groepen en wil je hier zelfs graag intensief mee kennis maken? Dan ben jij de scout voor het Stookkamp!\r\nGa mee en leer op verschillende manieren veilig vuur maken en alles wat daarbij komt kijken. "
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "opvuur"
+				, "geenmobieltje"			]
+			}
+				,  {
+			  "id" : 3166
+			, "shantiId": 12804
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-mook-2015/zeilhit-15"
+			, "naam": "Zeilhit '15"
+			, "startDatumTijd": "2015-04-03 20:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 11
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "1 - 4 pers"
+			, "deelnamekosten": "62"
+			, "hitCourantTekst": "\"Het is begin april 1574, de Mookerplassen en omgeving zijn nu nog van de Oranjes maar de Spanjaarden zijn bijna in zicht. Het is onze taak om ervoor te zorgen dat de Spanjaarden geen kans krijgen om voet aan wal te zetten. Het gerucht gaat tevens de ronde dat er binnen de Nederlandse bootlieden een Spaanse infiltrant zit die we moeten ontmaskeren.\" De Oranjes zoeken voor deze problemen een bijzonder geheime strategie en jullie hulp is hard nodig! Al zeilend, roeiend en wrikkend zullen jullie samen met de kampstaf het hele weekend proberen de Spanjaarden vanaf het water te verslaan. Durf jij de strijd aan te gaan én de Spaanse infiltrant te ontmaskeren? Kom dan ook naar de ZeilHIT '15 in Mook!"
+			, "minAantalDeelnemers": 21
+			, "maxAantalDeelnemers": 25
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "zeilboot"
+				, "geenrugz"
+				, "0pers"
+				, "gebouw"
+				, "5km"
+				, "stafkookt"
+				, "zwem"
+				, "vraagt"			]
+			}
+				]
+	}	,  {
+		  "id" : 24 
+		, "naam" : "Zeeland"
+		, "hitCourantTekst" : "In Zeeland kan je echt de meest waanzinnige dingen beleven, sluipen door de polder, liggend in greppels, bizarre foto's maken tijdens de Treasure Hunt, of je verliest jezelf in een spannend spel tijdens de Game Time, of je gaat lekker nerden bij de TecoHit. Of ben je meester in fikkie stoken? Leer nog meer over vuur bij Waar Rook is, is Vuur! Stam, leiding of ouder? Ga op pad met de Bourgondische auotpuzzeltocht, rijden over dijken, door de polder, lekker eten, relaxed een biertje bij het kampvuur..Genieten kan sowieso in 't Zeeuwse!"
+		, "kampen" : [
+		   {
+			  "id" : 3212
+			, "shantiId": 12805
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-zeeland-2015/bourgondische-autopuzzeltocht"
+			, "naam": "Bourgondische Autopuzzeltocht"
+			, "startDatumTijd": "2015-04-04 10:30"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 99
+			, "minimumLeeftijd": 23
+			, "maximumLeeftijd": 65
+			, "margeTeOud": 90
+			, "subgroep": "2 - 5 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Bij de Bourgondische Autopuzzeltocht draait het om: Jawel, bourgondisch leven met lekker eten en beetje relaxte sight-seeing, en aan de hand van verschillende uitdagende puzzels kris-kras het Zeeuwse landschap verkennen met de auto. Bijzondere biertjes bij het kampvuur, een HIT die vooral om gezelligheid draait! "
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 50
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "auto"
+				, "groepje"
+				, "tent"
+				, "0km"
+				, "opvuur"
+				, "stafkookt"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3213
+			, "shantiId": 12806
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-zeeland-2015/game-time"
+			, "naam": "Game Time"
+			, "startDatumTijd": "2015-04-04 10:00"
+			, "eindDatumTijd": "2015-04-06 16:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 13
+			, "margeTeOud": 90
+			, "subgroep": "1 - 6 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Ergens in het noorden van Frankrijk is een klein dorpje dat zich blijft verzetten tegen de grote overmacht aan Romeinen. De bewoners van het dorp, onder andere Asterix en Obelix hebben een geheim wapen; een toverdrank gebrouwen door de druïde. Door deze toverdrank worden alle inwoners van het dorp ontzettend sterk! Er is echter een probleem, de druïde is erg vergeetachtig en het recept lijkt kwijt te zijn......"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 40
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "15km"
+				, "opvuur"
+				, "k_ks"
+				, "zwem"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3214
+			, "shantiId": 12807
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-zeeland-2015/tecohit"
+			, "naam": "TeCoHit"
+			, "startDatumTijd": "2015-04-04 12:00"
+			, "eindDatumTijd": "2015-04-06 14:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 10
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "52"
+			, "hitCourantTekst": "Don't try this at home! Hou jij van een beetje (elektro)spanning? Dan zit je bij deze HIT goed! Wij gaan allerlei proeven, opdrachten en workshops doen met techniek en communicatie. We gaan vooral dingen doen die je thuis niet mag. Wat dacht je van de rookmelders testen, netwerkspellen spelen, stekkers aan UTP-kabels zetten, dingen elektrocuteren, microchips programmeren, signalen zoeken en nog veel meer. Dit doe je allemaal met hulp van mensen die er echt verstand van hebben, omdat ze er voor gestudeerd hebben of dit voor hun werk of hobby dagelijks doen. We gaan er echt een keigaaf weekend van maken en we hopen dat jij ook komt!"
+			, "minAantalDeelnemers": 20
+			, "maxAantalDeelnemers": 24
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "5km"
+				, "stafkookt"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3215
+			, "shantiId": 12808
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-zeeland-2015/treasure-hunt-30"
+			, "naam": "Treasure Hunt 3.0"
+			, "startDatumTijd": "2015-04-04 11:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 13
+			, "maximumLeeftijd": 15
+			, "margeTeOud": 90
+			, "subgroep": "2 - 3 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Geld, schatten, glorie en eeuwige roem: Dat is wat deze HIT jou kan brengen. Mits je het spel goed speelt natuurlijk!!! Tijdens games, (foto-)opdrachten en veel whatsApp'jes bepaal je zelf de route naar de volgende post. Wie krijgt de meest waardevolle schatten in zijn of haar bezit? \r\nDenk jij dat je kans maakt op de Treasure Hunt 3.0 Trofee? En wil je een leuk en gezellig weekend? Dan is dit jouw HIT!!!!!!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 35
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 2
+			, "icoontjes": [
+				  "geenrugz"
+				, "tent"
+				, "15km"
+				, "stafkookt"
+				, "k_ks"
+				, "mobieltje"			]
+			}
+				,  {
+			  "id" : 3211
+			, "shantiId": 12809
+			, "hitnlUrl": "https://hit.scouting.nl/hits-in-zeeland-2015/waar-rook-is-is-vuur"
+			, "naam": "Waar rook is ... is vuur"
+			, "startDatumTijd": "2015-04-04 09:00"
+			, "eindDatumTijd": "2015-04-06 15:00"
+			, "margeTeJong": 90
+			, "minimumLeeftijd": 12
+			, "maximumLeeftijd": 14
+			, "margeTeOud": 90
+			, "subgroep": "1 - 3 pers"
+			, "deelnamekosten": "47"
+			, "hitCourantTekst": "Waar rook is, is vuur! Kampvuur, kuilvuur, kookvuur. Weet jij het verschil? Wat heb je eigenlijk allemaal nodig voor het ideale kookvuur en hoe verzorg je knapperend kampvuur voor de hele groep? Je leert het allemaal tijdens deze HIT. Vuur gaat niet alleen over warmte of gezelligheid, maar ook over veiligheid. Wat moet je doen als het per ongeluk toch een keer mis gaat? Na dit Paasweekend ben jij vuurmeester!"
+			, "minAantalDeelnemers": 15
+			, "maxAantalDeelnemers": 30
+			, "vol": false
+			, "volTekst": "Nog ruim voldoende plaatsen beschikbaar."
+			, "minSubgroep": 1
+			, "icoontjes": [
+				  "staand"
+				, "geenrugz"
+				, "0pers"
+				, "groepje"
+				, "tent"
+				, "5km"
+				, "vuur"
+				, "insigne"
+				, "geenmobieltje"			]
+			}
+				]
+	}		]	}
+}
